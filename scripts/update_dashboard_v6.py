@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Dashboard v6: preserve VKOSPI chart fields for the shareable HTML."""
+"""Dashboard v6: preserve VKOSPI chart fields and cache-bust shareable assets."""
 from __future__ import annotations
 
 import update_dashboard as base
@@ -23,7 +23,23 @@ def metrics_v6(key, df, source):
     return metrics, enriched
 
 
+def cache_bust_html():
+    path = base.OUTPUT_HTML
+    text = path.read_text(encoding="utf-8")
+    replacements = {
+        'href="styles.css"': 'href="styles.css?v=6"',
+        'src="js/core.js"': 'src="js/core.js?v=6"',
+        'src="js/charts.js"': 'src="js/charts.js?v=6"',
+        'src="js/panels.js"': 'src="js/panels.js?v=6"',
+        'src="js/app.js"': 'src="js/app.js?v=6"',
+    }
+    for old, new in replacements.items():
+        text = text.replace(old, new)
+    path.write_text(text, encoding="utf-8")
+
+
 base.metrics = metrics_v6
 
 if __name__ == "__main__":
     base.main()
+    cache_bust_html()
