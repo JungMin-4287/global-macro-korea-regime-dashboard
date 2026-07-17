@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>한국 증시 레짐·메모리 트레이딩 대시보드</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <h1>한국 증시 레짐·메모리 트레이딩 대시보드</h1>
+  <div class="muted">이격도·MDD·수급 심리·VKOSPI·SOX·삼성전자·SK하이닉스 밸류에이션을 한 화면에서 점검합니다.<br>마지막 갱신: <span id="generatedAt">-</span></div>
+</header>
+<main>
+  <section class="grid" id="summary"></section>
+
+  <h2 class="section-title">수급 심리와 변동성</h2>
+  <section class="grid">
+    <article class="card span6">
+      <h2>코스피 수익률과 개인 순매수</h2>
+      <div class="chart"><canvas id="psychology"></canvas></div>
+      <div class="metrics" id="psychologyMetrics"></div>
+      <div class="note" id="psychologyText"></div>
+    </article>
+    <article class="card span6">
+      <h2>VKOSPI 변동성</h2>
+      <div class="chart"><canvas id="VKOSPI-price"></canvas></div>
+      <div class="interpret note" id="vkospiText"></div>
+    </article>
+    <article class="card span6">
+      <h2>나스닥100과 100일선</h2>
+      <div class="chart"><canvas id="NDX-price"></canvas></div>
+      <div class="interpret note" id="ndxText"></div>
+    </article>
+    <article class="card span6">
+      <h2>KOSPI 60일 이격도</h2>
+      <div class="chart"><canvas id="KOSPI-ratio60"></canvas></div>
+      <div class="interpret note" id="kospi60Text"></div>
+    </article>
+  </section>
+
+  <h2 class="section-title">국내 지수와 메모리 주도주</h2>
+  <section class="grid">
+    <article class="card span6"><h2>KOSPI: 50·120일선</h2><div class="chart"><canvas id="KOSPI-price"></canvas></div><div class="small"><canvas id="KOSPI-ratio"></canvas></div><div class="interpret note" id="KOSPI-interpretation"></div></article>
+    <article class="card span6"><h2>KOSDAQ: 50·120일선</h2><div class="chart"><canvas id="KOSDAQ-price"></canvas></div><div class="small"><canvas id="KOSDAQ-ratio"></canvas></div><div class="interpret note" id="KOSDAQ-interpretation"></div></article>
+    <article class="card span6"><h2>삼성전자: 가격·30일선</h2><div class="chart"><canvas id="SAMSUNG-price"></canvas></div><div class="small"><canvas id="SAMSUNG-ratio"></canvas></div><div class="interpret note" id="SAMSUNG-interpretation"></div></article>
+    <article class="card span6"><h2>SK하이닉스: 가격·30일선</h2><div class="chart"><canvas id="SKHYNIX-price"></canvas></div><div class="small"><canvas id="SKHYNIX-ratio"></canvas></div><div class="interpret note" id="SKHYNIX-interpretation"></div></article>
+  </section>
+
+  <h2 class="section-title">SOX 기술적 위치와 -20% 이벤트 스터디</h2>
+  <section class="grid">
+    <article class="card span8"><h2>SOX: 50·100·200일선</h2><div class="chart"><canvas id="SOX-price"></canvas></div><div class="small"><canvas id="SOX-ratio"></canvas></div><div class="interpret note" id="SOX-interpretation"></div></article>
+    <article class="card span4"><h2>-20% 이후 통계</h2><div id="eventStudy"></div><div class="note" style="margin-top:12px">과거 평균은 방향 참고용입니다. -30% 전이 확률과 현재 포지셔닝을 함께 봐야 합니다.</div></article>
+  </section>
+
+  <h2 class="section-title">삼성전자·SK하이닉스 Forward PER 비교</h2>
+  <section class="grid"><article class="card span12"><div class="scroll"><table><thead><tr><th>종목</th><th>현재가</th><th>2026E EPS</th><th>12MF 근사 PER</th><th>2027E EPS</th><th>2027F PER</th><th>2028E EPS</th><th>2028F PER</th><th>해석</th></tr></thead><tbody id="valuationTable"></tbody></table></div><div class="note" id="valuationNote" style="margin-top:12px"></div></article></section>
+
+  <h2 class="section-title">반도체 감익 스트레스 시나리오</h2>
+  <section class="grid"><article class="card span12"><div class="metrics" id="stressSummary"></div><div class="grid" style="margin-top:15px"><div class="span6"><div class="mid"><canvas id="stressPer"></canvas></div></div><div class="span6"><div class="mid"><canvas id="stressProfit"></canvas></div></div></div><div class="scroll"><table><thead><tr><th>감익률</th><th>KOSPI200 PER</th><th>삼성전자 순이익</th><th>SK하이닉스 순이익</th></tr></thead><tbody id="stressTable"></tbody></table></div><div class="note" id="stressText" style="margin-top:12px"></div></article></section>
+
+  <h2 class="section-title">시장 폭·포지셔닝·해석 기준</h2>
+  <section class="grid">
+    <article class="card span4"><h2>시장 폭</h2><table><thead><tr><th>시장</th><th>상승</th><th>하락</th><th>A/D</th></tr></thead><tbody id="breadth"></tbody></table><div class="note" id="breadthText" style="margin-top:12px"></div></article>
+    <article class="card span4"><h2>포지셔닝</h2><div id="positioning"></div></article>
+    <article class="card span4"><h2>계산 기준</h2><div class="formula">이격도 = 현재가 ÷ 이동평균 × 100</div><ul><li>100: 이동평균과 동일</li><li>95: 이동평균보다 5% 아래</li><li>낮은 이격도라도 신저가면 ‘낙하 중’</li><li>호재 불반응은 경고, 악재 내성은 바닥 선행</li><li>저PER은 단독 매수 신호가 아님</li></ul></article>
+  </section>
+
+  <section class="grid" style="margin-top:16px"><article class="card span12"><h2>데이터 상태와 한계</h2><div id="errors" class="muted"></div></article></section>
+</main>
+<footer>자동 생성된 분석 보조 자료이며 투자 판단의 단독 근거로 사용할 수 없습니다.</footer>
+
+<script id="embedded" type="application/json">__EMBEDDED_DATA__</script>
+<script src="js/core.js"></script>
+<script src="js/charts.js"></script>
+<script src="js/panels.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
