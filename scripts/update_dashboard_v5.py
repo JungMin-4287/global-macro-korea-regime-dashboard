@@ -9,6 +9,7 @@
 from __future__ import annotations
 
 from io import BytesIO
+import re
 from typing import Any
 
 import numpy as np
@@ -23,6 +24,46 @@ ORIGINAL_METRICS = base.metrics
 ORIGINAL_PSYCHOLOGY = base.psychology
 
 
+def _frame_from_investing_text(text: str) -> pd.DataFrame:
+    rows: list[tuple[pd.Timestamp, float]] = []
+    patterns = [
+        r"(?mi)^\s*\|?\s*([A-Z][a-z]{2}\s+\d{1,2},\s+\d{4})\s*\|\s*([0-9,]+(?:\.\d+)?)",
+        r"(?m)^\s*\|?\s*(\d{4}년\s+\d{1,2}월\s+\d{1,2}일)\s*\|\s*([0-9,]+(?:\.\d+)?)",
+        r"(?m)^\s*\|?\s*(\d{1,2}-\d{1,2}-\d{4})\s*\|\s*([0-9,]+(?:\.\d+)?)",
+    ]
+    for pattern in patterns:
+        for raw_date, raw_price in re.findall(pattern, text):
+            normalized = re.sub(r"(\d{4})년\s*(\d{1,2})월\s*(\d{1,2})일", r"\1-\2-\3", raw_date)
+            date = pd.to_datetime(normalized, errors="coerce", dayfirst="-" in normalized and normalized[:2].isdigit())
+            price = pd.to_numeric(raw_price.replace(",", ""), errors="coerce")
+            if pd.notna(date) and pd.notna(price):
+                rows.append((pd.Timestamp(date).normalize(), float(price)))
+    if len(rows) < 10:
+        raise RuntimeError(f"text parser found only {len(rows)} observations")
+    frame = pd.DataFrame(rows, columns=["date", "close"]).drop_duplicates("date", keep="first").set_index("date").sort_index()
+    return frame
+
+
+def _frame_from_investing_html(content: bytes) -> pd.DataFrame:
+    tables = pd.read_html(BytesIO(content))
+    for table in tables:
+        columns = {str(c).strip().lower(): c for c in table.columns}
+        date_col = next((orig for low, orig in columns.items() if low in {"date", "날짜"}), None)
+        price_col = next((orig for low, orig in columns.items() if low in {"price", "종가", "last"}), None)
+        if date_col is None or price_col is None:
+            continue
+        dates = pd.to_datetime(table[date_col], errors="coerce")
+        prices = pd.to_numeric(
+            table[price_col].astype(str).str.replace(",", "", regex=False).str.replace("−", "-", regex=False),
+            errors="coerce",
+        )
+        frame = pd.DataFrame({"close": prices.to_numpy()}, index=dates).dropna().sort_index()
+        frame = frame[~frame.index.duplicated(keep="last")]
+        if len(frame) >= 10:
+            return frame
+    raise RuntimeError("historical table not found")
+
+
 def _investing_vkospi() -> tuple[pd.DataFrame, str]:
     headers = {
         "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/124 Safari/537.36",
@@ -30,31 +71,32 @@ def _investing_vkospi() -> tuple[pd.DataFrame, str]:
         "Referer": "https://www.investing.com/indices/kospi-volatility",
     }
     errors: list[str] = []
-    urls = [
+    direct_urls = [
         "https://www.investing.com/indices/kospi-volatility-historical-data",
         "https://kr.investing.com/indices/kospi-volatility-historical-data",
     ]
-    for url in urls:
+    for url in direct_urls:
         try:
             response = requests.get(url, headers=headers, timeout=25)
             response.raise_for_status()
-            tables = pd.read_html(BytesIO(response.content))
-            for table in tables:
-                columns = {str(c).strip().lower(): c for c in table.columns}
-                date_col = next((orig for low, orig in columns.items() if low in {"date", "날짜"}), None)
-                price_col = next((orig for low, orig in columns.items() if low in {"price", "종가", "last"}), None)
-                if date_col is None or price_col is None:
-                    continue
-                dates = pd.to_datetime(table[date_col], errors="coerce")
-                prices = pd.to_numeric(
-                    table[price_col].astype(str).str.replace(",", "", regex=False).str.replace("−", "-", regex=False),
-                    errors="coerce",
-                )
-                frame = pd.DataFrame({"close": prices.to_numpy()}, index=dates).dropna().sort_index()
-                frame = frame[~frame.index.duplicated(keep="last")]
-                if len(frame) >= 10:
-                    return frame, "Investing.com KOSPI Volatility (KSVKOSPI)"
-            errors.append(f"{url}: historical table not found")
+            try:
+                return _frame_from_investing_html(response.content), "Investing.com KOSPI Volatility (KSVKOSPI)"
+            except Exception:
+                return _frame_from_investing_text(response.text), "Investing.com KOSPI Volatility (KSVKOSPI)"
+        except Exception as exc:
+            errors.append(f"{url}: {exc}")
+
+    # Investing sometimes blocks cloud runners. Jina Reader is a text mirror of the same public page.
+    reader_urls = [
+        "https://r.jina.ai/http://www.investing.com/indices/kospi-volatility-historical-data",
+        "https://r.jina.ai/http://kr.investing.com/indices/kospi-volatility-historical-data",
+    ]
+    for url in reader_urls:
+        try:
+            response = requests.get(url, headers={"User-Agent": headers["User-Agent"]}, timeout=35)
+            response.raise_for_status()
+            frame = _frame_from_investing_text(response.text)
+            return frame, "Investing.com KOSPI Volatility via Jina Reader"
         except Exception as exc:
             errors.append(f"{url}: {exc}")
     raise RuntimeError(" / ".join(errors))
