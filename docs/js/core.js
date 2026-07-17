@@ -4,7 +4,35 @@ DASH.f=(v,d=2)=>(v===null||v===undefined||Number.isNaN(v))?'-':Number(v).toLocal
 DASH.cls=s=>['반등 확인','과매도 접근','상승 추세','중기 상승 추세','안정'].some(x=>(s||'').includes(x))?'good':['낙하','훼손','공포','고변동성','위험','과열'].some(x=>(s||'').includes(x))?'bad':['조정','눌림','불안','중립'].some(x=>(s||'').includes(x))?'warn':'neutral';
 DASH.noteClass=zone=>(zone||'').includes('반전')||(zone||'').includes('안정')?'good-note':(['낙하','위험','공포','과열','훼손'].some(x=>(zone||'').includes(x))?'bad-note':'');
 DASH.interpretationHTML=a=>{const x=a?.disparity_interpretation||{};return `<div class="headline">${x.headline||'현재 구간 미산출'}</div><div>${x.summary||''}</div><div class="action"><b>해석:</b> ${x.action||'데이터 갱신 후 표시됩니다.'}</div><div class="status-line">데이터: ${a?.source||'-'} · 기준일 ${a?.date||'-'}</div>`};
-DASH.card=a=>{const x=a.disparity_interpretation||{},r=a.type==='stock'?a.ratio30:(a.name==='나스닥100'?a.ratio100:a.ratio50),f=DASH.f;return `<article class="card span3"><div class="kpi"><div><div class="name">${a.name}</div><div class="value">${f(a.close,0)}</div><div class="muted">${a.date||'-'} · ${f(a.change_pct)}%</div></div><span class="badge ${DASH.cls(x.zone||a.signal)}">${x.zone||a.signal||'관찰'}</span></div><div class="metrics"><div class="metric"><span class="muted">핵심 이격도</span><b>${f(r)}</b><small>${r===null||r===undefined?'-':f(r-100)}%</small></div><div class="metric"><span class="muted">현재 낙폭</span><b>${f(a.current_drawdown_pct)}%</b></div><div class="metric"><span class="muted">252일 MDD</span><b>${f(a.mdd_252_pct)}%</b></div><div class="metric"><span class="muted">현재 해석</span><b style="font-size:13px">${x.headline||a.signal||'-'}</b></div></div></article>`};
+DASH.card=a=>{
+  const x=a.disparity_interpretation||{},f=DASH.f;
+  const isStock=a.type==='stock';
+  const isNDX=a.name==='나스닥100';
+  const isVKOSPI=a.name==='VKOSPI';
+  const ratio=isStock?a.ratio30:(isNDX?a.ratio100:a.ratio50);
+  const ratioLabel=isStock?'30일 이격도':isNDX?'100일 이격도':isVKOSPI?'50일선 대비':'50일 이격도';
+  const zone=x.zone||a.signal||'관찰';
+  const reading=x.action||x.summary||'데이터 갱신 후 해석이 표시됩니다.';
+  return `<article class="card summary-card">
+    <div class="kpi">
+      <div>
+        <div class="name">${a.name}</div>
+        <div class="value">${f(a.close,0)}</div>
+        <div class="muted summary-date">${a.date||'-'} · ${f(a.change_pct)}%</div>
+      </div>
+      <span class="badge ${DASH.cls(zone)}">${zone}</span>
+    </div>
+    <div class="summary-metrics">
+      <div class="metric"><span class="muted">${ratioLabel}</span><b>${f(ratio)}</b><small>${ratio===null||ratio===undefined?'-':f(ratio-100)}%</small></div>
+      <div class="metric"><span class="muted">현재 낙폭</span><b>${f(a.current_drawdown_pct)}%</b></div>
+      <div class="metric"><span class="muted">252일 MDD</span><b>${f(a.mdd_252_pct)}%</b></div>
+    </div>
+    <div class="summary-reading ${DASH.noteClass(zone)}">
+      <strong>${x.headline||`현재 구간: ${zone}`}</strong>
+      <p>${reading}</p>
+    </div>
+  </article>`;
+};
 DASH.opt=()=>({responsive:true,maintainAspectRatio:false,interaction:{mode:'index',intersect:false},plugins:{legend:{labels:{color:'#c8d2e8',boxWidth:18}}},scales:{x:{ticks:{color:'#95a3bd',maxTicksLimit:8},grid:{color:'rgba(43,59,94,.3)'}},y:{ticks:{color:'#95a3bd'},grid:{color:'rgba(43,59,94,.3)'}}}});
 DASH.line=(id,labels,sets,options)=>{const e=document.getElementById(id);if(e)new Chart(e,{type:'line',data:{labels,datasets:sets},options:options||DASH.opt()})};
 DASH.s=(h,k)=>h.map(x=>x[k]??null);
