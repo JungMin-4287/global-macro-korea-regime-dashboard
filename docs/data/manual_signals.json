@@ -1,0 +1,32 @@
+{
+  "updated_at": null,
+  "credit": {
+    "kospi_credit_balance_trn_krw": null,
+    "kosdaq_credit_balance_trn_krw": null,
+    "kospi_credit_to_mcap_pct": null,
+    "kosdaq_credit_to_mcap_pct": null,
+    "unpaid_balance_trn_krw": null,
+    "forced_liquidation_100m_krw": null,
+    "forced_liquidation_ratio_pct": null
+  },
+  "ai_capex": {
+    "bigtech_capex_revision": "neutral",
+    "cloud_growth_revision": "neutral",
+    "capital_provider_reassurance": false,
+    "oracle_credit_stress": "neutral"
+  },
+  "memory": {
+    "dram_price_momentum": "up",
+    "nand_price_momentum": "up",
+    "price_second_derivative": "unknown",
+    "earnings_revision_breadth": "unknown",
+    "supply_growth_risk_2027_2028": "unknown"
+  },
+  "rates": {
+    "us10y_regime": "neutral",
+    "real_rate_regime": "neutral",
+    "breakeven_regime": "neutral",
+    "term_premium_regime": "neutral"
+  },
+  "notes": []
+}
