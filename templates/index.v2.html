@@ -55,10 +55,37 @@
   </section>
 
   <h2 class="section-title">삼성전자·SK하이닉스 Forward PER 비교</h2>
-  <section class="grid"><article class="card span12"><div class="scroll"><table><thead><tr><th>종목</th><th>현재가</th><th>2026E EPS</th><th>12MF 근사 PER</th><th>2027E EPS</th><th>2027F PER</th><th>2028E EPS</th><th>2028F PER</th><th>해석</th></tr></thead><tbody id="valuationTable"></tbody></table></div><div class="note" id="valuationNote" style="margin-top:12px"></div></article></section>
+  <section class="grid">
+    <article class="card span12">
+      <div class="scroll desktop-only">
+        <table>
+          <thead><tr><th>종목</th><th>현재가</th><th>2026E EPS</th><th>12MF 근사 PER</th><th>2027E EPS</th><th>2027F PER</th><th>2028E EPS</th><th>2028F PER</th><th>해석</th></tr></thead>
+          <tbody id="valuationTable"></tbody>
+        </table>
+      </div>
+      <div class="valuation-mobile mobile-only" id="valuationMobile"></div>
+      <div class="note" id="valuationNote" style="margin-top:12px"></div>
+    </article>
+  </section>
 
   <h2 class="section-title">반도체 감익 스트레스 시나리오</h2>
-  <section class="grid"><article class="card span12"><div class="metrics" id="stressSummary"></div><div class="grid" style="margin-top:15px"><div class="span6"><div class="mid"><canvas id="stressPer"></canvas></div></div><div class="span6"><div class="mid"><canvas id="stressProfit"></canvas></div></div></div><div class="scroll"><table><thead><tr><th>감익률</th><th>KOSPI200 PER</th><th>삼성전자 순이익</th><th>SK하이닉스 순이익</th></tr></thead><tbody id="stressTable"></tbody></table></div><div class="note" id="stressText" style="margin-top:12px"></div></article></section>
+  <section class="grid">
+    <article class="card span12">
+      <div class="metrics" id="stressSummary"></div>
+      <div class="current-marker-note" id="stressCurrent"></div>
+      <div class="grid" style="margin-top:15px">
+        <div class="span6"><h3>감익률별 KOSPI200 PER</h3><div class="mid"><canvas id="stressPer"></canvas></div></div>
+        <div class="span6"><h3>감익률별 삼성전자·SK하이닉스 순이익</h3><div class="mid"><canvas id="stressProfit"></canvas></div></div>
+      </div>
+      <div class="scroll">
+        <table>
+          <thead><tr><th>감익률</th><th>KOSPI200 PER</th><th>삼성전자 순이익</th><th>SK하이닉스 순이익</th></tr></thead>
+          <tbody id="stressTable"></tbody>
+        </table>
+      </div>
+      <div class="note" id="stressText" style="margin-top:12px"></div>
+    </article>
+  </section>
 
   <h2 class="section-title">시장 폭·포지셔닝·해석 기준</h2>
   <section class="grid">
