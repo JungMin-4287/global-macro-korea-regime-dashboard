@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-17T17:25:20+09:00",
+  "generated_at": "2026-07-17T18:05:46+09:00",
   "status": "ok",
   "methodology": {
     "disparity_ratio": "현재가 ÷ 이동평균 × 100",
@@ -11608,7 +11608,7 @@
     }
   },
   "manual": {
-    "updated_at": null,
+    "updated_at": "2026-07-17",
     "credit": {
       "kospi_credit_balance_trn_krw": null,
       "kosdaq_credit_balance_trn_krw": null,
@@ -11637,7 +11637,73 @@
       "breakeven_regime": "neutral",
       "term_premium_regime": "neutral"
     },
-    "notes": []
+    "earnings_stress_reference": {
+      "title": "삼성전자·SK하이닉스 감익별 KOSPI200 밸류에이션 시나리오",
+      "reference_date": "2026-07-16",
+      "reference_index": "KOSPI200 NXT 장중 저점",
+      "reference_index_level": 6614.7,
+      "reference_12m_forward_per": 5.59,
+      "reference_fy2028_per": 4.91,
+      "normalized_per": 10.0,
+      "implied_semiconductor_earnings_decline_pct": 59.1,
+      "implied_kospi200_forward_earnings_decline_pct": 44.1,
+      "historical_downcycle_average_earnings_decline_pct": 33.0,
+      "scenario_note": "장표 기준 고정 스냅샷이다. 현 지수·컨센서스가 바뀌면 자동 현재값으로 오인하지 말고 기준일과 함께 사용한다.",
+      "scenarios": [
+        {
+          "earnings_decline_pct": 0,
+          "kospi200_per": 5.59,
+          "samsung_net_income_trn_krw": 385,
+          "skhynix_net_income_trn_krw": 284
+        },
+        {
+          "earnings_decline_pct": 10,
+          "kospi200_per": 6.04,
+          "samsung_net_income_trn_krw": 346,
+          "skhynix_net_income_trn_krw": 256
+        },
+        {
+          "earnings_decline_pct": 20,
+          "kospi200_per": 6.57,
+          "samsung_net_income_trn_krw": 308,
+          "skhynix_net_income_trn_krw": 228
+        },
+        {
+          "earnings_decline_pct": 30,
+          "kospi200_per": 7.2,
+          "samsung_net_income_trn_krw": 269,
+          "skhynix_net_income_trn_krw": 199
+        },
+        {
+          "earnings_decline_pct": 50,
+          "kospi200_per": 8.92,
+          "samsung_net_income_trn_krw": 192,
+          "skhynix_net_income_trn_krw": 142
+        },
+        {
+          "earnings_decline_pct": 59,
+          "kospi200_per": 10.0,
+          "samsung_net_income_trn_krw": 157,
+          "skhynix_net_income_trn_krw": 116
+        },
+        {
+          "earnings_decline_pct": 70,
+          "kospi200_per": 11.7,
+          "samsung_net_income_trn_krw": 115,
+          "skhynix_net_income_trn_krw": 85
+        },
+        {
+          "earnings_decline_pct": 90,
+          "kospi200_per": 17.01,
+          "samsung_net_income_trn_krw": 38,
+          "skhynix_net_income_trn_krw": 28
+        }
+      ]
+    },
+    "notes": [
+      "감익 시나리오는 자동 매수선이 아니라 현재 가격에 반영된 이익 훼손 정도를 점검하는 스트레스 테스트다.",
+      "실제 컨센서스·시가총액과 기준일이 달라지면 시나리오 입력값을 갱신해야 한다."
+    ]
   },
   "errors": {}
 }
