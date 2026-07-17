@@ -28,6 +28,29 @@
     "breakeven_regime": "neutral",
     "term_premium_regime": "neutral"
   },
+  "forward_valuation_reference": {
+    "reference_date": "2026-06-01",
+    "source": "키움증권 2026년 하반기 반도체 산업전망",
+    "note": "F-PER는 대시보드의 최신 종가를 아래 연도별 EPS 추정치로 나누어 자동 계산한다. 12MF는 별도 컨센서스가 없을 때 2026E EPS 기반 근사치로 표시한다.",
+    "companies": {
+      "SAMSUNG": {
+        "name": "삼성전자",
+        "eps": {"2026": 42106, "2027": 47475, "2028": 52888},
+        "target_price": 430000
+      },
+      "SKHYNIX": {
+        "name": "SK하이닉스",
+        "eps": {"2026": 290964, "2027": 308470, "2028": 333987},
+        "target_price": 2600000
+      }
+    },
+    "interpretation": {
+      "below_6": "강한 감익 또는 사이클 종료 우려가 반영된 저멀티플 구간",
+      "6_to_8": "역사적으로 낮은 구간이지만 EPS 하향 속도와 주가 반응 확인 필요",
+      "8_to_10": "정상화 기대가 일부 반영된 중립 구간",
+      "above_10": "이익 지속성에 대한 높은 신뢰가 반영된 구간"
+    }
+  },
   "earnings_stress_reference": {
     "title": "삼성전자·SK하이닉스 감익별 KOSPI200 밸류에이션 시나리오",
     "reference_date": "2026-07-16",
@@ -51,8 +74,17 @@
       {"earnings_decline_pct": 90, "kospi200_per": 17.01, "samsung_net_income_trn_krw": 38, "skhynix_net_income_trn_krw": 28}
     ]
   },
+  "positioning": {
+    "us_semiconductor_ls_percentile": 96,
+    "us_semiconductor_flow_20d_z": -1.1,
+    "asia_supply_chain_ls_percentile": 63,
+    "asia_supply_chain_flow_20d_z": -0.6,
+    "reference_date": "2026-07-17",
+    "source": "JP Morgan APAC semiconductor commentary; manual snapshot",
+    "note": "프라임브로커리지 원자료가 비공개이므로 장표·코멘트 기반 수동 스냅샷"
+  },
   "notes": [
     "감익 시나리오는 자동 매수선이 아니라 현재 가격에 반영된 이익 훼손 정도를 점검하는 스트레스 테스트다.",
-    "실제 컨센서스·시가총액과 기준일이 달라지면 시나리오 입력값을 갱신해야 한다."
+    "F-PER는 EPS 추정치가 갱신되면 manual_signals.json의 연도별 EPS를 함께 갱신해야 한다."
   ]
 }
