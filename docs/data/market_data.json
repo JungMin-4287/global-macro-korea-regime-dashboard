@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-17T19:46:15+09:00",
+  "generated_at": "2026-07-17T22:18:05+09:00",
   "status": "ok",
   "methodology": {
     "disparity_ratio": "현재가 ÷ 이동평균 × 100",
@@ -62662,8 +62662,9 @@
     "points": [],
     "regression": [],
     "zone": "미산출",
-    "error": "",
-    "interpretation": "개인 순매수 데이터 미산출"
+    "source": "KRX(pykrx) 개인 순매수: empty response / KRX(pykrx) 개인 순매수: empty response / KRX(pykrx) 개인 순매수: empty response / Naver Finance: insufficient observations (0)",
+    "error": "KRX(pykrx) 개인 순매수: empty response / KRX(pykrx) 개인 순매수: empty response / KRX(pykrx) 개인 순매수: empty response / Naver Finance: insufficient observations (0)",
+    "interpretation": "KRX와 네이버 금융에서 개인 순매수 데이터를 모두 받지 못했습니다. 다음 자동 실행에서 재시도합니다."
   },
   "valuation": {
     "reference_date": "2026-06-01",
