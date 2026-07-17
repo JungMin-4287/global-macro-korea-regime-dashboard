@@ -2,16 +2,33 @@ name: Update Korea market dashboard
 
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/**"
+      - "templates/**"
+      - "requirements.txt"
+      - "docs/data/manual_signals.json"
+      - ".github/workflows/update-dashboard.yml"
   schedule:
     - cron: "5 3 * * 1-5"   # 12:05 KST
     - cron: "40 6 * * 1-5"  # 15:40 KST
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: korea-market-dashboard
+  cancel-in-progress: true
 
 jobs:
   update:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v6
 
@@ -33,3 +50,18 @@ jobs:
           git add docs/index.html docs/data/market_data.json docs/data/market_history.csv
           git diff --cached --quiet || git commit -m "chore: update Korea market dashboard"
           git push
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+        continue-on-error: true
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: ./docs
+        continue-on-error: true
+
+      - name: Deploy Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+        continue-on-error: true
