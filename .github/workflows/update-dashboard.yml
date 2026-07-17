@@ -43,7 +43,7 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Update data and HTML
-        run: python scripts/update_dashboard_v3.py
+        run: python scripts/update_dashboard_v4.py
 
       - name: Commit updated dashboard
         run: |
