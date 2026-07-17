@@ -1,318 +1,215 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
-import json
-import math
+import json, math
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any
 
+import numpy as np
 import pandas as pd
 
-ROOT = Path(__file__).resolve().parents[1]
-DOCS = ROOT / "docs"
-DATA_DIR = DOCS / "data"
-TEMPLATE = ROOT / "templates" / "index.template.html"
-MANUAL = DATA_DIR / "manual_signals.json"
-OUTPUT_JSON = DATA_DIR / "market_data.json"
-OUTPUT_CSV = DATA_DIR / "market_history.csv"
-OUTPUT_HTML = DOCS / "index.html"
+ROOT=Path(__file__).resolve().parents[1]
+DOCS=ROOT/'docs'; DATA_DIR=DOCS/'data'; TEMPLATE=ROOT/'templates'/'index.template.html'
+MANUAL=DATA_DIR/'manual_signals.json'; OUTPUT_JSON=DATA_DIR/'market_data.json'; OUTPUT_CSV=DATA_DIR/'market_history.csv'; OUTPUT_HTML=DOCS/'index.html'
+SEOUL=timezone(timedelta(hours=9))
 
-ASSETS = {
-    "KOSPI": {"name": "KOSPI", "type": "index", "pykrx": "1001", "yf": "^KS11"},
-    "KOSDAQ": {"name": "KOSDAQ", "type": "index", "pykrx": "2001", "yf": "^KQ11"},
-    "SAMSUNG": {"name": "삼성전자", "type": "stock", "pykrx": "005930", "yf": "005930.KS"},
-    "SKHYNIX": {"name": "SK하이닉스", "type": "stock", "pykrx": "000660", "yf": "000660.KS"},
+ASSETS={
+ 'KOSPI':{'name':'KOSPI','type':'index','pykrx':'1001','yf':'^KS11'},
+ 'KOSDAQ':{'name':'KOSDAQ','type':'index','pykrx':'2001','yf':'^KQ11'},
+ 'SAMSUNG':{'name':'삼성전자','type':'stock','pykrx':'005930','yf':'005930.KS'},
+ 'SKHYNIX':{'name':'SK하이닉스','type':'stock','pykrx':'000660','yf':'000660.KS'},
+ 'SOX':{'name':'SOX','type':'global_index','yf':'^SOX'},
+ 'NDX':{'name':'나스닥100','type':'global_index','yf':'^NDX'},
 }
 
-SEOUL = timezone(timedelta(hours=9))
+
+def cf(v:Any)->float|None:
+ try:
+  x=float(v)
+  return None if math.isnan(x) or math.isinf(x) else round(x,4)
+ except Exception:return None
 
 
-def clean_float(value: Any) -> float | None:
-    try:
-        number = float(value)
-        if math.isnan(number) or math.isinf(number):
-            return None
-        return round(number, 4)
-    except (TypeError, ValueError):
-        return None
+def load_manual():
+ try:return json.loads(MANUAL.read_text(encoding='utf-8'))
+ except Exception:return {}
 
 
-def fetch_with_pykrx(asset: dict[str, str], start: str, end: str) -> pd.DataFrame:
-    from pykrx import stock
-    if asset["type"] == "index":
-        raw = stock.get_index_ohlcv_by_date(start, end, asset["pykrx"])
-    else:
-        raw = stock.get_market_ohlcv_by_date(start, end, asset["pykrx"])
-    if raw is None or raw.empty or "종가" not in raw.columns:
-        raise RuntimeError("pykrx returned no closing-price data")
-    df = pd.DataFrame(index=pd.to_datetime(raw.index))
-    df["close"] = pd.to_numeric(raw["종가"], errors="coerce")
-    if "거래량" in raw.columns:
-        df["volume"] = pd.to_numeric(raw["거래량"], errors="coerce")
-    return df.dropna(subset=["close"]).sort_index()
+def yf_fetch(ticker,start,end):
+ import yfinance as yf
+ raw=yf.download(ticker,start=start,end=end,auto_adjust=False,progress=False)
+ if raw is None or raw.empty: raise RuntimeError('yfinance empty')
+ c=raw['Close']; c=c.iloc[:,0] if isinstance(c,pd.DataFrame) else c
+ df=pd.DataFrame({'close':pd.to_numeric(c,errors='coerce')},index=pd.to_datetime(c.index))
+ if 'Volume' in raw:
+  v=raw['Volume']; v=v.iloc[:,0] if isinstance(v,pd.DataFrame) else v
+  df['volume']=pd.to_numeric(v,errors='coerce')
+ return df.dropna(subset=['close']).sort_index()
 
 
-def fetch_with_yfinance(asset: dict[str, str], start: str, end: str) -> pd.DataFrame:
-    import yfinance as yf
-    raw = yf.download(asset["yf"], start=start, end=end, auto_adjust=False, progress=False)
-    if raw is None or raw.empty:
-        raise RuntimeError("yfinance returned no data")
-    close = raw["Close"]
-    if isinstance(close, pd.DataFrame):
-        close = close.iloc[:, 0]
-    df = pd.DataFrame(index=pd.to_datetime(close.index))
-    df["close"] = pd.to_numeric(close, errors="coerce")
-    if "Volume" in raw:
-        volume = raw["Volume"]
-        if isinstance(volume, pd.DataFrame):
-            volume = volume.iloc[:, 0]
-        df["volume"] = pd.to_numeric(volume, errors="coerce")
-    return df.dropna(subset=["close"]).sort_index()
+def pykrx_fetch(asset,start,end):
+ from pykrx import stock
+ if asset['type']=='index': raw=stock.get_index_ohlcv_by_date(start.replace('-',''),end.replace('-',''),asset['pykrx'])
+ else: raw=stock.get_market_ohlcv_by_date(start.replace('-',''),end.replace('-',''),asset['pykrx'])
+ if raw is None or raw.empty: raise RuntimeError('pykrx empty')
+ df=pd.DataFrame(index=pd.to_datetime(raw.index)); df['close']=pd.to_numeric(raw['종가'],errors='coerce')
+ if '거래량' in raw: df['volume']=pd.to_numeric(raw['거래량'],errors='coerce')
+ return df.dropna(subset=['close']).sort_index()
 
 
-def fetch_asset(asset: dict[str, str], start: str, end: str) -> tuple[pd.DataFrame, str]:
-    errors = []
-    try:
-        return fetch_with_pykrx(asset, start.replace("-", ""), end.replace("-", "")), "KRX(pykrx)"
-    except Exception as exc:
-        errors.append(f"pykrx: {exc}")
-    try:
-        return fetch_with_yfinance(asset, start, end), "Yahoo Finance fallback"
-    except Exception as exc:
-        errors.append(f"yfinance: {exc}")
-    raise RuntimeError(" / ".join(errors))
+def fetch_asset(asset,start,end):
+ if asset['type'] in ('index','stock'):
+  try:return pykrx_fetch(asset,start,end),'KRX(pykrx)'
+  except Exception:pass
+ return yf_fetch(asset['yf'],start,end),'Yahoo Finance fallback'
 
 
-def percentile_of_last(series: pd.Series, window: int = 756) -> float | None:
-    s = series.dropna().tail(window)
-    if len(s) < 20:
-        return None
-    return clean_float(s.rank(pct=True).iloc[-1] * 100)
+def fetch_vkospi(start,end):
+ from pykrx import stock
+ candidates=[]
+ for market in ['KOSPI','KOSDAQ','KRX','테마']:
+  try:
+   for t in stock.get_index_ticker_list(market=market):
+    n=stock.get_index_ticker_name(t)
+    if 'VKOSPI' in n.upper() or '변동성' in n: candidates.append((t,n))
+  except Exception:pass
+ for ticker,name in candidates:
+  try:
+   raw=stock.get_index_ohlcv_by_date(start.replace('-',''),end.replace('-',''),ticker)
+   if raw is not None and not raw.empty:
+    return pd.DataFrame({'close':pd.to_numeric(raw['종가'],errors='coerce')},index=pd.to_datetime(raw.index)).dropna(),f'KRX {name}'
+  except Exception:pass
+ raise RuntimeError('VKOSPI ticker not resolved')
 
 
-def current_and_mdd(close: pd.Series, window: int = 252) -> tuple[float | None, float | None]:
-    s = close.dropna().tail(window)
-    if s.empty:
-        return None, None
-    dd = (s / s.cummax() - 1.0) * 100
-    return clean_float(dd.iloc[-1]), clean_float(dd.min())
+def percentile(series,window=756):
+ s=series.dropna().tail(window)
+ return cf(s.rank(pct=True).iloc[-1]*100) if len(s)>=20 else None
 
 
-def classify_index(metrics: dict[str, Any]) -> tuple[str, int, list[str]]:
-    score = 0
-    reasons: list[str] = []
-    ratio50 = metrics.get("ratio50")
-    p50 = metrics.get("ratio50_percentile_3y")
-    p120 = metrics.get("ratio120_percentile_3y")
-    dd = metrics.get("current_drawdown_pct")
-    rebound = metrics.get("rebound_3d", False)
-    if p50 is not None and p50 <= 20:
-        score += 1
-        reasons.append(f"50일 이격도 지수의 3년 백분위가 {p50:.1f}%")
-    if p120 is not None and p120 <= 20:
-        score += 1
-        reasons.append(f"120일 이격도 지수의 3년 백분위가 {p120:.1f}%")
-    if dd is not None and dd <= -20:
-        score += 2
-        reasons.append(f"252일 고점 대비 {dd:.1f}% 조정")
-    elif dd is not None and dd <= -10:
-        score += 1
-        reasons.append(f"252일 고점 대비 {dd:.1f}% 조정")
-    if rebound:
-        score += 1
-        reasons.append("최근 3거래일 저점 방어·종가 회복")
-    if ratio50 is not None and ratio50 < 90 and not rebound:
-        return "낙하 중·확인 필요", score, reasons
-    if score >= 4 and rebound:
-        return "반등 확인", score, reasons
-    if score >= 3:
-        return "과매도 접근", score, reasons
-    if ratio50 is not None and ratio50 < 100:
-        return "추세 훼손", score, reasons
-    return "중립", score, reasons
+def enrich(df):
+ out=df.copy()
+ for w in (5,20,30,50,60,100,120,200): out[f'sma{w}']=out.close.rolling(w).mean()
+ for w in (30,50,60,100,120,200): out[f'ratio{w}']=out.close/out[f'sma{w}']*100
+ out['drawdown']=out.close/out.close.rolling(252,min_periods=20).max()*100-100
+ return out
 
 
-def classify_stock(key: str, metrics: dict[str, Any], index_context: dict[str, Any]) -> tuple[str, int, list[str]]:
-    score = 0
-    reasons: list[str] = []
-    ratio30 = metrics.get("ratio30")
-    ratio50 = metrics.get("ratio50")
-    dd = metrics.get("current_drawdown_pct")
-    rebound = metrics.get("rebound_3d", False)
-    rs5 = metrics.get("relative_strength_5d_pct")
-    if ratio30 is not None:
-        if 98 <= ratio30 <= 103:
-            score += 2
-            reasons.append(f"30일 이격도 지수 {ratio30:.1f}: 전술적 매수 관찰 구간")
-        elif ratio30 < 98:
-            score += 1
-            reasons.append(f"30일선 하회({ratio30:.1f}): 과매도이나 낙하 확인 필요")
-        elif ratio30 >= 115:
-            score -= 2
-            reasons.append(f"30일 이격도 지수 {ratio30:.1f}: 조정 후에도 과열 잔존")
-        elif ratio30 >= 110:
-            score -= 1
-            reasons.append(f"30일 이격도 지수 {ratio30:.1f}: 확장 구간")
-    threshold = -25 if key == "SAMSUNG" else -30
-    if dd is not None and dd <= threshold:
-        score += 1
-        reasons.append(f"MDD {dd:.1f}%: 과거 급락 비교 구간 진입")
-    if ratio50 is not None and ratio50 <= 100:
-        score += 1
-        reasons.append("50일선 이하로 밸류에이션·수급 조정 진행")
-    if rebound:
-        score += 1
-        reasons.append("최근 3거래일 저점 방어·종가 반전")
-    if rs5 is not None and rs5 > 0:
-        score += 1
-        reasons.append(f"KOSPI 대비 5일 상대강도 +{rs5:.1f}%p")
-    market_signal = index_context.get("signal")
-    if market_signal == "반등 확인":
-        score += 1
-        reasons.append("KOSPI 반등 확인 동반")
-    elif market_signal == "낙하 중·확인 필요":
-        score -= 1
-        reasons.append("KOSPI 낙하 국면")
-    if score >= 5 and rebound:
-        return "강한 트레이딩 바이", score, reasons
-    if score >= 3:
-        return "1차 분할매수", score, reasons
-    if score >= 1 and ratio30 is not None and ratio30 <= 103:
-        return "실적 전 탐색매수", score, reasons
-    if ratio30 is not None and ratio30 >= 110:
-        return "관망", score, reasons
-    return "매수 보류", score, reasons
+def metrics(key,df,source):
+ out=enrich(df); last=out.iloc[-1]; prev=out.iloc[-2] if len(out)>1 else last
+ s=out.close.tail(252); dd=s/s.cummax()*100-100
+ m={'name':ASSETS.get(key,{'name':key})['name'],'type':ASSETS.get(key,{'type':'index'})['type'],'date':out.index[-1].strftime('%Y-%m-%d'),'source':source,'close':cf(last.close),'change_pct':cf((last.close/prev.close-1)*100),'current_drawdown_pct':cf(dd.iloc[-1]),'mdd_252_pct':cf(dd.min())}
+ for w in (30,50,60,100,120,200):
+  m[f'sma{w}']=cf(last.get(f'sma{w}')); m[f'ratio{w}']=cf(last.get(f'ratio{w}')); m[f'dev{w}']=cf(last.get(f'ratio{w}')-100) if pd.notna(last.get(f'ratio{w}')) else None; m[f'ratio{w}_percentile_3y']=percentile(out[f'ratio{w}'])
+ c=out.close.tail(3); m['rebound_3d']=bool(len(c)>=3 and c.iloc[-1]>c.iloc[0] and c.iloc[-1]>c.min())
+ cols=['close','sma30','sma50','sma60','sma100','sma120','sma200','ratio30','ratio50','ratio60','ratio100','ratio120','ratio200','drawdown']
+ m['history']=[{'date':i.strftime('%Y-%m-%d'),**{c:cf(r.get(c)) for c in cols}} for i,r in out.tail(520).iterrows()]
+ return m,out
 
 
-def make_history(df: pd.DataFrame, limit: int = 260) -> list[dict[str, Any]]:
-    columns = ["close", "sma30", "sma50", "sma120", "ratio30", "ratio50", "ratio120", "drawdown"]
-    rows = []
-    for idx, row in df.tail(limit).iterrows():
-        item = {"date": idx.strftime("%Y-%m-%d")}
-        for col in columns:
-            if col in df.columns:
-                item[col] = clean_float(row.get(col))
-        rows.append(item)
-    return rows
+def event_study(out,threshold=-20):
+ dd=out.close/out.close.rolling(252,min_periods=50).max()*100-100
+ hits=[]; last_hit=-999
+ for i in range(1,len(dd)):
+  if dd.iloc[i]<=threshold and dd.iloc[i-1]>threshold and i-last_hit>60:
+   row={'date':out.index[i].strftime('%Y-%m-%d')}
+   for h in (5,20,60): row[f'r{h}']=cf((out.close.iloc[i+h]/out.close.iloc[i]-1)*100) if i+h<len(out) else None
+   row['to_minus30']=bool(dd.iloc[i:min(i+61,len(dd))].min()<=-30); hits.append(row); last_hit=i
+ valid=[x for x in hits if x['r60'] is not None]
+ def stat(k,kind='mean'):
+  a=[x[k] for x in valid if x[k] is not None]
+  if not a:return None
+  return cf(np.mean(a) if kind=='mean' else np.median(a))
+ return {'sample_count':len(valid),'period_start':valid[0]['date'] if valid else None,'period_end':valid[-1]['date'] if valid else None,'avg_5d':stat('r5'),'avg_20d':stat('r20'),'avg_60d':stat('r60'),'median_5d':stat('r5','median'),'median_20d':stat('r20','median'),'median_60d':stat('r60','median'),'positive_5d_pct':cf(np.mean([x['r5']>0 for x in valid])*100) if valid else None,'positive_20d_pct':cf(np.mean([x['r20']>0 for x in valid])*100) if valid else None,'positive_60d_pct':cf(np.mean([x['r60']>0 for x in valid])*100) if valid else None,'transition_to_minus30_pct':cf(np.mean([x['to_minus30'] for x in valid])*100) if valid else None,'events':valid[-10:]}
 
 
-def build_asset_metrics(key: str, df: pd.DataFrame, source: str) -> dict[str, Any]:
-    out = df.copy()
-    for window in (5, 30, 50, 120):
-        out[f"sma{window}"] = out["close"].rolling(window).mean()
-    for window in (30, 50, 120):
-        out[f"ratio{window}"] = out["close"] / out[f"sma{window}"] * 100
-    out["drawdown"] = (out["close"] / out["close"].rolling(252, min_periods=20).max() - 1) * 100
-    latest = out.dropna(subset=["close"]).iloc[-1]
-    previous = out.dropna(subset=["close"]).iloc[-2] if len(out.dropna(subset=["close"])) >= 2 else latest
-    current_dd, mdd = current_and_mdd(out["close"], 252)
-    close_3 = out["close"].dropna().tail(3)
-    rebound = len(close_3) >= 3 and close_3.iloc[-1] > close_3.iloc[0] and close_3.iloc[-1] > close_3.min()
-    metrics: dict[str, Any] = {
-        "name": ASSETS[key]["name"], "type": ASSETS[key]["type"],
-        "date": out.index[-1].strftime("%Y-%m-%d"), "source": source,
-        "close": clean_float(latest["close"]),
-        "change_pct": clean_float((latest["close"] / previous["close"] - 1) * 100),
-        "current_drawdown_pct": current_dd, "mdd_252_pct": mdd, "rebound_3d": bool(rebound),
-    }
-    for window in (30, 50, 120):
-        metrics[f"sma{window}"] = clean_float(latest.get(f"sma{window}"))
-        metrics[f"ratio{window}"] = clean_float(latest.get(f"ratio{window}"))
-        ratio = metrics[f"ratio{window}"]
-        metrics[f"dev{window}"] = clean_float(ratio - 100) if ratio is not None else None
-        metrics[f"ratio{window}_percentile_3y"] = percentile_of_last(out[f"ratio{window}"])
-    metrics["history"] = make_history(out)
-    return metrics
+def breadth(date,market):
+ try:
+  from pykrx import stock
+  raw=stock.get_market_ohlcv_by_ticker(date.replace('-',''),market=market); r=pd.to_numeric(raw['등락률'],errors='coerce').dropna()
+  a,d,z=int((r>0).sum()),int((r<0).sum()),int((r==0).sum())
+  return {'advancers':a,'decliners':d,'unchanged':z,'ad_ratio':cf(a/d) if d else None}
+ except Exception as e:return {'error':str(e),'advancers':None,'decliners':None,'unchanged':None,'ad_ratio':None}
 
 
-def fetch_breadth(date_yyyymmdd: str, market: str) -> dict[str, Any]:
-    try:
-        from pykrx import stock
-        raw = stock.get_market_ohlcv_by_ticker(date_yyyymmdd, market=market)
-        if raw is None or raw.empty:
-            raise RuntimeError("empty")
-        ret = pd.to_numeric(raw["등락률"], errors="coerce").dropna() if "등락률" in raw.columns else pd.Series(dtype=float)
-        adv, dec, flat = int((ret > 0).sum()), int((ret < 0).sum()), int((ret == 0).sum())
-        return {"advancers": adv, "decliners": dec, "unchanged": flat, "ad_ratio": clean_float(adv / dec) if dec else None}
-    except Exception as exc:
-        return {"advancers": None, "decliners": None, "unchanged": None, "ad_ratio": None, "error": str(exc)}
+def psychology(start,end,kospi):
+ try:
+  from pykrx import stock
+  raw=stock.get_market_trading_value_by_date(start.replace('-',''),end.replace('-',''),'KOSPI')
+  col=next(c for c in raw.columns if '개인' in str(c)); x=pd.to_numeric(raw[col],errors='coerce')/1e12
+  kret=kospi.close.pct_change()*100; df=pd.concat([x.rename('individual_net_buy_trn'),kret.rename('kospi_return_pct')],axis=1).dropna().tail(180)
+  slope,intercept=np.polyfit(df.iloc[:,0],df.iloc[:,1],1); pred=slope*df.iloc[-1,0]+intercept; resid=df.iloc[-1,1]-pred
+  if df.iloc[-1,0]>0 and df.iloc[-1,1]<0: label='개인 저가매수·외국인 매도 우위: 청산 미완료 가능성'
+  elif resid>1: label='개인 매수 대비 지수 반응이 강해 수급 개선 가능성'
+  elif resid<-1: label='개인 매수에도 지수 반응이 약해 탐욕·물타기 위험'
+  else: label='과거 회귀선 부근의 중립 수급'
+  return {'points':[{'date':i.strftime('%Y-%m-%d'),'x':cf(r.iloc[0]),'y':cf(r.iloc[1])} for i,r in df.iterrows()],'slope':cf(slope),'intercept':cf(intercept),'latest_residual':cf(resid),'interpretation':label}
+ except Exception as e:return {'points':[],'error':str(e),'interpretation':'개인 순매수 데이터 미산출'}
 
 
-def load_manual() -> dict[str, Any]:
-    try:
-        return json.loads(MANUAL.read_text(encoding="utf-8")) if MANUAL.exists() else {}
-    except Exception:
-        return {}
+def vkospi_view(m):
+ v=m.get('close'); p=m.get('ratio50_percentile_3y')
+ if v is None:return 'VKOSPI 미산출'
+ if v>=35:s='극단적 공포·강제청산 위험 구간'
+ elif v>=25:s='고변동성 경계 구간'
+ elif v>=18:s='불안 확대 구간'
+ else:s='안정 구간'
+ return f'{s}. 3년 백분위 {p:.1f}%' if p is not None else s
 
 
-def write_csv(payload: dict[str, Any]) -> None:
-    rows = []
-    for key, asset in payload["assets"].items():
-        for item in asset.get("history", []):
-            rows.append({"asset": key, **item})
-    pd.DataFrame(rows).to_csv(OUTPUT_CSV, index=False, encoding="utf-8-sig")
+def ndx_view(m):
+ r=m.get('ratio100')
+ if r is None:return '100일선 미산출'
+ if r<95:return '나스닥100이 100일선을 크게 하회: 글로벌 성장주 위험회피'
+ if r<100:return '나스닥100이 100일선 아래: 반도체 반등 신뢰도 제한'
+ if r<105:return '나스닥100이 100일선 부근 또는 소폭 상회: 중립'
+ return '나스닥100이 100일선 위: 미국 성장주 추세는 유지'
 
 
-def render_html(payload: dict[str, Any]) -> None:
-    template = TEMPLATE.read_text(encoding="utf-8")
-    embedded = json.dumps(payload, ensure_ascii=False, separators=(",", ":"))
-    OUTPUT_HTML.write_text(template.replace("__EMBEDDED_DATA__", embedded), encoding="utf-8")
+def valuation(assets,manual):
+ ref=manual.get('forward_valuation_reference',{}); out={'reference_date':ref.get('reference_date'),'source':ref.get('source'),'note':ref.get('note'),'rows':[]}
+ for key,c in ref.get('companies',{}).items():
+  price=assets.get(key,{}).get('close'); eps=c.get('eps',{}); row={'key':key,'name':c.get('name'),'price':price,'target_price':c.get('target_price')}
+  for y in ('2026','2027','2028'): row[f'eps_{y}']=eps.get(y); row[f'per_{y}']=cf(price/eps[y]) if price and eps.get(y) else None
+  p=row.get('per_2027')
+  row['interpretation']='미산출' if p is None else ('강한 감익 우려가 반영된 초저PER' if p<6 else '저PER이나 EPS 하향과 호재 반응 확인 필요' if p<8 else '중립 밸류에이션' if p<10 else '높은 이익 지속 신뢰 반영')
+  out['rows'].append(row)
+ return out
 
 
-def main() -> None:
-    DATA_DIR.mkdir(parents=True, exist_ok=True)
-    end_dt = datetime.now(SEOUL) + timedelta(days=1)
-    start_dt = end_dt - timedelta(days=1200)
-    start, end = start_dt.strftime("%Y-%m-%d"), end_dt.strftime("%Y-%m-%d")
-    assets, frames, errors = {}, {}, {}
-    for key, config in ASSETS.items():
-        try:
-            frame, source = fetch_asset(config, start, end)
-            frames[key] = frame
-            assets[key] = build_asset_metrics(key, frame, source)
-        except Exception as exc:
-            errors[key] = str(exc)
-    if "KOSPI" in assets:
-        kospi = assets["KOSPI"]
-        label, score, reasons = classify_index(kospi)
-        kospi.update(signal=label, score=score, reasons=reasons)
-        for key in ("SAMSUNG", "SKHYNIX"):
-            if key in assets and key in frames:
-                rs5 = frames[key]["close"].pct_change(5).iloc[-1] - frames["KOSPI"]["close"].pct_change(5).iloc[-1]
-                assets[key]["relative_strength_5d_pct"] = clean_float(rs5 * 100)
-                label, score, reasons = classify_stock(key, assets[key], kospi)
-                assets[key].update(signal=label, score=score, reasons=reasons)
-    if "KOSDAQ" in assets:
-        label, score, reasons = classify_index(assets["KOSDAQ"])
-        assets["KOSDAQ"].update(signal=label, score=score, reasons=reasons)
-    latest_date = max((v["date"] for v in assets.values()), default=datetime.now(SEOUL).strftime("%Y-%m-%d"))
-    payload = {
-        "generated_at": datetime.now(SEOUL).isoformat(timespec="seconds"),
-        "status": "ok" if assets else "error",
-        "methodology": {
-            "disparity_ratio": "현재가 ÷ 이동평균 × 100",
-            "deviation_pct": "이격도 지수 - 100",
-            "index_windows": [50, 120], "stock_tactical_window": 30, "drawdown_window": 252,
-            "principles": [
-                "지수는 50일·120일 이격도 지수를 기본으로 본다.",
-                "삼성전자·SK하이닉스는 30일 이격도 지수로 단기 과열·눌림을 판단하고 50·120일선과 MDD로 중기 위치를 보강한다.",
-                "호재에도 하락하면 사이클 고점 경고, 악재에도 저점을 지키면 바닥 선행 신호로 본다.",
-                "단순 호실적보다 금리 안정과 자본 공급자 안심 이벤트를 반등 트리거로 가중한다."
-            ]
-        },
-        "assets": assets,
-        "breadth": {
-            "KOSPI": fetch_breadth(latest_date.replace("-", ""), "KOSPI"),
-            "KOSDAQ": fetch_breadth(latest_date.replace("-", ""), "KOSDAQ")
-        },
-        "manual": load_manual(), "errors": errors,
-    }
-    OUTPUT_JSON.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
-    write_csv(payload)
-    render_html(payload)
-    print(f"Updated {OUTPUT_HTML} / {OUTPUT_JSON}")
+def classify(asset):
+ r=asset.get('ratio30') if asset.get('type')=='stock' else asset.get('ratio50'); dd=asset.get('current_drawdown_pct'); reb=asset.get('rebound_3d')
+ score=(2 if dd is not None and dd<=-20 else 1 if dd is not None and dd<=-10 else 0)+(1 if r is not None and r<100 else 0)+(1 if reb else 0)
+ if r is not None and r<90 and not reb:return '낙하 중·확인 필요',score
+ if score>=4 and reb:return '반등 확인',score
+ if score>=3:return '과매도 접근',score
+ if r is not None and r<100:return '추세 훼손',score
+ return '중립',score
 
 
-if __name__ == "__main__":
-    main()
+def main():
+ DATA_DIR.mkdir(parents=True,exist_ok=True); manual=load_manual(); enddt=datetime.now(SEOUL)+timedelta(days=1); startdt=enddt-timedelta(days=4000); start,end=startdt.strftime('%Y-%m-%d'),enddt.strftime('%Y-%m-%d')
+ assets={}; frames={}; errors={}; studies={}
+ for k,c in ASSETS.items():
+  try:
+   f,src=fetch_asset(c,start,end); frames[k]=f; assets[k],en=metrics(k,f,src); studies[k]=event_study(en); label,score=classify(assets[k]); assets[k]['signal']=label; assets[k]['score']=score
+  except Exception as e:errors[k]=str(e)
+ try:
+  f,src=fetch_vkospi(start,end); frames['VKOSPI']=f; assets['VKOSPI'],en=metrics('VKOSPI',f,src); assets['VKOSPI']['name']='VKOSPI'; assets['VKOSPI']['type']='volatility'; assets['VKOSPI']['interpretation']=vkospi_view(assets['VKOSPI'])
+ except Exception as e:errors['VKOSPI']=str(e)
+ if 'NDX' in assets:assets['NDX']['interpretation']=ndx_view(assets['NDX'])
+ if 'KOSPI' in assets:
+  psy=psychology(start,end,frames['KOSPI']); latest=assets['KOSPI']['date']
+ else:psy={'points':[],'interpretation':'미산출'}; latest=datetime.now(SEOUL).strftime('%Y-%m-%d')
+ val=valuation(assets,manual)
+ payload={'generated_at':datetime.now(SEOUL).isoformat(timespec='seconds'),'status':'ok' if assets else 'error','methodology':{'disparity_ratio':'현재가 ÷ 이동평균 × 100','deviation_pct':'이격도 지수 - 100','index_windows':[50,60,100,120,200],'stock_tactical_window':30,'drawdown_window':252},'assets':assets,'event_studies':studies,'market_psychology':psy,'valuation':val,'breadth':{'KOSPI':breadth(latest,'KOSPI'),'KOSDAQ':breadth(latest,'KOSDAQ')},'manual':manual,'errors':errors}
+ OUTPUT_JSON.write_text(json.dumps(payload,ensure_ascii=False,indent=2),encoding='utf-8')
+ rows=[]
+ for k,a in assets.items():
+  for h in a.get('history',[]): rows.append({'asset':k,**h})
+ pd.DataFrame(rows).to_csv(OUTPUT_CSV,index=False,encoding='utf-8-sig')
+ html=TEMPLATE.read_text(encoding='utf-8').replace('__EMBEDDED_DATA__',json.dumps(payload,ensure_ascii=False,separators=(',',':'))); OUTPUT_HTML.write_text(html,encoding='utf-8')
+ print('dashboard updated')
+
+if __name__=='__main__':main()
