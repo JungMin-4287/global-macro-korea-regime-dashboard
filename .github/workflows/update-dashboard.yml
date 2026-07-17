@@ -13,8 +13,8 @@ on:
       - "docs/data/manual_signals.json"
       - ".github/workflows/update-dashboard.yml"
   schedule:
-    - cron: "5 3 * * 1-5"   # 12:05 KST
-    - cron: "40 6 * * 1-5"  # 15:40 KST
+    - cron: "*/15 0-6 * * 1-5"  # 09:00~15:45 KST, every 15 minutes
+    - cron: "40 6 * * 1-5"      # 15:40 KST closing refresh
 
 permissions:
   contents: write
@@ -43,7 +43,7 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Update data and HTML
-        run: python scripts/update_dashboard_v4.py
+        run: python scripts/update_dashboard_v5.py
 
       - name: Commit updated dashboard
         run: |
