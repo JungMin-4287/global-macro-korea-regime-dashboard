@@ -1,0 +1,18 @@
+{
+  "generated_at": "초기 자동 갱신 전",
+  "status": "initial",
+  "methodology": {
+    "disparity_ratio": "현재가 ÷ 이동평균 × 100",
+    "deviation_pct": "이격도 지수 - 100",
+    "index_windows": [50, 120],
+    "stock_tactical_window": 30,
+    "drawdown_window": 252
+  },
+  "assets": {},
+  "breadth": {
+    "KOSPI": {},
+    "KOSDAQ": {}
+  },
+  "manual": {},
+  "errors": {}
+}
