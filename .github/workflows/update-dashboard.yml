@@ -44,7 +44,7 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Update data and HTML
-        run: python scripts/update_dashboard_v10.py
+        run: python scripts/update_dashboard_v11.py
 
       - name: Commit updated dashboard
         run: |
