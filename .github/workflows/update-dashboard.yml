@@ -15,6 +15,7 @@ on:
   schedule:
     - cron: "*/15 0-6 * * 1-5"  # 09:00~15:45 KST, every 15 minutes
     - cron: "40 6 * * 1-5"      # 15:40 KST closing refresh
+    - cron: "30 20 * * 1-5"     # 05:30 KST next day: US regular close settled (DST)
 
 permissions:
   contents: write
