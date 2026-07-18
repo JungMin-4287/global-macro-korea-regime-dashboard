@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-18T17:23:48+09:00",
+  "generated_at": "2026-07-18T20:16:56+09:00",
   "status": "ok",
   "methodology": {
     "disparity_ratio": "현재가 ÷ 이동평균 × 100",
@@ -26665,13 +26665,29 @@
       ],
       "disparity_interpretation": {
         "zone": "극단적 과매도·투매권",
-        "headline": "현재 구간: 극단적 과매도·투매권",
+        "headline": "기술적 구간: 극단적 과매도·투매권 · 트레이딩 판정: 실적 전 탐색매수",
         "summary": "30일 이격도 81.5(-18.5%), 50일 83.2(-16.8%), 120일 107.2(+7.2%). 252일 고점 대비 -29.7%",
-        "action": "과매도여도 낙하 중입니다. 갭하락 회복, 전저점 방어, 외국인 순매수 전환 전에는 탐색매수만 허용합니다."
+        "action": "과매도여도 낙하 중입니다. 갭하락 회복, 전저점 방어, 외국인 순매수 전환 전에는 탐색매수만 허용합니다. 하나증권 자료의 과매도 근거는 가점으로만 사용합니다. 현재 확인 1개(SOX 대비 5일 상대강도 개선). 추가 확인: 3거래일 반전, KOSPI 외국인 5일 순매수, 외국인 지분율 20일 상승. 허용 비중: 예정 비중의 10~15% 이내."
       },
       "is_proxy": false,
-      "signal": "낙하 중·확인 필요",
-      "score": 3
+      "signal": "실적 전 탐색매수",
+      "score": 3,
+      "trade_judgement": "실적 전 탐색매수",
+      "event_gate": {
+        "confirmation_count": 1,
+        "confirmations": {
+          "3거래일 반전": false,
+          "SOX 대비 5일 상대강도 개선": true,
+          "KOSPI 외국인 5일 순매수": false,
+          "외국인 지분율 20일 상승": false,
+          "빅테크 CAPEX·클라우드 상향": false
+        },
+        "fatal_risk": false,
+        "oversold_support_only": true,
+        "allowed_sizing": "예정 비중의 10~15% 이내",
+        "source": "하나증권 반도체 급락 과도 가능성 자료에 대한 사용자 제공 분석",
+        "rule": "MDD·DRAM 가격·ETF 유입은 과매도 가점일 뿐 단독 등급 상향 조건이 아니다."
+      }
     },
     "SKHYNIX": {
       "name": "SK하이닉스",
@@ -35551,13 +35567,29 @@
       ],
       "disparity_interpretation": {
         "zone": "극단적 과매도·투매권",
-        "headline": "현재 구간: 극단적 과매도·투매권",
+        "headline": "기술적 구간: 극단적 과매도·투매권 · 트레이딩 판정: 매수 보류·탐색매수 근접",
         "summary": "30일 이격도 79.1(-20.9%), 50일 84.1(-15.9%), 120일 124.4(+24.4%). 252일 고점 대비 -36.9%",
-        "action": "과매도여도 낙하 중입니다. 갭하락 회복, 전저점 방어, 외국인 순매수 전환 전에는 탐색매수만 허용합니다."
+        "action": "과매도여도 낙하 중입니다. 갭하락 회복, 전저점 방어, 외국인 순매수 전환 전에는 탐색매수만 허용합니다. 하나증권 자료의 과매도 근거는 가점으로만 사용합니다. 현재 확인 1개(외국인 지분율 20일 상승). 추가 확인: 3거래일 반전, SOX 대비 5일 상대강도 개선, KOSPI 외국인 5일 순매수. 허용 비중: 확인 신호 전 대기."
       },
       "is_proxy": false,
-      "signal": "낙하 중·확인 필요",
-      "score": 3
+      "signal": "매수 보류·탐색매수 근접",
+      "score": 3,
+      "trade_judgement": "매수 보류·탐색매수 근접",
+      "event_gate": {
+        "confirmation_count": 1,
+        "confirmations": {
+          "3거래일 반전": false,
+          "SOX 대비 5일 상대강도 개선": false,
+          "KOSPI 외국인 5일 순매수": false,
+          "외국인 지분율 20일 상승": true,
+          "빅테크 CAPEX·클라우드 상향": false
+        },
+        "fatal_risk": false,
+        "oversold_support_only": true,
+        "allowed_sizing": "확인 신호 전 대기",
+        "source": "하나증권 반도체 급락 과도 가능성 자료에 대한 사용자 제공 분석",
+        "rule": "MDD·DRAM 가격·ETF 유입은 과매도 가점일 뿐 단독 등급 상향 조건이 아니다."
+      }
     },
     "SOX": {
       "name": "SOX",
@@ -65448,6 +65480,40 @@
       ],
       "update_note": "외국인 수급·지분율과 직접 시가총액 비중은 KRX 자료로 자동 갱신한다. 순이익 비중과 컨센서스 하향 폭은 새 증권사 보고서가 입력될 때 갱신하는 이벤트 기반 자료다."
     },
+    "hana_oversold_event_logic": {
+      "title": "급락 과도 가능성과 하이퍼스케일러 실적 반응 게이트",
+      "input_date": "2026-07-18",
+      "source": "하나증권 반도체 급락 과도 가능성 자료에 대한 사용자 제공 분석",
+      "display_panel": false,
+      "purpose": "새 지표를 추가하지 않고 기존 MDD·메모리 가격·SOX 상대강도·외국인 수급·실적 반응의 해석 우선순위를 정한다.",
+      "reference_context": {
+        "skhynix_intraday_mdd_pct": -43.0,
+        "dram_spot_weekly_change_pct": 2.0,
+        "dram_spot_monthly_change_pct": 7.0,
+        "dram_etf_inflow_since_july_usd_bn": 4.5,
+        "hyperscaler_capex_growth_q1_pct": 80.0,
+        "hyperscaler_capex_growth_q3_estimate_pct": 92.0
+      },
+      "gating_rules": [
+        "장중 MDD 극단, DRAM 현물가격 상승, ETF 자금 유입은 과매도 근거를 강화하지만 단독으로 신호 등급을 올리지 않는다.",
+        "DRAM 가격이 상승해도 삼성전자·SK하이닉스가 신저가를 만들면 호재 불반응으로 감점한다.",
+        "하이퍼스케일러 실적과 CAPEX가 기대 이상인데도 SOX와 두 종목이 약하면 반등 시 비중 축소 또는 매수 보류를 유지한다.",
+        "실적이 다소 약해도 전저점 방어, 종가 회복, VKOSPI 하락, 외국인 순매수가 함께 나오면 바닥 선행 신호로 가점한다.",
+        "삼성전자는 극단 과매도만 확인된 경우 예정 비중의 10~15% 이내 실적 전 탐색매수까지만 허용한다.",
+        "SK하이닉스는 과매도만으로 매수 신호를 올리지 않고 하이퍼스케일러 서프라이즈, SOX 상대강도 개선, 외국인 현물 순매수, 전저점 방어 중 2개 이상 확인돼야 탐색매수로 전환한다.",
+        "1차 분할매수는 기존 신호군 4개 이상 개선과 치명적 위험 부재가 확인될 때만 허용한다."
+      ],
+      "current_reference_judgement": {
+        "SAMSUNG": "실적 전 탐색매수 유지·근거 강화",
+        "SKHYNIX": "매수 보류 유지·탐색매수 근접"
+      },
+      "event_priority": [
+        "Alphabet 매출 및 CAPEX와 발표 후 삼성전자·SK하이닉스 반응",
+        "Microsoft CAPEX 서프라이즈와 SK하이닉스 상대수익률",
+        "Meta·Amazon EPS 및 CAPEX와 발표 후 SOX 반응",
+        "한국 외국인 현물 순매수와 두 종목 외국인 지분율 변화"
+      ]
+    },
     "positioning": {
       "us_semiconductor_ls_percentile": 96,
       "us_semiconductor_flow_20d_z": -1.1,
@@ -65460,7 +65526,9 @@
     "notes": [
       "감익 시나리오는 자동 매수선이 아니라 현재 가격에 반영된 이익 훼손 정도를 점검하는 스트레스 테스트다.",
       "F-PER는 EPS 추정치가 갱신되면 manual_signals.json의 연도별 EPS를 함께 갱신해야 한다.",
-      "메리츠 보고서에서 가져온 시총·이익 비중은 기준일 고정값이며 현재 직접 시가총액 비중과 산식이 다르므로 동일한 값처럼 비교하지 않는다."
+      "메리츠 보고서에서 가져온 시총·이익 비중은 기준일 고정값이며 현재 직접 시가총액 비중과 산식이 다르므로 동일한 값처럼 비교하지 않는다.",
+      "하나증권 자료는 새 패널을 만들지 않고 기존 신호의 해석 및 등급 상향 게이트로만 사용한다.",
+      "필수성이 낮은 신규 지표·패널 추가는 중단하고 현재 핵심 패널의 정확도와 해석 개선을 우선한다."
     ]
   },
   "errors": {},
@@ -68225,5 +68293,10 @@
     "errors": [
       "최근 유효 거래일의 KOSPI 시가총액 자료를 받지 못했습니다"
     ]
+  },
+  "analysis_policy": {
+    "new_indicator_policy": "필수성이 낮은 신규 지표·패널 추가 중단",
+    "hana_logic_source": "하나증권 반도체 급락 과도 가능성 자료에 대한 사용자 제공 분석",
+    "hana_logic_usage": "기존 지표의 해석과 등급 상향 게이트로만 사용"
   }
 }

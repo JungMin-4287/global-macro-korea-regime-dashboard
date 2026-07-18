@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>한국 증시 레짐·메모리 트레이딩 대시보드</title>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
-  <link rel="stylesheet" href="styles.css?v=12">
+  <link rel="stylesheet" href="styles.css?v=13">
 </head>
 <body>
 <header>
@@ -27,7 +27,7 @@
           <div class="explain-step"><b>탐욕·추격 후보</b><span>지수가 오르는데 개인도 대규모 순매수합니다. 상승 추세일 수도 있지만 뒤늦은 추격매수라면 단기 고점 위험이 커집니다.</span></div>
         </div>
       </div>
-      <div class="chart"><canvas id="psychology"></canvas></div>
+      <div class="chart psychology-chart"><canvas id="psychology"></canvas></div>
       <div class="metrics" id="psychologyMetrics"></div>
       <div class="note" id="psychologyText"></div>
     </article>
@@ -43,7 +43,7 @@
           <div class="explain-step"><b>오른쪽 아래</b><span>개인이 물량을 받아도 지수가 더 밀리는 청산 미완료 후보입니다.</span></div>
         </div>
       </div>
-      <div class="chart wide-scatter"><canvas id="correctionFlow"></canvas></div>
+      <div class="chart"><canvas id="correctionFlow"></canvas></div>
       <div class="metrics" id="correctionFlowMetrics"></div>
       <div class="note" id="correctionFlowText"></div>
     </article>
@@ -72,41 +72,6 @@
       <h2>KOSPI 60일 이격도</h2>
       <div class="chart"><canvas id="KOSPI-ratio60"></canvas></div>
       <div class="interpret note" id="kospi60Text"></div>
-    </article>
-  </section>
-
-  <h2 class="section-title">반도체 추세 반등의 확인 조건</h2>
-  <section class="grid">
-    <article class="card span8">
-      <h2>외국인 누적 순매수와 반도체 외국인 지분율</h2>
-      <div class="explain-box">
-        <div class="explain-title">왜 중요한가?</div>
-        <p>보고서는 이익 우려가 완화돼도 추세 반등에는 외국인 수급 회복이 필요하다고 봅니다. 외국인 누적 순매수가 반전하고 삼성전자·SK하이닉스 지분율이 함께 올라야 단순 숏커버가 아닌 수급 복귀로 판단합니다.</p>
-      </div>
-      <div class="chart cycle-chart"><canvas id="foreignCycle"></canvas></div>
-      <div class="metrics" id="foreignCycleMetrics"></div>
-      <div class="note" id="foreignCycleText"></div>
-    </article>
-
-    <article class="card span4">
-      <h2>Top2 시총 비중과 이익 비중</h2>
-      <div class="explain-box">
-        <div class="explain-title">무엇을 비교하나?</div>
-        <p>삼성전자·SK하이닉스가 KOSPI 이익에서 차지하는 몫보다 시총 비중이 낮으면, 이익 신뢰가 회복될 때 격차 축소 여지가 있다는 논리입니다. 다만 보고서 수치는 계열사 보유지분 가치를 포함해 직접 시총 비중과 산식이 다릅니다.</p>
-      </div>
-      <div class="mid"><canvas id="top2Share"></canvas></div>
-      <div class="metrics compact-metrics" id="top2ShareMetrics"></div>
-      <div class="note" id="top2ShareText"></div>
-    </article>
-
-    <article class="card span12">
-      <h2>이익 전망 하향에 대한 주가 내성</h2>
-      <div class="explain-box">
-        <div class="explain-title">사이클주에서 가장 먼저 볼 것</div>
-        <p>과거에는 이익 추정치 하향이 시작되면 통상 수개월 안에 이익 고점이 왔습니다. 따라서 추정치가 내려가는지 자체보다, 내려가는데도 주가가 전저점을 지키는지 또는 상향에도 주가가 하락하는지를 선행 신호로 사용합니다.</p>
-      </div>
-      <div class="earnings-trust-grid" id="earningsTrust"></div>
-      <div class="note" id="earningsTrustText"></div>
     </article>
   </section>
 
@@ -168,6 +133,30 @@
     </article>
   </section>
 
+  <h2 class="section-title">반도체 추세 반등의 확인 조건</h2>
+  <section class="grid">
+    <article class="card span6">
+      <h2>외국인 누적 순매수와 반도체 외국인 지분율</h2>
+      <div class="explain-box"><div class="explain-title">왜 중요한가?</div><p>이익 우려가 완화돼도 추세 반등에는 외국인 수급 회복이 필요합니다. 외국인 누적 순매수가 반전하고 삼성전자·SK하이닉스 지분율이 함께 올라야 단순 숏커버가 아닌 자금 복귀로 판단합니다.</p></div>
+      <div class="cycle-chart"><canvas id="foreignCycle"></canvas></div>
+      <div class="metrics" id="foreignCycleMetrics"></div>
+      <div class="note" id="foreignCycleText"></div>
+    </article>
+    <article class="card span6">
+      <h2>반도체 Top2 시가총액 비중과 이익 비중</h2>
+      <div class="explain-box"><div class="explain-title">왜 중요한가?</div><p>보고서 기준으로는 삼성전자·SK하이닉스의 12개월 순이익 비중이 시가총액 비중보다 높았습니다. 이익 신뢰가 회복되면 이 격차가 줄어드는 방향이 반도체 상대수익률의 잠재 동력이 됩니다.</p></div>
+      <div class="cycle-chart"><canvas id="top2Share"></canvas></div>
+      <div class="metrics" id="top2ShareMetrics"></div>
+      <div class="note" id="top2ShareText"></div>
+    </article>
+    <article class="card span12">
+      <h2>이익 전망 하향에 대한 주가 내성</h2>
+      <div class="explain-box"><div class="explain-title">역사적 선행 신호</div><p>과거 반도체 사이클에서는 이익 추정치가 내려가도 주가가 더 이상 크게 하락하지 않는 시점이 이익 바닥보다 먼저 나타났습니다. 따라서 EPS 하향 자체보다 하향에 대한 주가 반응을 봅니다.</p></div>
+      <div class="earnings-trust-grid" id="earningsTrust"></div>
+      <div class="note" id="earningsTrustText"></div>
+    </article>
+  </section>
+
   <h2 class="section-title">시장 폭·포지셔닝·해석 기준</h2>
   <section class="grid">
     <article class="card span4"><h2>시장 폭</h2><table><thead><tr><th>시장</th><th>상승</th><th>하락</th><th>A/D</th></tr></thead><tbody id="breadth"></tbody></table><div class="note" id="breadthText" style="margin-top:12px"></div></article>
@@ -180,9 +169,10 @@
 <footer>자동 생성된 분석 보조 자료이며 투자 판단의 단독 근거로 사용할 수 없습니다.</footer>
 
 <script id="embedded" type="application/json">{}</script>
-<script src="js/core.js?v=12"></script>
-<script src="js/charts.js?v=12"></script>
-<script src="js/panels.js?v=12"></script>
-<script src="js/app.js?v=12"></script>
+<script src="js/core.js?v=13"></script>
+<script src="js/charts.js?v=13"></script>
+<script src="js/psychology-fix.js?v=13"></script>
+<script src="js/panels.js?v=13"></script>
+<script src="js/app.js?v=13"></script>
 </body>
 </html>
