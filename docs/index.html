@@ -18,7 +18,7 @@
   <h2 class="section-title">수급 심리와 변동성</h2>
   <section class="grid">
     <article class="card span6">
-      <h2>코스피 수익률과 개인 순매수</h2>
+      <h2>코스피 일간 수익률과 개인 순매수</h2>
       <div class="explain-box">
         <div class="explain-title">이 차트는 무엇을 보나?</div>
         <p>보통 개인은 지수가 떨어질 때 사고, 오를 때 파는 경향이 있어 점들이 우하향합니다. 평소 패턴에서 크게 벗어나는 날은 투자심리가 극단으로 움직였을 가능성이 있습니다.</p>
@@ -31,6 +31,23 @@
       <div class="metrics" id="psychologyMetrics"></div>
       <div class="note" id="psychologyText"></div>
     </article>
+
+    <article class="card span6">
+      <h2>고점 이후 개인 누적순매수와 KOSPI 낙폭</h2>
+      <div class="explain-box">
+        <div class="explain-title">이 차트는 무엇을 보나?</div>
+        <p>KOSPI가 신고가를 만든 날부터 개인이 얼마를 누적 순매수했는지와, 같은 기간 지수가 고점에서 얼마나 하락했는지를 연결합니다. 개인이 크게 샀는데도 낙폭이 깊어지면 외국인·기관 매도 압력이 더 강하다는 뜻입니다.</p>
+        <div class="explain-grid three">
+          <div class="explain-step"><b>오른쪽으로 이동</b><span>개인 누적 순매수가 커졌다는 뜻입니다.</span></div>
+          <div class="explain-step"><b>아래로 이동</b><span>고점 대비 KOSPI 낙폭이 깊어졌다는 뜻입니다.</span></div>
+          <div class="explain-step"><b>오른쪽 아래</b><span>개인이 물량을 받아도 지수가 더 밀리는 청산 미완료 후보입니다.</span></div>
+        </div>
+      </div>
+      <div class="chart wide-scatter"><canvas id="correctionFlow"></canvas></div>
+      <div class="metrics" id="correctionFlowMetrics"></div>
+      <div class="note" id="correctionFlowText"></div>
+    </article>
+
     <article class="card span6">
       <h2>VKOSPI 변동성</h2>
       <div class="explain-box">
