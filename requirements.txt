@@ -1,6 +1,6 @@
 pandas>=2.2
 numpy>=1.26
 yfinance>=0.2.50
-pykrx>=1.0.48
+pykrx>=1.2.8
 requests>=2.32
 lxml>=5.2
