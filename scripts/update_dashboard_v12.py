@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """Dashboard v12: tolerate KRX market-cap schema changes.
 
-The public pykrx market-cap table may expose only close, market cap, volume and
-trading value. Top2 market-cap share needs only market cap, so missing listed
-shares must not invalidate the whole snapshot. Aggregate foreign ownership is
-left unavailable when the required share-count columns are absent.
+The public pykrx market-cap response can change shape or omit share-count
+columns. Top2 market-cap share needs only market cap, so missing listed shares
+must not invalidate the whole snapshot. Aggregate foreign ownership remains
+unavailable when the required share-count columns are absent.
 """
 from __future__ import annotations
 
@@ -21,7 +21,46 @@ import update_dashboard_v7 as v7
 import update_dashboard_v8 as v8
 import update_dashboard_v9 as v9
 import update_dashboard_v10 as v10  # noqa: F401 - applies daily foreign-flow patch
-import update_dashboard_v11 as v11
+import update_dashboard_v11 as v11  # noqa: F401 - loads the v11 UI chain
+
+
+def _ticker_like(value: Any) -> bool:
+    return bool(re.fullmatch(r"\d{6}", str(value).strip()))
+
+
+def _normalise_market_cap(raw: pd.DataFrame) -> pd.DataFrame:
+    frame = raw.copy().dropna(how="all").dropna(axis=1, how="all")
+    if isinstance(frame.columns, pd.MultiIndex):
+        frame.columns = [" ".join(str(x) for x in col if str(x).lower() != "nan").strip() for col in frame.columns]
+    else:
+        frame.columns = [str(c).strip() for c in frame.columns]
+    frame.index = frame.index.map(lambda x: str(x).strip())
+
+    index_tickers = sum(_ticker_like(x) for x in frame.index)
+    column_tickers = sum(_ticker_like(x) for x in frame.columns)
+    if index_tickers == 0 and column_tickers > 10:
+        frame = frame.T
+        frame.index = frame.index.map(lambda x: str(x).strip())
+        frame.columns = [str(c).strip() for c in frame.columns]
+    return frame
+
+
+def _fetch_market_cap_table(stock: Any, target: str) -> tuple[pd.DataFrame, str]:
+    attempts: list[str] = []
+    if hasattr(stock, "get_market_cap_by_ticker"):
+        try:
+            raw = stock.get_market_cap_by_ticker(target, market="KOSPI")
+            if raw is not None and not raw.empty:
+                return _normalise_market_cap(raw), "KRX(pykrx) get_market_cap_by_ticker"
+        except Exception as exc:
+            attempts.append(f"by_ticker: {exc}")
+    try:
+        raw = stock.get_market_cap(target)
+        if raw is not None and not raw.empty:
+            return _normalise_market_cap(raw), "KRX(pykrx) get_market_cap"
+    except Exception as exc:
+        attempts.append(f"get_market_cap: {exc}")
+    raise RuntimeError(" / ".join(attempts) or "empty market-cap response")
 
 
 def market_snapshot_v12(date: str) -> dict[str, Any]:
@@ -33,11 +72,12 @@ def market_snapshot_v12(date: str) -> dict[str, Any]:
         target = (d - pd.Timedelta(days=offset)).strftime("%Y%m%d")
         try:
             kospi_tickers = set(stock.get_market_ticker_list(target, market="KOSPI"))
-            raw = stock.get_market_cap(target)
-            if raw is None or raw.empty:
+            raw, endpoint = _fetch_market_cap_table(stock, target)
+            if raw.empty:
                 continue
-            raw.index = raw.index.astype(str)
-            frame = raw.loc[raw.index.intersection(kospi_tickers)].copy()
+
+            overlap = raw.index.intersection(list(kospi_tickers))
+            frame = raw.loc[overlap].copy() if len(overlap) else raw.copy()
             mcap_col = v8._column(frame, ("시가총액",))
             if mcap_col is None:
                 errors.append(f"{target}: 시가총액 열 없음 ({list(frame.columns)})")
@@ -67,7 +107,7 @@ def market_snapshot_v12(date: str) -> dict[str, Any]:
                 "top2_direct_market_cap_trn_krw": base.cf(top2 / 1e12),
                 "top2_direct_market_cap_share_pct": base.cf(top2 / total * 100),
                 "kospi_foreign_ownership_mcap_weighted_pct": base.cf(foreign_pct),
-                "source": "KRX(pykrx) 종목별 시가총액",
+                "source": endpoint,
                 "note": note,
                 "available_columns": [str(c) for c in frame.columns],
             }
