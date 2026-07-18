@@ -2,9 +2,8 @@
 """Dashboard v10: harden KOSPI foreign net-buy fallback parsing.
 
 Naver's investor table sometimes exposes a two-level header and sometimes keeps
-trading dates in the index. v9 relied on header text only; v10 also detects the
-date column from values and, when necessary, uses the documented table order
-(date, individual, foreign, institution, ...).
+trading dates in the index. The parser accepts only a dense daily series, so a
+monthly/summary table can never be mistaken for daily foreign net buying.
 """
 from __future__ import annotations
 
@@ -32,7 +31,7 @@ def _parse_date(value: Any) -> pd.Timestamp | None:
         return None
     for fmt in ("%y.%m.%d", "%Y.%m.%d", "%Y-%m-%d", "%y-%m-%d", "%Y/%m/%d", "%y/%m/%d"):
         try:
-            return pd.Timestamp.strptime(text, fmt).normalize()
+            return pd.Timestamp(pd.to_datetime(text, format=fmt)).normalize()
         except Exception:
             pass
     parsed = pd.to_datetime(text, errors="coerce")
@@ -59,16 +58,20 @@ def _foreign_column(table: pd.DataFrame, date_col: Any) -> Any | None:
     if named is not None:
         return named
 
-    # Naver investorDealTrendDay documented order after date:
-    # 개인, 외국인, 기관계, 금융투자, 보험, 투신, ...
+    # If the flattened header lost the word 외국인, use the column immediately
+    # after 개인. Naver's table order is 개인 → 외국인 → 기관계.
+    personal = next((c for c in table.columns if "개인" in str(c)), None)
     cols = list(table.columns)
+    if personal is not None:
+        pos = cols.index(personal)
+        if pos + 1 < len(cols):
+            return cols[pos + 1]
+
     try:
         pos = cols.index(date_col)
     except ValueError:
         pos = 0
-    if pos + 2 < len(cols):
-        return cols[pos + 2]
-    return None
+    return cols[pos + 2] if pos + 2 < len(cols) else None
 
 
 def _normalise_table(raw: pd.DataFrame) -> pd.DataFrame:
@@ -80,21 +83,28 @@ def _normalise_table(raw: pd.DataFrame) -> pd.DataFrame:
         ]
     else:
         table.columns = [str(c).strip() for c in table.columns]
-
-    # Dates are often stored as the DataFrame index by read_html.
     if not isinstance(table.index, pd.RangeIndex):
         table = table.reset_index()
         table.columns = [str(c).strip() for c in table.columns]
     return table
 
 
+def _dense_daily(rows: list[tuple[pd.Timestamp, float]]) -> bool:
+    dates = sorted({d for d, _ in rows})
+    if len(dates) < 60:
+        return False
+    gaps = pd.Series(dates).diff().dt.days.dropna()
+    # Trading-day data normally has a median gap of 1 day and weekend gaps of 3.
+    return not gaps.empty and float(gaps.median()) <= 3 and float(gaps.quantile(0.9)) <= 7
+
+
 def _naver_foreign_net_buy_v10(end: str) -> tuple[pd.Series, str]:
-    rows: list[tuple[pd.Timestamp, float]] = []
     end_code = pd.Timestamp(end).strftime("%Y%m%d")
+    # The same sosok=01 endpoint already used successfully for the personal-flow panel goes first.
     variants = (
-        "https://finance.naver.com/sise/investorDealTrendDay.naver?bizdate={end}&sosok=&page={page}",
-        "https://finance.naver.com/sise/investorDealTrendDay.nhn?bizdate={end}&sosok=&page={page}",
         "https://finance.naver.com/sise/investorDealTrendDay.naver?bizdate={end}&sosok=01&page={page}",
+        "https://finance.naver.com/sise/investorDealTrendDay.nhn?bizdate={end}&sosok=01&page={page}",
+        "https://finance.naver.com/sise/investorDealTrendDay.naver?bizdate={end}&sosok=&page={page}",
     )
     errors: list[str] = []
 
@@ -106,9 +116,8 @@ def _naver_foreign_net_buy_v10(end: str) -> tuple[pd.Series, str]:
                 response = requests.get(url, headers=v9.HEADERS, timeout=20)
                 response.raise_for_status()
                 response.encoding = response.apparent_encoding or "euc-kr"
-                tables = pd.read_html(StringIO(response.text))
                 found = False
-                for raw in tables:
+                for raw in pd.read_html(StringIO(response.text)):
                     table = _normalise_table(raw)
                     date_col = _date_column(table)
                     if date_col is None:
@@ -122,27 +131,24 @@ def _naver_foreign_net_buy_v10(end: str) -> tuple[pd.Series, str]:
                         amount = v9._clean_number(row.get(foreign_col))
                         if date is not None and amount is not None:
                             variant_rows.append((date, amount / 10000.0))
-                if len({d for d, _ in variant_rows}) >= 260:
+                if len({d for d, _ in variant_rows}) >= 280:
                     break
                 if not found and page >= 3:
                     break
-            if len(variant_rows) >= 10:
-                rows = variant_rows
-                break
-            errors.append(f"{pattern}: {len(variant_rows)} rows")
+            if _dense_daily(variant_rows):
+                frame = (
+                    pd.DataFrame(variant_rows, columns=["date", "foreign_net_buy_trn"])
+                    .drop_duplicates("date", keep="first")
+                    .set_index("date")
+                    .sort_index()
+                )
+                return frame["foreign_net_buy_trn"], "Naver Finance KOSPI 외국인 순매수(억원→조원, 일별 구조 감지 파서)"
+            unique = len({d for d, _ in variant_rows})
+            errors.append(f"{pattern}: daily-density rejected ({unique} dates)")
         except Exception as exc:
             errors.append(f"{pattern}: {exc}")
 
-    if len(rows) < 10:
-        raise RuntimeError("Naver foreign flow parser failed: " + " / ".join(errors[-3:]))
-
-    frame = (
-        pd.DataFrame(rows, columns=["date", "foreign_net_buy_trn"])
-        .drop_duplicates("date", keep="first")
-        .set_index("date")
-        .sort_index()
-    )
-    return frame["foreign_net_buy_trn"], "Naver Finance KOSPI 외국인 순매수(억원→조원, 구조 감지 파서)"
+    raise RuntimeError("Naver foreign flow parser failed: " + " / ".join(errors[-3:]))
 
 
 def foreign_net_buy_v10(start: str, end: str) -> tuple[pd.Series, str]:
@@ -155,7 +161,7 @@ def foreign_net_buy_v10(start: str, end: str) -> tuple[pd.Series, str]:
         s, source = _naver_foreign_net_buy_v10(end)
         start_ts, end_ts = pd.Timestamp(start), pd.Timestamp(end)
         s = s[(s.index >= start_ts) & (s.index <= end_ts)]
-        if len(s) >= 10:
+        if len(s) >= 60:
             return s, source
         errors.append(f"Naver common period insufficient ({len(s)})")
     except Exception as exc:
@@ -170,8 +176,11 @@ def foreign_net_buy_v10(start: str, end: str) -> tuple[pd.Series, str]:
                 .set_index("date")["daily_net_buy_trn"]
                 .sort_index()
             )
-            if len(s) >= 10:
+            # Do not reuse the erroneous sparse archive from the previous parser.
+            rows = [(pd.Timestamp(i), float(v)) for i, v in s.items()]
+            if _dense_daily(rows):
                 return s, "GitHub CSV 외국인 순매수 보존자료(원자료 일시 실패)"
+            errors.append("archive rejected: not a dense daily series")
         except Exception as exc:
             errors.append(f"archive: {exc}")
     raise RuntimeError(" / ".join(errors))
@@ -194,6 +203,8 @@ if __name__ == "__main__":
     base.main()
     payload = json.loads(base.OUTPUT_JSON.read_text(encoding="utf-8"))
     payload["cycle_signals"] = v8.build_cycle_signals(payload)
+    # Save collection errors separately in the payload so the UI/debugging never hides a failed source.
+    payload["cycle_signals"]["foreign"]["collection_errors"] = payload["cycle_signals"].get("errors", [])
     base.OUTPUT_JSON.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
     v7.append_archives()
     v9.persist_foreign_archives(payload)
