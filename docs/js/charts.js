@@ -51,13 +51,43 @@ DASH.linearFit=points=>{
   if(!points.length)return[];
   const xs=points.map(p=>Number(p.x)),ys=points.map(p=>Number(p.y));
   const mx=xs.reduce((a,b)=>a+b,0)/xs.length,my=ys.reduce((a,b)=>a+b,0)/ys.length;
-  const den=xs.reduce((s,x,i)=>s+(x-mx)*(x-mx),0);
-  const slope=den===0?0:xs.reduce((s,x,i)=>s+(x-mx)*(ys[i]-my),0)/den;
+  const den=xs.reduce((s,x)=>s+(x-mx)*(x-mx),0);
+  const slope=den===0?0:xs.reduce((sum,x,i)=>sum+(x-mx)*(ys[i]-my),0)/den;
   const intercept=my-slope*mx,min=Math.min(...xs),max=Math.max(...xs);
   return [{x:min,y:slope*min+intercept},{x:max,y:slope*max+intercept}];
 };
 
+DASH.renderCorrectionFlow=m=>{
+  const e=document.getElementById('correctionFlow'),metrics=document.getElementById('correctionFlowMetrics'),text=document.getElementById('correctionFlowText'),f=DASH.f,C=DASH.C;
+  if(!e||!metrics||!text)return;
+  const points=(m.points||[]).map(d=>({x:Number(d.x),y:Number(d.y),date:d.date,peak_date:d.peak_date,close:d.close})).filter(d=>Number.isFinite(d.x)&&Number.isFinite(d.y));
+  if(!points.length){
+    e.parentElement.innerHTML='<div class="plain-conclusion bad-conclusion"><b>누적 수급 지도 미산출</b><br>개인 순매수와 KOSPI 가격의 공통 날짜가 부족합니다. 다음 자동 실행에서 KRX·네이버 금융을 다시 조회합니다.</div>';
+    metrics.innerHTML='<div class="metric"><span class="muted">현재 낙폭</span><b>-</b></div><div class="metric"><span class="muted">개인 누적순매수</span><b>-</b></div><div class="metric"><span class="muted">조정 시작일</span><b>-</b></div><div class="metric"><span class="muted">현재 구간</span><b>미산출</b></div>';
+    text.innerHTML=`<div class="headline">현재 판단을 만들 수 없습니다.</div><div>${m.interpretation||m.error||'수급 데이터 미산출'}</div>`;
+    return;
+  }
+  const regression=(m.regression||DASH.linearFit(points)).map(d=>({x:Number(d.x),y:Number(d.y)}));
+  const marked=(m.highlights||[]).map(d=>({x:Number(d.x),y:Number(d.y),date:d.date,label:d.label})).filter(d=>Number.isFinite(d.x)&&Number.isFinite(d.y));
+  const latest=m.latest||points[points.length-1];
+  new Chart(e,{type:'scatter',data:{datasets:[
+    {label:'조정구간 일별 관측치',data:points,backgroundColor:'rgba(160,180,205,.62)',borderColor:'rgba(110,130,155,.8)',pointRadius:3.3},
+    {label:'평균 관계',type:'line',data:regression,borderColor:C.a,borderDash:[6,5],borderWidth:2,pointRadius:0},
+    {label:'현재',data:[{x:Number(latest.x),y:Number(latest.y),date:latest.date}],backgroundColor:C.r,borderColor:'#fff',borderWidth:2,pointRadius:9},
+    {label:'주요 변곡',data:marked,backgroundColor:C.w,borderColor:'#9b6b00',borderWidth:2,pointRadius:7}
+  ]},options:{responsive:true,maintainAspectRatio:false,interaction:{mode:'nearest',intersect:false},plugins:{legend:{labels:{color:'#c8d2e8',boxWidth:18}},pointLabels:{enabled:true,datasetIndex:3},tooltip:{callbacks:{label:ctx=>{const d=ctx.raw||{};return `${d.date||ctx.dataset.label}: 개인 누적 ${f(d.x)}조원 · 낙폭 ${f(d.y)}%`}}}},scales:{x:{title:{display:true,text:'고점 이후 개인 누적순매수(조원)',color:'#95a3bd'},ticks:{color:'#95a3bd'},grid:{color:'rgba(43,59,94,.3)'}},y:{title:{display:true,text:'KOSPI 고점 대비 낙폭(%)',color:'#95a3bd'},ticks:{color:'#95a3bd'},grid:{color:'rgba(43,59,94,.3)'}}}}});
+
+  const x=Number(latest.x),y=Number(latest.y),zone=m.zone||'관찰';
+  let action='외국인 현물·선물 수급과 시장 폭을 함께 확인합니다.';
+  if(y<=-20&&x>5)action='개인이 대규모로 물량을 받았는데도 지수가 깊게 하락했습니다. 외국인 순매수 전환과 종가 회복 전에는 청산 완료로 판단하지 않습니다.';
+  else if(y<=-20&&x<=0)action='개인 투매가 동반된 극단 구간입니다. 매도 고갈 후보지만 VKOSPI가 고점을 통과하고 지수가 전저점을 지키는지 확인합니다.';
+  else if(y<=-10&&x>0)action='개인 저가매수가 누적되고 있습니다. 가격 반전 없이 누적매수만 커지면 물타기 위험으로 봅니다.';
+  metrics.innerHTML=`<div class="metric"><span class="muted">현재 낙폭</span><b>${f(y)}%</b></div><div class="metric"><span class="muted">개인 누적순매수</span><b>${f(x)}조원</b></div><div class="metric"><span class="muted">조정 시작일</span><b>${latest.peak_date||'-'}</b></div><div class="metric"><span class="muted">현재 구간</span><b>${zone}</b></div>`;
+  text.innerHTML=`<div class="headline">현재 위치: ${zone}</div><div><b>무슨 뜻?</b> ${m.interpretation||''}</div><div class="action"><b>투자 판단:</b> ${action}</div><div class="status-line">${m.window||''} · ${m.source||'-'} · 기준일 ${latest.date||'-'}</div>`;
+};
+
 DASH.renderPsychology=p=>{
+  DASH.renderCorrectionFlow(p.correction_map||{});
   const e=document.getElementById('psychology'),points=p.points||[],highlights=p.highlights||[],f=DASH.f,C=DASH.C,metrics=document.getElementById('psychologyMetrics'),text=document.getElementById('psychologyText');
   if(!points.length){
     if(e&&e.parentElement)e.parentElement.innerHTML='<div class="note bad-note"><b>수급 데이터 미산출</b><br>KRX와 네이버 금융을 순차 조회했지만 가격 데이터와 결합할 수 있는 개인 순매수 시계열을 받지 못했습니다.</div>';
@@ -65,8 +95,6 @@ DASH.renderPsychology=p=>{
     text.innerHTML=`<div class="headline">현재 판단을 만들 수 없습니다.</div><div>${p.interpretation||'개인 순매수 데이터 미산출'}</div><div class="status-line">${p.source||p.error||'다음 자동 실행에서 재시도합니다.'}</div>`;
     return;
   }
-
-  // 참고 장표와 같은 방향: X축=KOSPI 수익률, Y축=개인 순매수.
   const scatter=points.map(d=>({x:Number(d.y),y:Number(d.x),date:d.date}));
   const fit=DASH.linearFit(scatter);
   const marked=highlights.map(d=>({x:Number(d.y),y:Number(d.x),label:d.label,date:d.date}));
@@ -104,7 +132,6 @@ DASH.renderEnv=()=>{
     const last3=closes.slice(-3),falling=last3.length>=2&&last3[last3.length-1]<last3[last3.length-2],twoDayFall=last3.length>=3&&last3[2]<last3[1]&&last3[1]<last3[0];
     const recentHigh=closes.length?Math.max(...closes.slice(-20)):null,offHigh=recentHigh&&Number.isFinite(level)?(level/recentHigh-1)*100:null;
     vm.innerHTML=`<div class="metric"><span class="muted">현재 VKOSPI</span><b>${f(level)}</b></div><div class="metric"><span class="muted">하루 예상 변동폭</span><b>±${f(dailyMove)}%</b><small>연환산값 단순 환산</small></div><div class="metric"><span class="muted">20일 평균</span><b>${f(v.sma20)}</b></div><div class="metric"><span class="muted">20일 고점 대비</span><b>${f(offHigh)}%</b></div>`;
-
     if(h.length){
       const pointRadius=h.length<3?7:h.length<15?3:0;
       const datasets=[{label:v.is_proxy?'KOSPI 20일 실현변동성(대체)':'VKOSPI',data:closes,borderColor:C.r,backgroundColor:'rgba(255,101,119,.12)',fill:true,pointRadius,borderWidth:3,spanGaps:true,tension:.18}];
@@ -115,7 +142,6 @@ DASH.renderEnv=()=>{
     }else{
       canvas.parentElement.innerHTML='<div class="plain-conclusion bad-conclusion"><b>VKOSPI 이력 미수집</b><br>현재값은 확인했지만 차트를 그릴 날짜별 시계열이 없습니다. 다음 자동 실행에서 Investing.com·KRX 이력을 다시 수집합니다.</div>';
     }
-
     const zone=v.disparity_interpretation?.zone||'관찰';
     let meaning=Number.isFinite(level)?`현재 ${f(level)}는 ${zone}입니다. 옵션시장은 하루 약 ±${f(dailyMove)}% 수준의 큰 움직임을 반영하고 있습니다.`:'현재 VKOSPI 수준을 계산하지 못했습니다.';
     let action='지수 반등과 VKOSPI 하락이 동시에 나오는지 확인합니다.';
