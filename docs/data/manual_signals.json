@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-17",
+  "updated_at": "2026-07-18",
   "credit": {
     "kospi_credit_balance_trn_krw": null,
     "kosdaq_credit_balance_trn_krw": null,
@@ -74,6 +74,22 @@
       {"earnings_decline_pct": 90, "kospi200_per": 17.01, "samsung_net_income_trn_krw": 38, "skhynix_net_income_trn_krw": 28}
     ]
   },
+  "cycle_rebound_reference": {
+    "title": "반도체 이익 신뢰와 수급 회복 조건",
+    "reference_date": "2026-07-15",
+    "source": "메리츠증권 ‘시장이 추세 반등한다면’",
+    "historical_rule": "과거 반도체 사이클에서는 이익 추정치 하향이 시작되면 통상 6개월 내 이익 피크아웃이 도래했다. 따라서 하향 조정 자체보다 하향 조정에 대한 주가 반응이 둔감해지는지를 선행 신호로 본다.",
+    "reported_top2_market_cap_share_pct": 62.7,
+    "reported_top2_12m_net_income_share_pct": 73.5,
+    "house_top2_12m_net_income_share_pct": 76.8,
+    "reported_share_method": "삼성전자·SK하이닉스에 삼성물산·삼성생명·삼성화재·SK스퀘어의 지분가치를 포함한 장표 기준",
+    "rebound_conditions": [
+      "단기 이익 전망치 하향에도 삼성전자·SK하이닉스가 전저점을 지키고 상대강도가 개선되는가",
+      "KOSPI 외국인 누적 순매수가 반전하고 외국인 지분율이 저점에서 상승하는가",
+      "반도체 Top2 시가총액 비중과 12개월 순이익 비중의 격차가 축소되는가"
+    ],
+    "update_note": "외국인 수급·지분율과 직접 시가총액 비중은 KRX 자료로 자동 갱신한다. 순이익 비중과 컨센서스 하향 폭은 새 증권사 보고서가 입력될 때 갱신하는 이벤트 기반 자료다."
+  },
   "positioning": {
     "us_semiconductor_ls_percentile": 96,
     "us_semiconductor_flow_20d_z": -1.1,
@@ -85,6 +101,7 @@
   },
   "notes": [
     "감익 시나리오는 자동 매수선이 아니라 현재 가격에 반영된 이익 훼손 정도를 점검하는 스트레스 테스트다.",
-    "F-PER는 EPS 추정치가 갱신되면 manual_signals.json의 연도별 EPS를 함께 갱신해야 한다."
+    "F-PER는 EPS 추정치가 갱신되면 manual_signals.json의 연도별 EPS를 함께 갱신해야 한다.",
+    "메리츠 보고서에서 가져온 시총·이익 비중은 기준일 고정값이며 현재 직접 시가총액 비중과 산식이 다르므로 동일한 값처럼 비교하지 않는다."
   ]
 }
