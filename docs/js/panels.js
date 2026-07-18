@@ -11,6 +11,49 @@ DASH.renderVal=()=>{
   document.getElementById('valuationNote').textContent=`기준 EPS: ${v.source||'-'} (${v.reference_date||'-'}). ${v.note||''} 저PER이라도 EPS 하향 가속·호재 불반응이면 매수 신호로 쓰지 않습니다.`;
 };
 
+DASH.renderCycleSignals=()=>{
+  const D=DASH.data,c=D.cycle_signals||{},f=DASH.f,C=DASH.C;
+  const foreign=c.foreign||{},canvas=document.getElementById('foreignCycle'),metrics=document.getElementById('foreignCycleMetrics'),text=document.getElementById('foreignCycleText');
+  const flow=foreign.points||[],own=foreign.ownership||[];
+  if(canvas&&(flow.length||own.length)){
+    const dates=[...new Set([...flow.map(x=>x.date),...own.map(x=>x.date)])].sort();
+    const fm=new Map(flow.map(x=>[x.date,x.cumulative_net_buy_trn]));
+    const om=new Map(own.map(x=>[x.date,x]));
+    new Chart(canvas,{type:'line',data:{labels:dates,datasets:[
+      {label:'KOSPI 외국인 누적 순매수(조원)',data:dates.map(d=>fm.has(d)?fm.get(d):null),borderColor:C.a,backgroundColor:'rgba(111,168,255,.08)',fill:true,pointRadius:0,borderWidth:2.4,spanGaps:true,yAxisID:'y'},
+      {label:'삼성전자 외국인 지분율',data:dates.map(d=>om.get(d)?.samsung_pct??null),borderColor:C.w,pointRadius:0,borderWidth:1.8,spanGaps:true,yAxisID:'y1'},
+      {label:'SK하이닉스 외국인 지분율',data:dates.map(d=>om.get(d)?.skhynix_pct??null),borderColor:C.c,pointRadius:0,borderWidth:1.8,spanGaps:true,yAxisID:'y1'}
+    ]},options:{responsive:true,maintainAspectRatio:false,interaction:{mode:'index',intersect:false},plugins:{legend:{labels:{color:'#c8d2e8',boxWidth:18}},tooltip:{callbacks:{label:ctx=>`${ctx.dataset.label}: ${f(ctx.parsed.y)}${ctx.dataset.yAxisID==='y'?'조원':'%'}`}}},scales:{x:{ticks:{color:'#95a3bd',maxTicksLimit:8},grid:{color:'rgba(43,59,94,.24)'}},y:{position:'left',title:{display:true,text:'누적 순매수(조원)',color:'#95a3bd'},ticks:{color:'#95a3bd'},grid:{color:'rgba(43,59,94,.3)'}},y1:{position:'right',title:{display:true,text:'외국인 지분율(%)',color:'#95a3bd'},ticks:{color:'#95a3bd'},grid:{drawOnChartArea:false}}}}});
+  }else if(canvas){canvas.parentElement.innerHTML='<div class="plain-conclusion bad-conclusion"><b>외국인 수급 미산출</b><br>KRX 외국인 순매수 또는 지분율 데이터를 받지 못했습니다.</div>'}
+  if(metrics){
+    const snap=foreign.market_snapshot||{};
+    metrics.innerHTML=`<div class="metric"><span class="muted">최근 20일 순매수</span><b>${f(foreign.net_buy_20d_trn)}조원</b></div><div class="metric"><span class="muted">삼성 외국인 지분율</span><b>${f(foreign.samsung_foreign_ownership_pct)}%</b><small>20일 ${f(foreign.samsung_foreign_ownership_20d_change_pp)}%p</small></div><div class="metric"><span class="muted">하이닉스 외국인 지분율</span><b>${f(foreign.skhynix_foreign_ownership_pct)}%</b><small>20일 ${f(foreign.skhynix_foreign_ownership_20d_change_pp)}%p</small></div><div class="metric"><span class="muted">KOSPI 외국인 보유 비중</span><b>${f(snap.kospi_foreign_ownership_mcap_weighted_pct)}%</b><small>${snap.date||'-'} 확정치</small></div>`;
+  }
+  if(text){
+    const sig=foreign.signal||'데이터 축적 중';
+    let meaning='외국인 누적 순매수와 두 종목의 외국인 지분율을 함께 확인합니다.';
+    let action='외국인 순매수와 지분율이 동시에 개선될 때 추세 반등 신뢰도를 높입니다.';
+    if(sig.includes('압력')){meaning='최근 외국인 순매도가 계속돼 국내 개인 매수만으로 가격을 방어하는 상태일 수 있습니다.';action='외국인 5·20일 누적 순매수가 플러스로 전환하고 두 종목 중 하나 이상 지분율이 상승하기 전까지 매수 비중을 제한합니다.'}
+    else if(sig.includes('관찰')){meaning='순매수는 반전했지만 외국인 보유 비중 회복이 아직 뚜렷하지 않습니다.';action='단기 숏커버인지 실제 자금 복귀인지 2~3거래일 더 확인합니다.'}
+    else if(sig.includes('확인')){meaning='외국인 순매수와 보유 비중이 함께 개선되는 추세 반등 조건이 나타났습니다.';action='시장 폭과 삼성전자·SK하이닉스 전저점 방어까지 동반되면 분할매수 신뢰도를 높입니다.'}
+    text.innerHTML=`<div class="headline">현재 판단: ${sig}</div><div><b>무슨 뜻?</b> ${meaning}</div><div class="action"><b>투자 판단:</b> ${action}</div><div class="status-line">${foreign.source||'-'} · 외국인 보유주식수는 확정치 시차가 있을 수 있습니다.</div>`;
+  }
+
+  const t=c.top2_share_gap||{},shareCanvas=document.getElementById('top2Share');
+  if(shareCanvas){
+    const labels=['현재 직접 시총 비중','보고서 시총 비중*','12M 순이익 비중','당사 순이익 추정'];
+    const vals=[t.current_direct_market_cap_share_pct,t.reported_market_cap_share_pct,t.reported_12m_net_income_share_pct,t.house_12m_net_income_share_pct];
+    new Chart(shareCanvas,{type:'bar',data:{labels,datasets:[{label:'비중(%)',data:vals,backgroundColor:[C.a,C.b,C.w,C.c],borderWidth:0}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>`${ctx.label}: ${f(ctx.parsed.y)}%`}}},scales:{x:{ticks:{color:'#95a3bd',maxRotation:0,minRotation:0},grid:{display:false}},y:{beginAtZero:false,suggestedMin:40,suggestedMax:85,ticks:{color:'#95a3bd'},grid:{color:'rgba(43,59,94,.3)'}}}}});
+  }
+  const sm=document.getElementById('top2ShareMetrics'),st=document.getElementById('top2ShareText');
+  if(sm)sm.innerHTML=`<div class="metric"><span class="muted">현재 직접 시총 비중</span><b>${f(t.current_direct_market_cap_share_pct)}%</b></div><div class="metric"><span class="muted">보고서 기준 격차</span><b>${f(t.reported_gap_pp)}%p</b></div><div class="metric"><span class="muted">보고서 기준일</span><b>${t.reference_date||'-'}</b></div><div class="metric"><span class="muted">현재 시총 기준일</span><b>${t.current_reference_date||'-'}</b></div>`;
+  if(st)st.innerHTML=`<div class="headline">보고서의 핵심: 이익 비중이 시총 비중보다 높았다</div><div>보고서 기준 시총 비중 ${f(t.reported_market_cap_share_pct)}%와 12개월 순이익 비중 ${f(t.reported_12m_net_income_share_pct)}%의 차이는 ${f(t.reported_gap_pp)}%p입니다. 이익 신뢰가 회복되면 이 격차가 줄어드는 방향을 반등 여력으로 본 논리입니다.</div><div class="action"><b>주의:</b> 현재 직접 시총 비중은 삼성전자·SK하이닉스 보통주만 계산한 값이며, 보고서 수치는 계열사 보유지분 가치를 포함하므로 서로 같은 산식이 아닙니다.</div><div class="status-line">${t.source||'-'} · ${t.method_note||''}</div>`;
+
+  const et=c.earnings_trust||{},box=document.getElementById('earningsTrust'),etText=document.getElementById('earningsTrustText');
+  if(box)box.innerHTML=(et.rows||[]).map(r=>`<article class="trust-card"><div class="trust-head"><b>${r.name}</b><span class="badge ${r.status?.includes('회복')?'good':r.status?.includes('경고')||r.status?.includes('우려')?'bad':'neutral'}">${r.status||'미산출'}</span></div><div class="trust-metrics"><div><span>5일 주가</span><b>${f(r.price_return_5d_pct)}%</b></div><div><span>20일 주가</span><b>${f(r.price_return_20d_pct)}%</b></div><div><span>2027E EPS 변화</span><b>${r.eps_2027_change_pct==null?'축적 중':f(r.eps_2027_change_pct)+'%'}</b></div><div><span>추정치 기준일</span><b>${r.latest_reference_date||'-'}</b></div></div></article>`).join('');
+  if(etText)etText.innerHTML=`<div class="headline">역사적 기준</div><div>${et.historical_rule||'컨센서스 하향과 주가 반응을 함께 봅니다.'}</div><div class="action"><b>운영 방식:</b> EPS 추정치는 사용자가 제공한 최신 증권사 보고서가 manual_signals.json에 입력될 때 스냅샷을 저장합니다. 하향 조정에도 5일 주가가 버티면 내성 회복, 상향에도 주가가 하락하면 호재 불반응으로 판정합니다.</div><div class="status-line">${et.update_note||''} · ${et.source||'-'} (${et.reference_date||'-'})</div>`;
+};
+
 DASH.findXForY=(rows,xKey,yKey,target)=>{
   if(!Array.isArray(rows)||rows.length<2||target==null)return null;
   const a=[...rows].sort((x,y)=>x[xKey]-y[xKey]);
@@ -77,6 +120,6 @@ DASH.renderOther=()=>{
 };
 
 DASH.renderErrors=()=>{
-  const entries=Object.entries(DASH.data.errors||{});
+  const entries=[...Object.entries(DASH.data.errors||{}),...((DASH.data.cycle_signals?.errors||[]).map((v,i)=>[`cycle_${i+1}`,v]))];
   document.getElementById('errors').innerHTML=entries.length?entries.map(([k,v])=>`<div><b>${k}</b>: ${v}</div>`).join(''):'모든 핵심 데이터가 정상 수집됐습니다.';
 };
