@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-18T14:42:03+09:00",
+  "generated_at": "2026-07-18T14:47:08+09:00",
   "status": "ok",
   "methodology": {
     "disparity_ratio": "현재가 ÷ 이동평균 × 100",
@@ -64111,7 +64111,7 @@
         "date": "2026-07-16",
         "x": 3.6647,
         "y": -6.3672,
-        "residual": -3.98742779126189,
+        "residual": -3.987427791261889,
         "label": "7/16"
       },
       {
@@ -65463,5 +65463,57 @@
       "메리츠 보고서에서 가져온 시총·이익 비중은 기준일 고정값이며 현재 직접 시가총액 비중과 산식이 다르므로 동일한 값처럼 비교하지 않는다."
     ]
   },
-  "errors": {}
+  "errors": {},
+  "cycle_signals": {
+    "foreign": {
+      "points": [],
+      "ownership": [],
+      "source": null,
+      "market_snapshot": {},
+      "signal": "데이터 축적 중"
+    },
+    "top2_share_gap": {
+      "current_direct_market_cap_share_pct": null,
+      "current_reference_date": null,
+      "reported_market_cap_share_pct": 62.7,
+      "reported_12m_net_income_share_pct": 73.5,
+      "house_12m_net_income_share_pct": 76.8,
+      "reported_gap_pp": 10.8,
+      "method_note": "삼성전자·SK하이닉스에 삼성물산·삼성생명·삼성화재·SK스퀘어의 지분가치를 포함한 장표 기준",
+      "source": "메리츠증권 ‘시장이 추세 반등한다면’",
+      "reference_date": "2026-07-15"
+    },
+    "earnings_trust": {
+      "rows": [
+        {
+          "available": false,
+          "latest_reference_date": "2026-06-01",
+          "key": "SAMSUNG",
+          "name": "삼성전자",
+          "price_return_5d_pct": -8.2734,
+          "price_return_20d_pct": -29.6552,
+          "status": "컨센서스 스냅샷 축적 중"
+        },
+        {
+          "available": false,
+          "latest_reference_date": "2026-06-01",
+          "key": "SKHYNIX",
+          "name": "SK하이닉스",
+          "price_return_5d_pct": -15.7365,
+          "price_return_20d_pct": -31.3966,
+          "status": "컨센서스 스냅샷 축적 중"
+        }
+      ],
+      "historical_rule": "과거 반도체 사이클에서는 이익 추정치 하향이 시작되면 통상 6개월 내 이익 피크아웃이 도래했다. 따라서 하향 조정 자체보다 하향 조정에 대한 주가 반응이 둔감해지는지를 선행 신호로 본다.",
+      "update_note": "외국인 수급·지분율과 직접 시가총액 비중은 KRX 자료로 자동 갱신한다. 순이익 비중과 컨센서스 하향 폭은 새 증권사 보고서가 입력될 때 갱신하는 이벤트 기반 자료다.",
+      "source": "메리츠증권 ‘시장이 추세 반등한다면’",
+      "reference_date": "2026-07-15"
+    },
+    "errors": [
+      "foreign flow: KRX foreign flow empty",
+      "samsung ownership: Expecting value: line 1 column 1 (char 0)",
+      "skhynix ownership: Expecting value: line 1 column 1 (char 0)",
+      "market snapshot failed: \"None of [Index(['종가', '시가총액', '거래량', '거래대금'], dtype='object')] are in the [columns]\" / \"None of [Index(['종가', '시가총액', '거래량', '거래대금'], dtype='object')] are in the [columns]\" / \"None of [Index(['종가', '시가총액', '거래량', '거래대금'], dtype='object')] are in the [columns]\""
+    ]
+  }
 }
