@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-18T16:48:42+09:00",
+  "generated_at": "2026-07-18T17:23:48+09:00",
   "status": "ok",
   "methodology": {
     "disparity_ratio": "현재가 ÷ 이동평균 × 100",
@@ -68182,7 +68182,7 @@
       "market_snapshot": {},
       "signal": "외국인 매도 압력 지속",
       "collection_errors": [
-        "market snapshot failed: \"None of [Index(['종가', '시가총액', '거래량', '거래대금'], dtype='object')] are in the [columns]\" / \"None of [Index(['종가', '시가총액', '거래량', '거래대금'], dtype='object')] are in the [columns]\" / \"None of [Index(['종가', '시가총액', '거래량', '거래대금'], dtype='object')] are in the [columns]\" / KRX market snapshot failed: \"None of [Index(['종가', '시가총액', '거래량', '거래대금'], dtype='object')] are in the [columns]\" / \"None of [Index(['종가', '시가총액', '거래량', '거래대금'], dtype='object')] are in the [columns]\" / \"None of [Index(['종가', '시가총액', '거래량', '거래대금'], dtype='object')] are in the [columns]\""
+        "최근 유효 거래일의 KOSPI 시가총액 자료를 받지 못했습니다"
       ]
     },
     "top2_share_gap": {
@@ -68223,7 +68223,7 @@
       "reference_date": "2026-07-15"
     },
     "errors": [
-      "market snapshot failed: \"None of [Index(['종가', '시가총액', '거래량', '거래대금'], dtype='object')] are in the [columns]\" / \"None of [Index(['종가', '시가총액', '거래량', '거래대금'], dtype='object')] are in the [columns]\" / \"None of [Index(['종가', '시가총액', '거래량', '거래대금'], dtype='object')] are in the [columns]\" / KRX market snapshot failed: \"None of [Index(['종가', '시가총액', '거래량', '거래대금'], dtype='object')] are in the [columns]\" / \"None of [Index(['종가', '시가총액', '거래량', '거래대금'], dtype='object')] are in the [columns]\" / \"None of [Index(['종가', '시가총액', '거래량', '거래대금'], dtype='object')] are in the [columns]\""
+      "최근 유효 거래일의 KOSPI 시가총액 자료를 받지 못했습니다"
     ]
   }
 }
