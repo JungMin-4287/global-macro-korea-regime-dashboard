@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-18T14:47:08+09:00",
+  "generated_at": "2026-07-18T16:26:35+09:00",
   "status": "ok",
   "methodology": {
     "disparity_ratio": "현재가 ÷ 이동평균 × 100",
@@ -65467,8 +65467,1313 @@
   "cycle_signals": {
     "foreign": {
       "points": [],
-      "ownership": [],
+      "ownership": [
+        {
+          "date": "2025-06-25",
+          "samsung_pct": 49.78,
+          "skhynix_pct": 55.61
+        },
+        {
+          "date": "2025-06-26",
+          "samsung_pct": 49.73,
+          "skhynix_pct": 55.66
+        },
+        {
+          "date": "2025-06-27",
+          "samsung_pct": 49.74,
+          "skhynix_pct": 55.52
+        },
+        {
+          "date": "2025-06-30",
+          "samsung_pct": 49.64,
+          "skhynix_pct": 55.51
+        },
+        {
+          "date": "2025-07-01",
+          "samsung_pct": 49.64,
+          "skhynix_pct": 55.51
+        },
+        {
+          "date": "2025-07-02",
+          "samsung_pct": 49.64,
+          "skhynix_pct": 55.5
+        },
+        {
+          "date": "2025-07-03",
+          "samsung_pct": 49.8,
+          "skhynix_pct": 55.48
+        },
+        {
+          "date": "2025-07-04",
+          "samsung_pct": 49.79,
+          "skhynix_pct": 55.46
+        },
+        {
+          "date": "2025-07-07",
+          "samsung_pct": 49.75,
+          "skhynix_pct": 55.42
+        },
+        {
+          "date": "2025-07-08",
+          "samsung_pct": 49.72,
+          "skhynix_pct": 55.44
+        },
+        {
+          "date": "2025-07-09",
+          "samsung_pct": 49.66,
+          "skhynix_pct": 55.43
+        },
+        {
+          "date": "2025-07-10",
+          "samsung_pct": 49.68,
+          "skhynix_pct": 55.47
+        },
+        {
+          "date": "2025-07-11",
+          "samsung_pct": 49.78,
+          "skhynix_pct": 55.46
+        },
+        {
+          "date": "2025-07-14",
+          "samsung_pct": 49.76,
+          "skhynix_pct": 55.55
+        },
+        {
+          "date": "2025-07-15",
+          "samsung_pct": 49.83,
+          "skhynix_pct": 55.55
+        },
+        {
+          "date": "2025-07-16",
+          "samsung_pct": 49.93,
+          "skhynix_pct": 55.57
+        },
+        {
+          "date": "2025-07-17",
+          "samsung_pct": 50.08,
+          "skhynix_pct": 55.28
+        },
+        {
+          "date": "2025-07-18",
+          "samsung_pct": 50.19,
+          "skhynix_pct": 55.19
+        },
+        {
+          "date": "2025-07-21",
+          "samsung_pct": 50.24,
+          "skhynix_pct": 55.16
+        },
+        {
+          "date": "2025-07-22",
+          "samsung_pct": 50.24,
+          "skhynix_pct": 55.13
+        },
+        {
+          "date": "2025-07-23",
+          "samsung_pct": 50.22,
+          "skhynix_pct": 55.16
+        },
+        {
+          "date": "2025-07-24",
+          "samsung_pct": 50.23,
+          "skhynix_pct": 55.22
+        },
+        {
+          "date": "2025-07-25",
+          "samsung_pct": 50.25,
+          "skhynix_pct": 55.2
+        },
+        {
+          "date": "2025-07-28",
+          "samsung_pct": 50.44,
+          "skhynix_pct": 55.17
+        },
+        {
+          "date": "2025-07-29",
+          "samsung_pct": 50.49,
+          "skhynix_pct": 55.12
+        },
+        {
+          "date": "2025-07-30",
+          "samsung_pct": 50.65,
+          "skhynix_pct": 55.11
+        },
+        {
+          "date": "2025-07-31",
+          "samsung_pct": 50.62,
+          "skhynix_pct": 55.2
+        },
+        {
+          "date": "2025-08-01",
+          "samsung_pct": 50.61,
+          "skhynix_pct": 55.08
+        },
+        {
+          "date": "2025-08-04",
+          "samsung_pct": 50.61,
+          "skhynix_pct": 55.06
+        },
+        {
+          "date": "2025-08-05",
+          "samsung_pct": 50.56,
+          "skhynix_pct": 55.12
+        },
+        {
+          "date": "2025-08-06",
+          "samsung_pct": 50.55,
+          "skhynix_pct": 55.14
+        },
+        {
+          "date": "2025-08-07",
+          "samsung_pct": 50.55,
+          "skhynix_pct": 55.17
+        },
+        {
+          "date": "2025-08-08",
+          "samsung_pct": 50.61,
+          "skhynix_pct": 55.15
+        },
+        {
+          "date": "2025-08-11",
+          "samsung_pct": 50.57,
+          "skhynix_pct": 55.21
+        },
+        {
+          "date": "2025-08-12",
+          "samsung_pct": 50.58,
+          "skhynix_pct": 55.31
+        },
+        {
+          "date": "2025-08-13",
+          "samsung_pct": 50.6,
+          "skhynix_pct": 55.48
+        },
+        {
+          "date": "2025-08-14",
+          "samsung_pct": 50.57,
+          "skhynix_pct": 55.48
+        },
+        {
+          "date": "2025-08-18",
+          "samsung_pct": 50.52,
+          "skhynix_pct": 55.41
+        },
+        {
+          "date": "2025-08-19",
+          "samsung_pct": 50.51,
+          "skhynix_pct": 55.37
+        },
+        {
+          "date": "2025-08-20",
+          "samsung_pct": 50.52,
+          "skhynix_pct": 55.3
+        },
+        {
+          "date": "2025-08-21",
+          "samsung_pct": 50.56,
+          "skhynix_pct": 55.05
+        },
+        {
+          "date": "2025-08-22",
+          "samsung_pct": 50.56,
+          "skhynix_pct": 55.07
+        },
+        {
+          "date": "2025-08-25",
+          "samsung_pct": 50.53,
+          "skhynix_pct": 55.14
+        },
+        {
+          "date": "2025-08-26",
+          "samsung_pct": 50.5,
+          "skhynix_pct": 55.15
+        },
+        {
+          "date": "2025-08-27",
+          "samsung_pct": 50.49,
+          "skhynix_pct": 55.06
+        },
+        {
+          "date": "2025-08-28",
+          "samsung_pct": 50.52,
+          "skhynix_pct": 54.81
+        },
+        {
+          "date": "2025-08-29",
+          "samsung_pct": 50.49,
+          "skhynix_pct": 54.82
+        },
+        {
+          "date": "2025-09-01",
+          "samsung_pct": 50.32,
+          "skhynix_pct": 55.06
+        },
+        {
+          "date": "2025-09-02",
+          "samsung_pct": 50.35,
+          "skhynix_pct": 55.13
+        },
+        {
+          "date": "2025-09-03",
+          "samsung_pct": 50.37,
+          "skhynix_pct": 55.18
+        },
+        {
+          "date": "2025-09-04",
+          "samsung_pct": 50.38,
+          "skhynix_pct": 55.16
+        },
+        {
+          "date": "2025-09-05",
+          "samsung_pct": 50.35,
+          "skhynix_pct": 55.35
+        },
+        {
+          "date": "2025-09-08",
+          "samsung_pct": 50.37,
+          "skhynix_pct": 55.44
+        },
+        {
+          "date": "2025-09-09",
+          "samsung_pct": 50.44,
+          "skhynix_pct": 55.63
+        },
+        {
+          "date": "2025-09-10",
+          "samsung_pct": 50.54,
+          "skhynix_pct": 55.97
+        },
+        {
+          "date": "2025-09-11",
+          "samsung_pct": 50.53,
+          "skhynix_pct": 56.09
+        },
+        {
+          "date": "2025-09-12",
+          "samsung_pct": 50.72,
+          "skhynix_pct": 56.21
+        },
+        {
+          "date": "2025-09-15",
+          "samsung_pct": 50.78,
+          "skhynix_pct": 56.25
+        },
+        {
+          "date": "2025-09-16",
+          "samsung_pct": 51.02,
+          "skhynix_pct": 56.32
+        },
+        {
+          "date": "2025-09-17",
+          "samsung_pct": 51.04,
+          "skhynix_pct": 56.26
+        },
+        {
+          "date": "2025-09-18",
+          "samsung_pct": 51.12,
+          "skhynix_pct": 56.21
+        },
+        {
+          "date": "2025-09-19",
+          "samsung_pct": 51.11,
+          "skhynix_pct": 56.08
+        },
+        {
+          "date": "2025-09-22",
+          "samsung_pct": 51.25,
+          "skhynix_pct": 55.9
+        },
+        {
+          "date": "2025-09-23",
+          "samsung_pct": 51.26,
+          "skhynix_pct": 55.9
+        },
+        {
+          "date": "2025-09-24",
+          "samsung_pct": 51.27,
+          "skhynix_pct": 55.81
+        },
+        {
+          "date": "2025-09-25",
+          "samsung_pct": 51.35,
+          "skhynix_pct": 55.85
+        },
+        {
+          "date": "2025-09-26",
+          "samsung_pct": 51.37,
+          "skhynix_pct": 55.57
+        },
+        {
+          "date": "2025-09-29",
+          "samsung_pct": 51.38,
+          "skhynix_pct": 55.48
+        },
+        {
+          "date": "2025-09-30",
+          "samsung_pct": 51.41,
+          "skhynix_pct": 55.45
+        },
+        {
+          "date": "2025-10-01",
+          "samsung_pct": 51.52,
+          "skhynix_pct": 55.48
+        },
+        {
+          "date": "2025-10-02",
+          "samsung_pct": 51.85,
+          "skhynix_pct": 55.64
+        },
+        {
+          "date": "2025-10-10",
+          "samsung_pct": 51.96,
+          "skhynix_pct": 55.61
+        },
+        {
+          "date": "2025-10-13",
+          "samsung_pct": 51.92,
+          "skhynix_pct": 55.44
+        },
+        {
+          "date": "2025-10-14",
+          "samsung_pct": 51.96,
+          "skhynix_pct": 55.41
+        },
+        {
+          "date": "2025-10-15",
+          "samsung_pct": 52.0,
+          "skhynix_pct": 55.3
+        },
+        {
+          "date": "2025-10-16",
+          "samsung_pct": 52.09,
+          "skhynix_pct": 55.35
+        },
+        {
+          "date": "2025-10-17",
+          "samsung_pct": 52.15,
+          "skhynix_pct": 55.3
+        },
+        {
+          "date": "2025-10-20",
+          "samsung_pct": 52.13,
+          "skhynix_pct": 55.23
+        },
+        {
+          "date": "2025-10-21",
+          "samsung_pct": 52.15,
+          "skhynix_pct": 55.13
+        },
+        {
+          "date": "2025-10-22",
+          "samsung_pct": 52.15,
+          "skhynix_pct": 54.96
+        },
+        {
+          "date": "2025-10-23",
+          "samsung_pct": 52.13,
+          "skhynix_pct": 54.87
+        },
+        {
+          "date": "2025-10-24",
+          "samsung_pct": 52.22,
+          "skhynix_pct": 54.99
+        },
+        {
+          "date": "2025-10-27",
+          "samsung_pct": 52.36,
+          "skhynix_pct": 54.94
+        },
+        {
+          "date": "2025-10-28",
+          "samsung_pct": 52.3,
+          "skhynix_pct": 54.63
+        },
+        {
+          "date": "2025-10-29",
+          "samsung_pct": 52.26,
+          "skhynix_pct": 54.6
+        },
+        {
+          "date": "2025-10-30",
+          "samsung_pct": 52.36,
+          "skhynix_pct": 54.53
+        },
+        {
+          "date": "2025-10-31",
+          "samsung_pct": 52.62,
+          "skhynix_pct": 54.37
+        },
+        {
+          "date": "2025-11-03",
+          "samsung_pct": 52.56,
+          "skhynix_pct": 54.33
+        },
+        {
+          "date": "2025-11-04",
+          "samsung_pct": 52.47,
+          "skhynix_pct": 54.21
+        },
+        {
+          "date": "2025-11-05",
+          "samsung_pct": 52.43,
+          "skhynix_pct": 53.9
+        },
+        {
+          "date": "2025-11-06",
+          "samsung_pct": 52.3,
+          "skhynix_pct": 53.77
+        },
+        {
+          "date": "2025-11-07",
+          "samsung_pct": 52.34,
+          "skhynix_pct": 53.7
+        },
+        {
+          "date": "2025-11-10",
+          "samsung_pct": 52.36,
+          "skhynix_pct": 53.67
+        },
+        {
+          "date": "2025-11-11",
+          "samsung_pct": 52.39,
+          "skhynix_pct": 53.57
+        },
+        {
+          "date": "2025-11-12",
+          "samsung_pct": 52.32,
+          "skhynix_pct": 53.95
+        },
+        {
+          "date": "2025-11-13",
+          "samsung_pct": 52.34,
+          "skhynix_pct": 54.0
+        },
+        {
+          "date": "2025-11-14",
+          "samsung_pct": 52.23,
+          "skhynix_pct": 53.67
+        },
+        {
+          "date": "2025-11-17",
+          "samsung_pct": 52.29,
+          "skhynix_pct": 53.76
+        },
+        {
+          "date": "2025-11-18",
+          "samsung_pct": 52.31,
+          "skhynix_pct": 53.63
+        },
+        {
+          "date": "2025-11-19",
+          "samsung_pct": 52.27,
+          "skhynix_pct": 53.46
+        },
+        {
+          "date": "2025-11-20",
+          "samsung_pct": 52.36,
+          "skhynix_pct": 53.36
+        },
+        {
+          "date": "2025-11-21",
+          "samsung_pct": 52.2,
+          "skhynix_pct": 53.59
+        },
+        {
+          "date": "2025-11-24",
+          "samsung_pct": 52.22,
+          "skhynix_pct": 53.46
+        },
+        {
+          "date": "2025-11-25",
+          "samsung_pct": 52.22,
+          "skhynix_pct": 53.43
+        },
+        {
+          "date": "2025-11-26",
+          "samsung_pct": 52.26,
+          "skhynix_pct": 53.34
+        },
+        {
+          "date": "2025-11-27",
+          "samsung_pct": 52.27,
+          "skhynix_pct": 53.39
+        },
+        {
+          "date": "2025-11-28",
+          "samsung_pct": 52.17,
+          "skhynix_pct": 53.21
+        },
+        {
+          "date": "2025-12-01",
+          "samsung_pct": 52.14,
+          "skhynix_pct": 53.3
+        },
+        {
+          "date": "2025-12-02",
+          "samsung_pct": 52.22,
+          "skhynix_pct": 53.39
+        },
+        {
+          "date": "2025-12-03",
+          "samsung_pct": 52.24,
+          "skhynix_pct": 53.3
+        },
+        {
+          "date": "2025-12-04",
+          "samsung_pct": 52.21,
+          "skhynix_pct": 53.18
+        },
+        {
+          "date": "2025-12-05",
+          "samsung_pct": 52.28,
+          "skhynix_pct": 53.14
+        },
+        {
+          "date": "2025-12-08",
+          "samsung_pct": 52.3,
+          "skhynix_pct": 53.23
+        },
+        {
+          "date": "2025-12-09",
+          "samsung_pct": 52.23,
+          "skhynix_pct": 53.24
+        },
+        {
+          "date": "2025-12-10",
+          "samsung_pct": 52.21,
+          "skhynix_pct": 53.41
+        },
+        {
+          "date": "2025-12-11",
+          "samsung_pct": 52.26,
+          "skhynix_pct": 53.38
+        },
+        {
+          "date": "2025-12-12",
+          "samsung_pct": 52.24,
+          "skhynix_pct": 53.38
+        },
+        {
+          "date": "2025-12-15",
+          "samsung_pct": 52.11,
+          "skhynix_pct": 53.41
+        },
+        {
+          "date": "2025-12-16",
+          "samsung_pct": 52.07,
+          "skhynix_pct": 53.32
+        },
+        {
+          "date": "2025-12-17",
+          "samsung_pct": 52.12,
+          "skhynix_pct": 53.34
+        },
+        {
+          "date": "2025-12-18",
+          "samsung_pct": 52.11,
+          "skhynix_pct": 53.37
+        },
+        {
+          "date": "2025-12-19",
+          "samsung_pct": 51.98,
+          "skhynix_pct": 53.33
+        },
+        {
+          "date": "2025-12-22",
+          "samsung_pct": 52.13,
+          "skhynix_pct": 53.42
+        },
+        {
+          "date": "2025-12-23",
+          "samsung_pct": 52.22,
+          "skhynix_pct": 53.44
+        },
+        {
+          "date": "2025-12-24",
+          "samsung_pct": 52.22,
+          "skhynix_pct": 53.54
+        },
+        {
+          "date": "2025-12-26",
+          "samsung_pct": 52.42,
+          "skhynix_pct": 53.74
+        },
+        {
+          "date": "2025-12-29",
+          "samsung_pct": 52.34,
+          "skhynix_pct": 53.82
+        },
+        {
+          "date": "2025-12-30",
+          "samsung_pct": 52.33,
+          "skhynix_pct": 53.83
+        },
+        {
+          "date": "2026-01-02",
+          "samsung_pct": 52.37,
+          "skhynix_pct": 53.81
+        },
+        {
+          "date": "2026-01-05",
+          "samsung_pct": 52.4,
+          "skhynix_pct": 53.82
+        },
+        {
+          "date": "2026-01-06",
+          "samsung_pct": 52.18,
+          "skhynix_pct": 53.88
+        },
+        {
+          "date": "2026-01-07",
+          "samsung_pct": 52.22,
+          "skhynix_pct": 53.98
+        },
+        {
+          "date": "2026-01-08",
+          "samsung_pct": 52.15,
+          "skhynix_pct": 53.97
+        },
+        {
+          "date": "2026-01-09",
+          "samsung_pct": 52.03,
+          "skhynix_pct": 53.8
+        },
+        {
+          "date": "2026-01-12",
+          "samsung_pct": 51.91,
+          "skhynix_pct": 53.79
+        },
+        {
+          "date": "2026-01-13",
+          "samsung_pct": 51.84,
+          "skhynix_pct": 53.64
+        },
+        {
+          "date": "2026-01-14",
+          "samsung_pct": 51.85,
+          "skhynix_pct": 53.58
+        },
+        {
+          "date": "2026-01-15",
+          "samsung_pct": 51.85,
+          "skhynix_pct": 53.54
+        },
+        {
+          "date": "2026-01-16",
+          "samsung_pct": 51.86,
+          "skhynix_pct": 53.5
+        },
+        {
+          "date": "2026-01-19",
+          "samsung_pct": 51.86,
+          "skhynix_pct": 53.5
+        },
+        {
+          "date": "2026-01-20",
+          "samsung_pct": 51.8,
+          "skhynix_pct": 53.46
+        },
+        {
+          "date": "2026-01-21",
+          "samsung_pct": 51.92,
+          "skhynix_pct": 53.55
+        },
+        {
+          "date": "2026-01-22",
+          "samsung_pct": 51.93,
+          "skhynix_pct": 53.56
+        },
+        {
+          "date": "2026-01-23",
+          "samsung_pct": 51.89,
+          "skhynix_pct": 53.56
+        },
+        {
+          "date": "2026-01-26",
+          "samsung_pct": 51.91,
+          "skhynix_pct": 53.51
+        },
+        {
+          "date": "2026-01-27",
+          "samsung_pct": 51.97,
+          "skhynix_pct": 53.6
+        },
+        {
+          "date": "2026-01-28",
+          "samsung_pct": 51.93,
+          "skhynix_pct": 53.56
+        },
+        {
+          "date": "2026-01-29",
+          "samsung_pct": 51.8,
+          "skhynix_pct": 53.43
+        },
+        {
+          "date": "2026-01-30",
+          "samsung_pct": 51.74,
+          "skhynix_pct": 53.47
+        },
+        {
+          "date": "2026-02-02",
+          "samsung_pct": 51.62,
+          "skhynix_pct": 53.21
+        },
+        {
+          "date": "2026-02-03",
+          "samsung_pct": 51.72,
+          "skhynix_pct": 53.14
+        },
+        {
+          "date": "2026-02-04",
+          "samsung_pct": 51.62,
+          "skhynix_pct": 53.01
+        },
+        {
+          "date": "2026-02-05",
+          "samsung_pct": 51.3,
+          "skhynix_pct": 52.77
+        },
+        {
+          "date": "2026-02-06",
+          "samsung_pct": 51.18,
+          "skhynix_pct": 52.61
+        },
+        {
+          "date": "2026-02-09",
+          "samsung_pct": 51.19,
+          "skhynix_pct": 52.86
+        },
+        {
+          "date": "2026-02-10",
+          "samsung_pct": 51.22,
+          "skhynix_pct": 52.87
+        },
+        {
+          "date": "2026-02-11",
+          "samsung_pct": 51.28,
+          "skhynix_pct": 52.83
+        },
+        {
+          "date": "2026-02-12",
+          "samsung_pct": 51.52,
+          "skhynix_pct": 53.12
+        },
+        {
+          "date": "2026-02-13",
+          "samsung_pct": 51.42,
+          "skhynix_pct": 53.13
+        },
+        {
+          "date": "2026-02-19",
+          "samsung_pct": 51.3,
+          "skhynix_pct": 53.13
+        },
+        {
+          "date": "2026-02-20",
+          "samsung_pct": 51.09,
+          "skhynix_pct": 53.47
+        },
+        {
+          "date": "2026-02-23",
+          "samsung_pct": 51.0,
+          "skhynix_pct": 54.6
+        },
+        {
+          "date": "2026-02-24",
+          "samsung_pct": 50.96,
+          "skhynix_pct": 54.64
+        },
+        {
+          "date": "2026-02-25",
+          "samsung_pct": 50.8,
+          "skhynix_pct": 54.48
+        },
+        {
+          "date": "2026-02-26",
+          "samsung_pct": 50.66,
+          "skhynix_pct": 54.36
+        },
+        {
+          "date": "2026-02-27",
+          "samsung_pct": 50.3,
+          "skhynix_pct": 54.02
+        },
+        {
+          "date": "2026-03-03",
+          "samsung_pct": 50.03,
+          "skhynix_pct": 53.87
+        },
+        {
+          "date": "2026-03-04",
+          "samsung_pct": 49.97,
+          "skhynix_pct": 53.79
+        },
+        {
+          "date": "2026-03-05",
+          "samsung_pct": 49.95,
+          "skhynix_pct": 53.84
+        },
+        {
+          "date": "2026-03-06",
+          "samsung_pct": 49.82,
+          "skhynix_pct": 53.76
+        },
+        {
+          "date": "2026-03-09",
+          "samsung_pct": 49.67,
+          "skhynix_pct": 53.54
+        },
+        {
+          "date": "2026-03-10",
+          "samsung_pct": 49.79,
+          "skhynix_pct": 53.69
+        },
+        {
+          "date": "2026-03-11",
+          "samsung_pct": 49.77,
+          "skhynix_pct": 53.7
+        },
+        {
+          "date": "2026-03-12",
+          "samsung_pct": 49.66,
+          "skhynix_pct": 53.59
+        },
+        {
+          "date": "2026-03-13",
+          "samsung_pct": 49.58,
+          "skhynix_pct": 53.51
+        },
+        {
+          "date": "2026-03-16",
+          "samsung_pct": 49.56,
+          "skhynix_pct": 53.57
+        },
+        {
+          "date": "2026-03-17",
+          "samsung_pct": 49.56,
+          "skhynix_pct": 53.51
+        },
+        {
+          "date": "2026-03-18",
+          "samsung_pct": 49.6,
+          "skhynix_pct": 53.63
+        },
+        {
+          "date": "2026-03-19",
+          "samsung_pct": 49.53,
+          "skhynix_pct": 53.55
+        },
+        {
+          "date": "2026-03-20",
+          "samsung_pct": 49.5,
+          "skhynix_pct": 53.45
+        },
+        {
+          "date": "2026-03-23",
+          "samsung_pct": 49.34,
+          "skhynix_pct": 53.43
+        },
+        {
+          "date": "2026-03-24",
+          "samsung_pct": 49.21,
+          "skhynix_pct": 53.41
+        },
+        {
+          "date": "2026-03-25",
+          "samsung_pct": 49.12,
+          "skhynix_pct": 53.35
+        },
+        {
+          "date": "2026-03-26",
+          "samsung_pct": 48.9,
+          "skhynix_pct": 53.21
+        },
+        {
+          "date": "2026-03-27",
+          "samsung_pct": 48.7,
+          "skhynix_pct": 53.05
+        },
+        {
+          "date": "2026-03-30",
+          "samsung_pct": 48.62,
+          "skhynix_pct": 52.88
+        },
+        {
+          "date": "2026-03-31",
+          "samsung_pct": 48.41,
+          "skhynix_pct": 52.69
+        },
+        {
+          "date": "2026-04-01",
+          "samsung_pct": 48.43,
+          "skhynix_pct": 52.62
+        },
+        {
+          "date": "2026-04-02",
+          "samsung_pct": 48.4,
+          "skhynix_pct": 52.57
+        },
+        {
+          "date": "2026-04-03",
+          "samsung_pct": 48.41,
+          "skhynix_pct": 52.62
+        },
+        {
+          "date": "2026-04-06",
+          "samsung_pct": 48.44,
+          "skhynix_pct": 52.61
+        },
+        {
+          "date": "2026-04-07",
+          "samsung_pct": 48.4,
+          "skhynix_pct": 52.71
+        },
+        {
+          "date": "2026-04-08",
+          "samsung_pct": 48.46,
+          "skhynix_pct": 52.9
+        },
+        {
+          "date": "2026-04-09",
+          "samsung_pct": 48.64,
+          "skhynix_pct": 52.79
+        },
+        {
+          "date": "2026-04-10",
+          "samsung_pct": 48.65,
+          "skhynix_pct": 52.91
+        },
+        {
+          "date": "2026-04-13",
+          "samsung_pct": 48.62,
+          "skhynix_pct": 52.98
+        },
+        {
+          "date": "2026-04-14",
+          "samsung_pct": 49.23,
+          "skhynix_pct": 53.08
+        },
+        {
+          "date": "2026-04-15",
+          "samsung_pct": 49.23,
+          "skhynix_pct": 53.04
+        },
+        {
+          "date": "2026-04-16",
+          "samsung_pct": 49.26,
+          "skhynix_pct": 52.97
+        },
+        {
+          "date": "2026-04-17",
+          "samsung_pct": 49.2,
+          "skhynix_pct": 52.87
+        },
+        {
+          "date": "2026-04-20",
+          "samsung_pct": 49.14,
+          "skhynix_pct": 52.96
+        },
+        {
+          "date": "2026-04-21",
+          "samsung_pct": 49.18,
+          "skhynix_pct": 53.06
+        },
+        {
+          "date": "2026-04-22",
+          "samsung_pct": 49.16,
+          "skhynix_pct": 53.05
+        },
+        {
+          "date": "2026-04-23",
+          "samsung_pct": 49.24,
+          "skhynix_pct": 53.12
+        },
+        {
+          "date": "2026-04-24",
+          "samsung_pct": 49.14,
+          "skhynix_pct": 53.01
+        },
+        {
+          "date": "2026-04-27",
+          "samsung_pct": 49.25,
+          "skhynix_pct": 53.1
+        },
+        {
+          "date": "2026-04-28",
+          "samsung_pct": 49.19,
+          "skhynix_pct": 53.04
+        },
+        {
+          "date": "2026-04-29",
+          "samsung_pct": 49.27,
+          "skhynix_pct": 52.92
+        },
+        {
+          "date": "2026-04-30",
+          "samsung_pct": 49.24,
+          "skhynix_pct": 53.0
+        },
+        {
+          "date": "2026-05-04",
+          "samsung_pct": 49.37,
+          "skhynix_pct": 53.22
+        },
+        {
+          "date": "2026-05-06",
+          "samsung_pct": 49.61,
+          "skhynix_pct": 53.23
+        },
+        {
+          "date": "2026-05-07",
+          "samsung_pct": 49.4,
+          "skhynix_pct": 53.01
+        },
+        {
+          "date": "2026-05-08",
+          "samsung_pct": 49.21,
+          "skhynix_pct": 52.87
+        },
+        {
+          "date": "2026-05-11",
+          "samsung_pct": 49.07,
+          "skhynix_pct": 52.78
+        },
+        {
+          "date": "2026-05-12",
+          "samsung_pct": 48.91,
+          "skhynix_pct": 52.51
+        },
+        {
+          "date": "2026-05-13",
+          "samsung_pct": 48.83,
+          "skhynix_pct": 52.37
+        },
+        {
+          "date": "2026-05-14",
+          "samsung_pct": 48.85,
+          "skhynix_pct": 52.36
+        },
+        {
+          "date": "2026-05-15",
+          "samsung_pct": 48.69,
+          "skhynix_pct": 52.14
+        },
+        {
+          "date": "2026-05-18",
+          "samsung_pct": 48.61,
+          "skhynix_pct": 52.06
+        },
+        {
+          "date": "2026-05-19",
+          "samsung_pct": 48.42,
+          "skhynix_pct": 51.87
+        },
+        {
+          "date": "2026-05-20",
+          "samsung_pct": 48.33,
+          "skhynix_pct": 51.76
+        },
+        {
+          "date": "2026-05-21",
+          "samsung_pct": 48.39,
+          "skhynix_pct": 51.66
+        },
+        {
+          "date": "2026-05-22",
+          "samsung_pct": 48.32,
+          "skhynix_pct": 51.61
+        },
+        {
+          "date": "2026-05-26",
+          "samsung_pct": 48.37,
+          "skhynix_pct": 51.62
+        },
+        {
+          "date": "2026-05-27",
+          "samsung_pct": 48.39,
+          "skhynix_pct": 51.65
+        },
+        {
+          "date": "2026-05-28",
+          "samsung_pct": 48.29,
+          "skhynix_pct": 51.5
+        },
+        {
+          "date": "2026-05-29",
+          "samsung_pct": 48.29,
+          "skhynix_pct": 51.44
+        },
+        {
+          "date": "2026-06-01",
+          "samsung_pct": 48.3,
+          "skhynix_pct": 51.34
+        },
+        {
+          "date": "2026-06-02",
+          "samsung_pct": 48.07,
+          "skhynix_pct": 51.3
+        },
+        {
+          "date": "2026-06-04",
+          "samsung_pct": 47.81,
+          "skhynix_pct": 51.27
+        },
+        {
+          "date": "2026-06-05",
+          "samsung_pct": 47.73,
+          "skhynix_pct": 51.16
+        },
+        {
+          "date": "2026-06-08",
+          "samsung_pct": 47.7,
+          "skhynix_pct": 51.15
+        },
+        {
+          "date": "2026-06-09",
+          "samsung_pct": 47.68,
+          "skhynix_pct": 51.09
+        },
+        {
+          "date": "2026-06-10",
+          "samsung_pct": 47.61,
+          "skhynix_pct": 51.05
+        },
+        {
+          "date": "2026-06-11",
+          "samsung_pct": 47.58,
+          "skhynix_pct": 51.1
+        },
+        {
+          "date": "2026-06-12",
+          "samsung_pct": 47.63,
+          "skhynix_pct": 51.19
+        },
+        {
+          "date": "2026-06-15",
+          "samsung_pct": 47.6,
+          "skhynix_pct": 51.23
+        },
+        {
+          "date": "2026-06-16",
+          "samsung_pct": 47.6,
+          "skhynix_pct": 51.29
+        },
+        {
+          "date": "2026-06-17",
+          "samsung_pct": 47.57,
+          "skhynix_pct": 51.3
+        },
+        {
+          "date": "2026-06-18",
+          "samsung_pct": 47.62,
+          "skhynix_pct": 51.31
+        },
+        {
+          "date": "2026-06-19",
+          "samsung_pct": 47.56,
+          "skhynix_pct": 51.25
+        },
+        {
+          "date": "2026-06-22",
+          "samsung_pct": 47.52,
+          "skhynix_pct": 51.15
+        },
+        {
+          "date": "2026-06-23",
+          "samsung_pct": 47.43,
+          "skhynix_pct": 50.99
+        },
+        {
+          "date": "2026-06-24",
+          "samsung_pct": 47.41,
+          "skhynix_pct": 50.78
+        },
+        {
+          "date": "2026-06-25",
+          "samsung_pct": 47.37,
+          "skhynix_pct": 50.77
+        },
+        {
+          "date": "2026-06-26",
+          "samsung_pct": 47.24,
+          "skhynix_pct": 50.63
+        },
+        {
+          "date": "2026-06-29",
+          "samsung_pct": 47.01,
+          "skhynix_pct": 50.44
+        },
+        {
+          "date": "2026-06-30",
+          "samsung_pct": 46.96,
+          "skhynix_pct": 50.36
+        },
+        {
+          "date": "2026-07-01",
+          "samsung_pct": 46.88,
+          "skhynix_pct": 50.4
+        },
+        {
+          "date": "2026-07-02",
+          "samsung_pct": 46.76,
+          "skhynix_pct": 50.28
+        },
+        {
+          "date": "2026-07-03",
+          "samsung_pct": 46.72,
+          "skhynix_pct": 50.17
+        },
+        {
+          "date": "2026-07-06",
+          "samsung_pct": 46.69,
+          "skhynix_pct": 50.17
+        },
+        {
+          "date": "2026-07-07",
+          "samsung_pct": 46.58,
+          "skhynix_pct": 50.06
+        },
+        {
+          "date": "2026-07-08",
+          "samsung_pct": 46.55,
+          "skhynix_pct": 50.05
+        },
+        {
+          "date": "2026-07-09",
+          "samsung_pct": 46.57,
+          "skhynix_pct": 50.01
+        },
+        {
+          "date": "2026-07-10",
+          "samsung_pct": 46.59,
+          "skhynix_pct": 49.87
+        },
+        {
+          "date": "2026-07-13",
+          "samsung_pct": 46.58,
+          "skhynix_pct": 49.77
+        },
+        {
+          "date": "2026-07-14",
+          "samsung_pct": 46.58,
+          "skhynix_pct": 49.88
+        },
+        {
+          "date": "2026-07-15",
+          "samsung_pct": 46.6,
+          "skhynix_pct": 52.44
+        },
+        {
+          "date": "2026-07-16",
+          "samsung_pct": 46.59,
+          "skhynix_pct": 52.37
+        }
+      ],
       "source": null,
+      "samsung_foreign_ownership_pct": 46.59,
+      "samsung_foreign_ownership_20d_change_pp": -1.03,
+      "skhynix_foreign_ownership_pct": 52.37,
+      "skhynix_foreign_ownership_20d_change_pp": 1.06,
       "market_snapshot": {},
       "signal": "데이터 축적 중"
     },
@@ -65510,10 +66815,8 @@
       "reference_date": "2026-07-15"
     },
     "errors": [
-      "foreign flow: KRX foreign flow empty",
-      "samsung ownership: Expecting value: line 1 column 1 (char 0)",
-      "skhynix ownership: Expecting value: line 1 column 1 (char 0)",
-      "market snapshot failed: \"None of [Index(['종가', '시가총액', '거래량', '거래대금'], dtype='object')] are in the [columns]\" / \"None of [Index(['종가', '시가총액', '거래량', '거래대금'], dtype='object')] are in the [columns]\" / \"None of [Index(['종가', '시가총액', '거래량', '거래대금'], dtype='object')] are in the [columns]\""
+      "foreign flow: KRX: KRX foreign flow empty / Naver: Naver foreign flow insufficient (0)",
+      "market snapshot failed: \"None of [Index(['종가', '시가총액', '거래량', '거래대금'], dtype='object')] are in the [columns]\" / \"None of [Index(['종가', '시가총액', '거래량', '거래대금'], dtype='object')] are in the [columns]\" / \"None of [Index(['종가', '시가총액', '거래량', '거래대금'], dtype='object')] are in the [columns]\" / KRX market snapshot failed: \"None of [Index(['종가', '시가총액', '거래량', '거래대금'], dtype='object')] are in the [columns]\" / \"None of [Index(['종가', '시가총액', '거래량', '거래대금'], dtype='object')] are in the [columns]\" / \"None of [Index(['종가', '시가총액', '거래량', '거래대금'], dtype='object')] are in the [columns]\""
     ]
   }
 }
