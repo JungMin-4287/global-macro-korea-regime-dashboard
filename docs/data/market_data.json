@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-18T16:26:35+09:00",
+  "generated_at": "2026-07-18T16:33:46+09:00",
   "status": "ok",
   "methodology": {
     "disparity_ratio": "현재가 ÷ 이동평균 × 100",
@@ -65466,7 +65466,123 @@
   "errors": {},
   "cycle_signals": {
     "foreign": {
-      "points": [],
+      "points": [
+        {
+          "date": "2024-02-26",
+          "daily_net_buy_trn": -0.2013,
+          "cumulative_net_buy_trn": -0.2013
+        },
+        {
+          "date": "2024-03-26",
+          "daily_net_buy_trn": -1.9863,
+          "cumulative_net_buy_trn": -2.1876
+        },
+        {
+          "date": "2024-04-26",
+          "daily_net_buy_trn": -1.9496,
+          "cumulative_net_buy_trn": -4.1372
+        },
+        {
+          "date": "2024-06-26",
+          "daily_net_buy_trn": -4.6546,
+          "cumulative_net_buy_trn": -8.7918
+        },
+        {
+          "date": "2024-07-25",
+          "daily_net_buy_trn": 0.7386,
+          "cumulative_net_buy_trn": -8.0532
+        },
+        {
+          "date": "2024-09-25",
+          "daily_net_buy_trn": -0.2486,
+          "cumulative_net_buy_trn": -8.3018
+        },
+        {
+          "date": "2024-10-25",
+          "daily_net_buy_trn": 0.5756,
+          "cumulative_net_buy_trn": -7.7262
+        },
+        {
+          "date": "2024-11-25",
+          "daily_net_buy_trn": -0.7993,
+          "cumulative_net_buy_trn": -8.5255
+        },
+        {
+          "date": "2024-12-25",
+          "daily_net_buy_trn": 0.5225,
+          "cumulative_net_buy_trn": -8.003
+        },
+        {
+          "date": "2025-02-26",
+          "daily_net_buy_trn": -1.3082,
+          "cumulative_net_buy_trn": -9.3112
+        },
+        {
+          "date": "2025-03-26",
+          "daily_net_buy_trn": -1.2895,
+          "cumulative_net_buy_trn": -10.6007
+        },
+        {
+          "date": "2025-06-25",
+          "daily_net_buy_trn": -0.1108,
+          "cumulative_net_buy_trn": -10.7115
+        },
+        {
+          "date": "2025-06-26",
+          "daily_net_buy_trn": -0.8754,
+          "cumulative_net_buy_trn": -11.5869
+        },
+        {
+          "date": "2025-07-25",
+          "daily_net_buy_trn": 0.2706,
+          "cumulative_net_buy_trn": -11.3163
+        },
+        {
+          "date": "2025-08-25",
+          "daily_net_buy_trn": 0.1224,
+          "cumulative_net_buy_trn": -11.1939
+        },
+        {
+          "date": "2025-09-25",
+          "daily_net_buy_trn": 0.2196,
+          "cumulative_net_buy_trn": -10.9743
+        },
+        {
+          "date": "2025-11-25",
+          "daily_net_buy_trn": 0.0049,
+          "cumulative_net_buy_trn": -10.9694
+        },
+        {
+          "date": "2026-01-26",
+          "daily_net_buy_trn": -0.1588,
+          "cumulative_net_buy_trn": -11.1282
+        },
+        {
+          "date": "2026-02-26",
+          "daily_net_buy_trn": -2.1135,
+          "cumulative_net_buy_trn": -13.2417
+        },
+        {
+          "date": "2026-03-26",
+          "daily_net_buy_trn": -2.937,
+          "cumulative_net_buy_trn": -16.1787
+        },
+        {
+          "date": "2026-05-26",
+          "daily_net_buy_trn": -0.1321,
+          "cumulative_net_buy_trn": -16.3108
+        },
+        {
+          "date": "2026-06-25",
+          "daily_net_buy_trn": -0.5794,
+          "cumulative_net_buy_trn": -16.8902
+        },
+        {
+          "date": "2026-06-26",
+          "daily_net_buy_trn": -4.2906,
+          "cumulative_net_buy_trn": -21.1808
+        }
+      ],
       "ownership": [
         {
           "date": "2025-06-25",
@@ -66769,13 +66885,17 @@
           "skhynix_pct": 52.37
         }
       ],
-      "source": null,
+      "source": "Naver Finance KOSPI 외국인 순매수(억원→조원, 구조 감지 파서)",
+      "latest_daily_net_buy_trn": -4.2906,
+      "cumulative_net_buy_trn": -21.1808,
+      "net_buy_5d_trn": -10.0526,
+      "net_buy_20d_trn": -17.0436,
       "samsung_foreign_ownership_pct": 46.59,
       "samsung_foreign_ownership_20d_change_pp": -1.03,
       "skhynix_foreign_ownership_pct": 52.37,
       "skhynix_foreign_ownership_20d_change_pp": 1.06,
       "market_snapshot": {},
-      "signal": "데이터 축적 중"
+      "signal": "외국인 매도 압력 지속"
     },
     "top2_share_gap": {
       "current_direct_market_cap_share_pct": null,
@@ -66815,7 +66935,6 @@
       "reference_date": "2026-07-15"
     },
     "errors": [
-      "foreign flow: KRX: KRX foreign flow empty / Naver: Naver foreign flow insufficient (0)",
       "market snapshot failed: \"None of [Index(['종가', '시가총액', '거래량', '거래대금'], dtype='object')] are in the [columns]\" / \"None of [Index(['종가', '시가총액', '거래량', '거래대금'], dtype='object')] are in the [columns]\" / \"None of [Index(['종가', '시가총액', '거래량', '거래대금'], dtype='object')] are in the [columns]\" / KRX market snapshot failed: \"None of [Index(['종가', '시가총액', '거래량', '거래대금'], dtype='object')] are in the [columns]\" / \"None of [Index(['종가', '시가총액', '거래량', '거래대금'], dtype='object')] are in the [columns]\" / \"None of [Index(['종가', '시가총액', '거래량', '거래대금'], dtype='object')] are in the [columns]\""
     ]
   }
