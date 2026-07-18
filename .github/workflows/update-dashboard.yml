@@ -50,7 +50,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add docs/index.html docs/data/market_data.json docs/data/market_history.csv docs/data/daily_archive.csv
+          git add docs/index.html docs/data/market_data.json docs/data/market_history.csv docs/data/daily_archive.csv docs/data/investor_flow_history.csv docs/data/correction_flow_map.csv
           git diff --cached --quiet || git commit -m "chore: update Korea market dashboard"
           git push
 
