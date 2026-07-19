@@ -6,6 +6,7 @@
   <title>한국 증시 레짐·메모리 트레이딩 대시보드</title>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="gate.css">
 </head>
 <body>
 <header>
@@ -13,6 +14,7 @@
   <div class="muted">이격도·MDD·수급 심리·VKOSPI·SOX·삼성전자·SK하이닉스 밸류에이션을 한 화면에서 점검합니다.<br>마지막 갱신: <span id="generatedAt">-</span></div>
 </header>
 <main>
+  <section id="trendGate" class="trend-gate-wrap"></section>
   <section class="grid" id="summary"></section>
 
   <h2 class="section-title">수급 심리와 변동성</h2>
@@ -172,6 +174,7 @@
 <script src="js/core.js"></script>
 <script src="js/charts.js"></script>
 <script src="js/panels.js"></script>
+<script src="js/gate.js"></script>
 <script src="js/app.js"></script>
 </body>
 </html>
