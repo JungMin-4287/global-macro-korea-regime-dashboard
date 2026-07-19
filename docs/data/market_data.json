@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-19T13:50:47+09:00",
+  "generated_at": "2026-07-19T14:29:25+09:00",
   "status": "ok",
   "methodology": {
     "disparity_ratio": "현재가 ÷ 이동평균 × 100",
@@ -74243,7 +74243,7 @@
     }
   },
   "manual": {
-    "updated_at": "2026-07-18",
+    "updated_at": "2026-07-19",
     "credit": {
       "kospi_credit_balance_trn_krw": null,
       "kosdaq_credit_balance_trn_krw": null,
@@ -74263,7 +74263,7 @@
       "dram_price_momentum": "up",
       "nand_price_momentum": "up",
       "price_second_derivative": "unknown",
-      "earnings_revision_breadth": "unknown",
+      "earnings_revision_breadth": "up",
       "supply_growth_risk_2027_2028": "unknown"
     },
     "rates": {
@@ -74423,13 +74423,30 @@
       "asia_supply_chain_flow_20d_z": -0.6,
       "reference_date": "2026-07-17",
       "source": "JP Morgan APAC semiconductor commentary; manual snapshot",
-      "note": "프라임브로커리지 원자료가 비공개이므로 장표·코멘트 기반 수동 스냅샷"
+      "note": "프라임브로커리지 원자료가 비공개이므로 장표·코멘트 기반 수동 스냅샷",
+      "global_memory_ls": {
+        "ratio": 6.1,
+        "direction": "down",
+        "percentile_since_2020": 64,
+        "percentile_12m": 32,
+        "prior_peak_ratio_min": 20,
+        "reference_date": "2026-07-18",
+        "source": "The Market Ear / 기관 프라임브로커리지 차트; 사용자 제공 자료",
+        "status": "과밀 상당 부분 해소 · 아직 롱 우위",
+        "dram_asp_direction": "up",
+        "eps_revision_direction": "up",
+        "hbm_order_direction": "up",
+        "raw_data_public": false,
+        "not_in_regime_score": true,
+        "note": "6.1배는 투자자 수 비율이 아니라 기관 고객계좌의 익스포저 집계일 수 있다. 절대값보다 20배 이상에서 6배 수준으로 하락한 방향과 DRAM ASP·EPS 방향의 조합을 본다."
+      }
     },
     "notes": [
       "감익 시나리오는 자동 매수선이 아니라 현재 가격에 반영된 이익 훼손 정도를 점검하는 스트레스 테스트다.",
       "F-PER는 EPS 추정치가 갱신되면 manual_signals.json의 연도별 EPS를 함께 갱신해야 한다.",
       "메리츠 보고서에서 가져온 시총·이익 비중은 기준일 고정값이며 현재 직접 시가총액 비중과 산식이 다르므로 동일한 값처럼 비교하지 않는다.",
       "하나증권 자료는 새 패널을 만들지 않고 기존 신호의 해석 및 등급 상향 게이트로만 사용한다.",
+      "기관 글로벌 메모리 L/S는 수동 스냅샷이며 일일 종합 레짐 점수에 포함하지 않는다.",
       "필수성이 낮은 신규 지표·패널 추가는 중단하고 현재 핵심 패널의 정확도와 해석 개선을 우선한다."
     ]
   },
@@ -77251,6 +77268,94 @@
       }
     ],
     "note": "MDD·DRAM 가격·ETF 유입은 가점일 뿐, 이 4개 게이트를 대체하지 않습니다.",
-    "updated_at": "2026-07-19T13:50:47+09:00"
+    "updated_at": "2026-07-19T14:29:25+09:00"
+  },
+  "positioning_analysis": {
+    "institutional_snapshot": {
+      "ratio": 6.1,
+      "direction": "down",
+      "percentile_since_2020": 64,
+      "percentile_12m": 32,
+      "prior_peak_ratio_min": 20,
+      "reference_date": "2026-07-18",
+      "source": "The Market Ear / 기관 프라임브로커리지 차트; 사용자 제공 자료",
+      "status": "과밀 상당 부분 해소 · 아직 롱 우위",
+      "dram_asp_direction": "up",
+      "eps_revision_direction": "up",
+      "hbm_order_direction": "up",
+      "raw_data_public": false,
+      "not_in_regime_score": true,
+      "note": "6.1배는 투자자 수 비율이 아니라 기관 고객계좌의 익스포저 집계일 수 있다. 절대값보다 20배 이상에서 6배 수준으로 하락한 방향과 DRAM ASP·EPS 방향의 조합을 본다."
+    },
+    "daily_proxy": {
+      "score": 24.9586,
+      "state": "투매·극단적 숏",
+      "coverage_pct": 35,
+      "components": [
+        {
+          "name": "한국 외국인 수급·지분율",
+          "score": 34.302,
+          "weight": 25,
+          "available": true,
+          "detail": {
+            "flow_20d_percentile": 8.8123,
+            "ownership_change_percentile": 59.7917,
+            "latest_20d_net_buy_trn": -40.562,
+            "source": "Naver Finance KOSPI 외국인 순매수(억원→조원, 일별 구조 감지 파서)"
+          }
+        },
+        {
+          "name": "KRX 공매도 잔고",
+          "score": null,
+          "weight": 20,
+          "available": false,
+          "detail": {
+            "latest_ratio_pct": {},
+            "source": "미산출"
+          }
+        },
+        {
+          "name": "KRX 공매도 거래",
+          "score": null,
+          "weight": 10,
+          "available": false,
+          "detail": {
+            "latest_ratio_pct": {},
+            "source": "미산출"
+          }
+        },
+        {
+          "name": "메모리·SOX 상승 확산도",
+          "score": 1.6,
+          "weight": 10,
+          "available": true,
+          "detail": {
+            "source": "삼성전자·SK하이닉스·SOX 20일 수익률의 자체 역사 백분위"
+          }
+        }
+      ],
+      "missing_components": [
+        "ETF 설정·환매",
+        "옵션 put/call",
+        "대차잔고",
+        "미국 메모리 FINRA·공식 short interest"
+      ],
+      "note": "확보된 공개 데이터만으로 활성 가중치를 재정규화한 1단계 프록시입니다. 커버리지가 100%가 아니며 기관 L/S 수동값은 점수에 포함하지 않습니다."
+    },
+    "combined_judgement": {
+      "label": "포지션 청산 우세·저점 접근 후보",
+      "text": "기관 메모리 L/S는 급락했지만 DRAM ASP와 EPS 방향은 상향입니다. 확인된 다운사이클보다 과밀 롱 해소 가능성이 우세합니다. 다만 가격 반응과 외국인 수급 회복 전에는 저점 확정으로 보지 않습니다.",
+      "ls_direction": "down",
+      "dram_asp_direction": "up",
+      "eps_revision_direction": "up"
+    },
+    "not_in_regime_score": true,
+    "errors": [
+      "삼성전자 KRX 공매도 잔고: KRX 공매도 순보유잔고 비중 미산출",
+      "SK하이닉스 KRX 공매도 잔고: KRX 공매도 순보유잔고 비중 미산출",
+      "삼성전자 KRX 공매도 거래: get_shorting_value_by_date: '거래대금' / get_shorting_volume_by_date: '거래량'",
+      "SK하이닉스 KRX 공매도 거래: get_shorting_value_by_date: '거래대금' / get_shorting_volume_by_date: '거래량'"
+    ],
+    "updated_at": "2026-07-19T14:29:25+09:00"
   }
 }
