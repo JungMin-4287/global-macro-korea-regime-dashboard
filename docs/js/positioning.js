@@ -25,6 +25,18 @@
     const target = document.getElementById('positioning');
     if (!target) return;
 
+    const card = target.closest('article.card');
+    if (card) {
+      card.classList.remove('span4');
+      card.classList.add('span8');
+      const section = card.parentElement;
+      const formulaCard = section ? [...section.querySelectorAll('article.card')].find(node => node.querySelector('.formula')) : null;
+      if (formulaCard) {
+        formulaCard.classList.remove('span4');
+        formulaCard.classList.add('span12');
+      }
+    }
+
     const manual = DASH.data?.manual?.positioning || {};
     const analysis = DASH.data?.positioning_analysis || {};
     const inst = analysis.institutional_snapshot || manual.global_memory_ls || {};
