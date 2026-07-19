@@ -8,7 +8,7 @@ on:
       - "scripts/**"
       - "templates/**"
       - "docs/js/**"
-      - "docs/styles.css"
+      - "docs/*.css"
       - "requirements.txt"
       - "docs/data/manual_signals.json"
       - ".github/workflows/update-dashboard.yml"
@@ -44,7 +44,7 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Update data and HTML
-        run: python scripts/update_dashboard_v13.py
+        run: python scripts/update_dashboard_v14.py
 
       - name: Commit updated dashboard
         run: |
