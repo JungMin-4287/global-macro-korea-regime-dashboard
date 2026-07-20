@@ -11,6 +11,7 @@ on:
       - "docs/*.css"
       - "requirements.txt"
       - "docs/data/manual_signals.json"
+      - "docs/data/vkospi_manual.json"
       - ".github/workflows/update-dashboard.yml"
   schedule:
     - cron: "*/15 0-6 * * 1-5"  # 09:00~15:45 KST, every 15 minutes
@@ -44,7 +45,7 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Update data and HTML
-        run: python scripts/update_dashboard_v15.py
+        run: python scripts/update_dashboard_v16.py
 
       - name: Commit updated dashboard
         run: |
