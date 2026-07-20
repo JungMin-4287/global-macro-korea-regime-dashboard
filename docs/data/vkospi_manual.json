@@ -1,0 +1,12 @@
+{
+  "date": "2026-07-20",
+  "close": 86.91,
+  "change_pct": -0.26,
+  "observed_at_kst": "2026-07-20T15:26:40+09:00",
+  "symbol": "KSVKOSPI",
+  "source": "Investing.com KOSPI Volatility 화면; 사용자 제공 스크린샷",
+  "data_kind": "actual_vkospi_manual_snapshot",
+  "is_closing_snapshot": true,
+  "gate_policy": "actual_only_partial_without_3d_or_5d_downtrend_confirmation",
+  "note": "실제 VKOSPI와 KOSPI 실현변동성 대체값을 구분한다. 단일 일간 하락은 게이트 ③ 확정이 아니라 부분 개선으로만 사용한다."
+}
