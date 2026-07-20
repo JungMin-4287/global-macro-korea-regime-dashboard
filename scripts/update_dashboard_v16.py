@@ -8,7 +8,6 @@ an actual VKOSPI multi-day downtrend plus USD/KRW stability.
 from __future__ import annotations
 
 import json
-from pathlib import Path
 
 import update_dashboard as base
 import update_dashboard_v7 as v7
@@ -70,7 +69,6 @@ def build_macro_context_actual(payload: dict) -> dict:
     one_day_falling = actual and vk.get("change_pct") is not None and float(vk.get("change_pct")) < 0
     trend_available = bool(vk.get("trend_confirmation_available"))
 
-    # A manual one-day actual snapshot can improve the condition only partially.
     if actual and not trend_available:
         macro["vkospi_falling"] = False
         macro["vkospi_partial_falling"] = one_day_falling
@@ -96,7 +94,6 @@ if __name__ == "__main__":
     payload["trend_rebound_gate"] = v14.build_trend_gate(payload, macro)
     payload["positioning_analysis"] = v15.build_positioning_analysis(payload)
 
-    # Ensure the gate card explains that an actual one-day fall is partial only.
     gate = payload.get("trend_rebound_gate") or {}
     for component in gate.get("components") or []:
         if component.get("name") == "환율·변동성":
