@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-21T13:40:31+09:00",
+  "generated_at": "2026-07-21T13:57:24+09:00",
   "status": "ok",
   "methodology": {
     "disparity_ratio": "현재가 ÷ 이동평균 × 100",
@@ -20,35 +20,35 @@
       "type": "index",
       "date": "2026-07-21",
       "source": "Yahoo Finance fallback",
-      "close": 6828.6001,
-      "change_pct": 4.7931,
-      "current_drawdown_pct": -25.0802,
+      "close": 6813.1899,
+      "change_pct": 4.5566,
+      "current_drawdown_pct": -25.2493,
       "mdd_252_pct": -28.5069,
-      "sma30": 7961.5404,
-      "ratio30": 85.7698,
-      "dev30": -14.2302,
+      "sma30": 7961.0267,
+      "ratio30": 85.5818,
+      "dev30": -14.4182,
       "ratio30_percentile_3y": 0.6614,
-      "sma50": 7952.0016,
-      "ratio50": 85.8727,
-      "dev50": -14.1273,
+      "sma50": 7951.6934,
+      "ratio50": 85.6823,
+      "dev50": -14.3177,
       "ratio50_percentile_3y": 0.5291,
-      "sma60": 7755.4479,
-      "ratio60": 88.0491,
-      "dev60": -11.9509,
+      "sma60": 7755.191,
+      "ratio60": 87.8533,
+      "dev60": -12.1467,
       "ratio60_percentile_3y": 0.2646,
-      "sma100": 6933.7931,
-      "ratio100": 98.4829,
-      "dev100": -1.5171,
-      "ratio100_percentile_3y": 19.9735,
-      "sma120": 6659.5808,
-      "ratio120": 102.538,
-      "dev120": 2.538,
-      "ratio120_percentile_3y": 39.9471,
-      "sma200": 5616.5192,
-      "ratio200": 121.5806,
-      "dev200": 21.5806,
+      "sma100": 6933.639,
+      "ratio100": 98.2628,
+      "dev100": -1.7372,
+      "ratio100_percentile_3y": 19.3122,
+      "sma120": 6659.4524,
+      "ratio120": 102.3086,
+      "dev120": 2.3086,
+      "ratio120_percentile_3y": 38.7566,
+      "sma200": 5616.4422,
+      "ratio200": 121.3079,
+      "dev200": 21.3079,
       "ratio200_percentile_3y": 71.4286,
-      "rebound_3d": true,
+      "rebound_3d": false,
       "history": [
         {
           "date": "2024-05-30",
@@ -8875,64 +8875,64 @@
         },
         {
           "date": "2026-07-21",
-          "close": 6828.6001,
-          "sma30": 7961.5404,
-          "sma50": 7952.0016,
-          "sma60": 7755.4479,
-          "sma100": 6933.7931,
-          "sma120": 6659.5808,
-          "sma200": 5616.5192,
-          "ratio30": 85.7698,
-          "ratio50": 85.8727,
-          "ratio60": 88.0491,
-          "ratio100": 98.4829,
-          "ratio120": 102.538,
-          "ratio200": 121.5806,
-          "drawdown": -25.0802
+          "close": 6813.1899,
+          "sma30": 7961.0267,
+          "sma50": 7951.6934,
+          "sma60": 7755.191,
+          "sma100": 6933.639,
+          "sma120": 6659.4524,
+          "sma200": 5616.4422,
+          "ratio30": 85.5818,
+          "ratio50": 85.6823,
+          "ratio60": 87.8533,
+          "ratio100": 98.2628,
+          "ratio120": 102.3086,
+          "ratio200": 121.3079,
+          "drawdown": -25.2493
         }
       ],
       "disparity_interpretation": {
-        "zone": "극단적 과매도 후 반전 시도",
-        "headline": "현재 구간: 극단적 과매도 후 반전 시도",
-        "summary": "50일 이격도 85.9(-14.1%), 120일 이격도 102.5(+2.5%). 120일선 위로 중기 추세는 유지. 60일 이격도는 88.0로 장표상 과거 극단 구간 90과 비교합니다.",
-        "action": "과매도 반등이 시작됐지만 5·20일선 회복과 외국인 수급 반전이 추가 확인 조건입니다."
+        "zone": "극단적 과매도·낙하 위험",
+        "headline": "현재 구간: 극단적 과매도·낙하 위험",
+        "summary": "50일 이격도 85.7(-14.3%), 120일 이격도 102.3(+2.3%). 120일선 위로 중기 추세는 유지. 60일 이격도는 87.9로 장표상 과거 극단 구간 90과 비교합니다.",
+        "action": "수치만으로 매수하지 말고 전저점 방어, A/D 개선, VKOSPI 하락 전환을 확인해야 합니다."
       },
       "is_proxy": false,
-      "signal": "반등 확인",
-      "score": 4
+      "signal": "낙하 중·확인 필요",
+      "score": 3
     },
     "KOSDAQ": {
       "name": "KOSDAQ",
       "type": "index",
       "date": "2026-07-21",
       "source": "Yahoo Finance fallback",
-      "close": 758.17,
-      "change_pct": 1.1379,
-      "current_drawdown_pct": -38.1681,
+      "close": 756.16,
+      "change_pct": 0.8697,
+      "current_drawdown_pct": -38.3321,
       "mdd_252_pct": -38.8638,
-      "sma30": 893.8133,
-      "ratio30": 84.8242,
-      "dev30": -15.1758,
-      "ratio30_percentile_3y": 1.1905,
-      "sma50": 978.9928,
-      "ratio50": 77.4439,
-      "dev50": -22.5561,
-      "ratio50_percentile_3y": 0.6614,
-      "sma60": 1016.4395,
-      "ratio60": 74.5908,
-      "dev60": -25.4092,
+      "sma30": 893.7463,
+      "ratio30": 84.6057,
+      "dev30": -15.3943,
+      "ratio30_percentile_3y": 1.0582,
+      "sma50": 978.9526,
+      "ratio50": 77.2417,
+      "dev50": -22.7583,
+      "ratio50_percentile_3y": 0.5291,
+      "sma60": 1016.406,
+      "ratio60": 74.3955,
+      "dev60": -25.6045,
       "ratio60_percentile_3y": 0.3968,
-      "sma100": 1059.6389,
-      "ratio100": 71.5498,
-      "dev100": -28.4502,
+      "sma100": 1059.6188,
+      "ratio100": 71.3615,
+      "dev100": -28.6385,
       "ratio100_percentile_3y": 0.2646,
-      "sma120": 1068.0019,
-      "ratio120": 70.9896,
-      "dev120": -29.0104,
+      "sma120": 1067.9852,
+      "ratio120": 70.8025,
+      "dev120": -29.1975,
       "ratio120_percentile_3y": 0.2646,
-      "sma200": 1002.2805,
-      "ratio200": 75.6445,
-      "dev200": -24.3555,
+      "sma200": 1002.2704,
+      "ratio200": 75.4447,
+      "dev200": -24.5553,
       "ratio200_percentile_3y": 0.2646,
       "rebound_3d": false,
       "history": [
@@ -17761,26 +17761,26 @@
         },
         {
           "date": "2026-07-21",
-          "close": 758.17,
-          "sma30": 893.8133,
-          "sma50": 978.9928,
-          "sma60": 1016.4395,
-          "sma100": 1059.6389,
-          "sma120": 1068.0019,
-          "sma200": 1002.2805,
-          "ratio30": 84.8242,
-          "ratio50": 77.4439,
-          "ratio60": 74.5908,
-          "ratio100": 71.5498,
-          "ratio120": 70.9896,
-          "ratio200": 75.6445,
-          "drawdown": -38.1681
+          "close": 756.16,
+          "sma30": 893.7463,
+          "sma50": 978.9526,
+          "sma60": 1016.406,
+          "sma100": 1059.6188,
+          "sma120": 1067.9852,
+          "sma200": 1002.2704,
+          "ratio30": 84.6057,
+          "ratio50": 77.2417,
+          "ratio60": 74.3955,
+          "ratio100": 71.3615,
+          "ratio120": 70.8025,
+          "ratio200": 75.4447,
+          "drawdown": -38.3321
         }
       ],
       "disparity_interpretation": {
         "zone": "극단적 과매도·낙하 위험",
         "headline": "현재 구간: 극단적 과매도·낙하 위험",
-        "summary": "50일 이격도 77.4(-22.6%), 120일 이격도 71.0(-29.0%). 120일선 아래로 중기 추세도 훼손.",
+        "summary": "50일 이격도 77.2(-22.8%), 120일 이격도 70.8(-29.2%). 120일선 아래로 중기 추세도 훼손.",
         "action": "수치만으로 매수하지 말고 전저점 방어, A/D 개선, VKOSPI 하락 전환을 확인해야 합니다."
       },
       "is_proxy": false,
@@ -17792,34 +17792,34 @@
       "type": "stock",
       "date": "2026-07-21",
       "source": "KRX(pykrx)",
-      "close": 262500.0,
-      "change_pct": 7.582,
-      "current_drawdown_pct": -27.5862,
+      "close": 259000.0,
+      "change_pct": 6.1475,
+      "current_drawdown_pct": -28.5517,
       "mdd_252_pct": -32.6897,
-      "sma30": 309033.3333,
-      "ratio30": 84.9423,
-      "dev30": -15.0577,
+      "sma30": 308916.6667,
+      "ratio30": 83.8414,
+      "dev30": -16.1586,
       "ratio30_percentile_3y": 0.6614,
-      "sma50": 305740.0,
-      "ratio50": 85.8573,
-      "dev50": -14.1427,
-      "ratio50_percentile_3y": 4.1005,
-      "sma60": 293525.0,
-      "ratio60": 89.4302,
-      "dev60": -10.5698,
-      "ratio60_percentile_3y": 7.4074,
-      "sma100": 254285.0,
-      "ratio100": 103.2306,
-      "dev100": 3.2306,
-      "ratio100_percentile_3y": 42.5926,
-      "sma120": 239715.8333,
-      "ratio120": 109.5047,
-      "dev120": 9.5047,
-      "ratio120_percentile_3y": 60.3175,
-      "sma200": 186900.0,
-      "ratio200": 140.4494,
-      "dev200": 40.4494,
-      "ratio200_percentile_3y": 74.7354,
+      "sma50": 305670.0,
+      "ratio50": 84.7319,
+      "dev50": -15.2681,
+      "ratio50_percentile_3y": 3.4392,
+      "sma60": 293466.6667,
+      "ratio60": 88.2553,
+      "dev60": -11.7447,
+      "ratio60_percentile_3y": 6.8783,
+      "sma100": 254250.0,
+      "ratio100": 101.8682,
+      "dev100": 1.8682,
+      "ratio100_percentile_3y": 37.4339,
+      "sma120": 239686.6667,
+      "ratio120": 108.0577,
+      "dev120": 8.0577,
+      "ratio120_percentile_3y": 58.0688,
+      "sma200": 186882.5,
+      "ratio200": 138.5898,
+      "dev200": 38.5898,
+      "ratio200_percentile_3y": 74.2063,
       "rebound_3d": true,
       "history": [
         {
@@ -26647,26 +26647,26 @@
         },
         {
           "date": "2026-07-21",
-          "close": 262500.0,
-          "sma30": 309033.3333,
-          "sma50": 305740.0,
-          "sma60": 293525.0,
-          "sma100": 254285.0,
-          "sma120": 239715.8333,
-          "sma200": 186900.0,
-          "ratio30": 84.9423,
-          "ratio50": 85.8573,
-          "ratio60": 89.4302,
-          "ratio100": 103.2306,
-          "ratio120": 109.5047,
-          "ratio200": 140.4494,
-          "drawdown": -27.5862
+          "close": 259000.0,
+          "sma30": 308916.6667,
+          "sma50": 305670.0,
+          "sma60": 293466.6667,
+          "sma100": 254250.0,
+          "sma120": 239686.6667,
+          "sma200": 186882.5,
+          "ratio30": 83.8414,
+          "ratio50": 84.7319,
+          "ratio60": 88.2553,
+          "ratio100": 101.8682,
+          "ratio120": 108.0577,
+          "ratio200": 138.5898,
+          "drawdown": -28.5517
         }
       ],
       "disparity_interpretation": {
         "zone": "극단적 과매도·투매권",
         "headline": "기술적 구간: 극단적 과매도·투매권 · 트레이딩 판정: 1차 분할매수",
-        "summary": "30일 이격도 84.9(-15.1%), 50일 85.9(-14.1%), 120일 109.5(+9.5%). 252일 고점 대비 -27.6%",
+        "summary": "30일 이격도 83.8(-16.2%), 50일 84.7(-15.3%), 120일 108.1(+8.1%). 252일 고점 대비 -28.6%",
         "action": "가격 반응과 수급을 함께 확인해야 하며 이격도 단독으로 매수하지 않습니다. 하나증권 자료의 과매도 근거는 가점으로만 사용합니다. 현재 확인 3개(3거래일 반전, SOX 대비 5일 상대강도 개선, KOSPI 외국인 5일 순매수). 추가 확인: 외국인 지분율 20일 상승, 빅테크 CAPEX·클라우드 상향. 허용 비중: 예정 비중의 20~30%."
       },
       "is_proxy": false,
@@ -26694,34 +26694,34 @@
       "type": "stock",
       "date": "2026-07-21",
       "source": "KRX(pykrx)",
-      "close": 1867000.0,
-      "change_pct": 5.839,
-      "current_drawdown_pct": -36.0397,
+      "close": 1851000.0,
+      "change_pct": 4.932,
+      "current_drawdown_pct": -36.5879,
       "mdd_252_pct": -39.5683,
-      "sma30": 2318233.3333,
-      "ratio30": 80.5355,
-      "dev30": -19.4645,
+      "sma30": 2317700.0,
+      "ratio30": 79.8637,
+      "dev30": -20.1363,
       "ratio30_percentile_3y": 1.1905,
-      "sma50": 2196860.0,
-      "ratio50": 84.9849,
-      "dev50": -15.0151,
-      "ratio50_percentile_3y": 3.1746,
-      "sma60": 2056433.3333,
-      "ratio60": 90.7883,
-      "dev60": -9.2117,
-      "ratio60_percentile_3y": 6.746,
-      "sma100": 1626710.0,
-      "ratio100": 114.7715,
-      "dev100": 14.7715,
-      "ratio100_percentile_3y": 48.4127,
-      "sma120": 1498691.6667,
-      "ratio120": 124.5753,
-      "dev120": 24.5753,
-      "ratio120_percentile_3y": 61.5079,
-      "sma200": 1122825.0,
-      "ratio200": 166.277,
-      "dev200": 66.277,
-      "ratio200_percentile_3y": 75.6614,
+      "sma50": 2196540.0,
+      "ratio50": 84.2689,
+      "dev50": -15.7311,
+      "ratio50_percentile_3y": 3.0423,
+      "sma60": 2056166.6667,
+      "ratio60": 90.0219,
+      "dev60": -9.9781,
+      "ratio60_percentile_3y": 5.8201,
+      "sma100": 1626550.0,
+      "ratio100": 113.7991,
+      "dev100": 13.7991,
+      "ratio100_percentile_3y": 45.7672,
+      "sma120": 1498558.3333,
+      "ratio120": 123.5187,
+      "dev120": 23.5187,
+      "ratio120_percentile_3y": 59.127,
+      "sma200": 1122745.0,
+      "ratio200": 164.8638,
+      "dev200": 64.8638,
+      "ratio200_percentile_3y": 75.3968,
       "rebound_3d": true,
       "history": [
         {
@@ -35549,26 +35549,26 @@
         },
         {
           "date": "2026-07-21",
-          "close": 1867000.0,
-          "sma30": 2318233.3333,
-          "sma50": 2196860.0,
-          "sma60": 2056433.3333,
-          "sma100": 1626710.0,
-          "sma120": 1498691.6667,
-          "sma200": 1122825.0,
-          "ratio30": 80.5355,
-          "ratio50": 84.9849,
-          "ratio60": 90.7883,
-          "ratio100": 114.7715,
-          "ratio120": 124.5753,
-          "ratio200": 166.277,
-          "drawdown": -36.0397
+          "close": 1851000.0,
+          "sma30": 2317700.0,
+          "sma50": 2196540.0,
+          "sma60": 2056166.6667,
+          "sma100": 1626550.0,
+          "sma120": 1498558.3333,
+          "sma200": 1122745.0,
+          "ratio30": 79.8637,
+          "ratio50": 84.2689,
+          "ratio60": 90.0219,
+          "ratio100": 113.7991,
+          "ratio120": 123.5187,
+          "ratio200": 164.8638,
+          "drawdown": -36.5879
         }
       ],
       "disparity_interpretation": {
         "zone": "극단적 과매도·투매권",
         "headline": "기술적 구간: 극단적 과매도·투매권 · 트레이딩 판정: 1차 분할매수",
-        "summary": "30일 이격도 80.5(-19.5%), 50일 85.0(-15.0%), 120일 124.6(+24.6%). 252일 고점 대비 -36.0%",
+        "summary": "30일 이격도 79.9(-20.1%), 50일 84.3(-15.7%), 120일 123.5(+23.5%). 252일 고점 대비 -36.6%",
         "action": "가격 반응과 수급을 함께 확인해야 하며 이격도 단독으로 매수하지 않습니다. 하나증권 자료의 과매도 근거는 가점으로만 사용합니다. 현재 확인 4개(3거래일 반전, SOX 대비 5일 상대강도 개선, KOSPI 외국인 5일 순매수, 외국인 지분율 20일 상승). 추가 확인: 빅테크 CAPEX·클라우드 상향. 허용 비중: 예정 비중의 20~30%."
       },
       "is_proxy": false,
@@ -53369,33 +53369,33 @@
       "type": "macro",
       "date": "2026-07-21",
       "source": "Yahoo Finance fallback",
-      "close": 1474.53,
-      "change_pct": -0.8646,
-      "current_drawdown_pct": -5.1432,
-      "mdd_252_pct": -5.1432,
-      "sma30": 1519.3097,
-      "ratio30": 97.0526,
-      "dev30": -2.9474,
-      "ratio30_percentile_3y": 1.455,
-      "sma50": 1515.3932,
-      "ratio50": 97.3035,
-      "dev50": -2.6965,
+      "close": 1474.58,
+      "change_pct": -0.8612,
+      "current_drawdown_pct": -5.14,
+      "mdd_252_pct": -5.14,
+      "sma30": 1519.3113,
+      "ratio30": 97.0558,
+      "dev30": -2.9442,
+      "ratio30_percentile_3y": 1.5873,
+      "sma50": 1515.3942,
+      "ratio50": 97.3067,
+      "dev50": -2.6933,
       "ratio50_percentile_3y": 5.8201,
-      "sma60": 1507.6503,
-      "ratio60": 97.8032,
-      "dev60": -2.1968,
+      "sma60": 1507.6512,
+      "ratio60": 97.8064,
+      "dev60": -2.1936,
       "ratio60_percentile_3y": 11.5079,
-      "sma100": 1499.3738,
-      "ratio100": 98.3431,
-      "dev100": -1.6569,
+      "sma100": 1499.3743,
+      "ratio100": 98.3464,
+      "dev100": -1.6536,
       "ratio100_percentile_3y": 15.6085,
-      "sma120": 1490.4957,
-      "ratio120": 98.9288,
-      "dev120": -1.0712,
-      "ratio120_percentile_3y": 19.709,
-      "sma200": 1475.2672,
-      "ratio200": 99.95,
-      "dev200": -0.05,
+      "sma120": 1490.4962,
+      "ratio120": 98.9322,
+      "dev120": -1.0678,
+      "ratio120_percentile_3y": 19.8413,
+      "sma200": 1475.2674,
+      "ratio200": 99.9534,
+      "dev200": -0.0466,
       "ratio200_percentile_3y": 26.1905,
       "rebound_3d": false,
       "history": [
@@ -62224,20 +62224,20 @@
         },
         {
           "date": "2026-07-21",
-          "close": 1474.53,
-          "sma30": 1519.3097,
-          "sma50": 1515.3932,
-          "sma60": 1507.6503,
-          "sma100": 1499.3738,
-          "sma120": 1490.4957,
-          "sma200": 1475.2672,
-          "ratio30": 97.0526,
-          "ratio50": 97.3035,
-          "ratio60": 97.8032,
-          "ratio100": 98.3431,
-          "ratio120": 98.9288,
-          "ratio200": 99.95,
-          "drawdown": -5.1432
+          "close": 1474.58,
+          "sma30": 1519.3113,
+          "sma50": 1515.3942,
+          "sma60": 1507.6512,
+          "sma100": 1499.3743,
+          "sma120": 1490.4962,
+          "sma200": 1475.2674,
+          "ratio30": 97.0558,
+          "ratio50": 97.3067,
+          "ratio60": 97.8064,
+          "ratio100": 98.3464,
+          "ratio120": 98.9322,
+          "ratio200": 99.9534,
+          "drawdown": -5.14
         }
       ],
       "disparity_interpretation": {
@@ -62288,18 +62288,18 @@
       "disparity_interpretation": {
         "zone": "극단적 공포·강제청산 구간",
         "headline": "현재 구간: 극단적 공포·강제청산 구간",
-        "summary": "VKOSPI 81.65, 20일 평균 75.15, 50일 평균 62.39, 3년 수준 백분위 100.0%. 실제 VKOSPI가 아닌 실현변동성 대체치",
+        "summary": "VKOSPI 81.42, 20일 평균 75.14, 50일 평균 62.39, 3년 수준 백분위 100.0%. 실제 VKOSPI가 아닌 실현변동성 대체치",
         "action": "역사적 극단 구간입니다. 공포 자체는 반등 후보지만 최소 2거래일 하락 전환과 시장 폭 회복이 필요합니다."
       },
       "is_proxy": true,
       "sma20": null,
       "level_percentile_3y": 100.0,
       "low_52w": 12.5449,
-      "high_52w": 81.6541,
+      "high_52w": 81.4238,
       "history_points": 520,
       "interpretation": "실제 VKOSPI 종가 스냅샷. 당일 하락은 부분 개선이며 3일·5일 하락 전환 확인 전에는 게이트 확정에 사용하지 않습니다.",
-      "proxy_close": 81.6541,
-      "proxy_change_pct": 3.571,
+      "proxy_close": 81.4238,
+      "proxy_change_pct": 3.279,
       "proxy_source": "KOSPI 20일 실현변동성 대체지표",
       "data_kind": "actual_vkospi_manual_snapshot",
       "actual_vkospi": true,
@@ -63663,25 +63663,25 @@
       },
       {
         "date": "2026-07-21",
-        "x": -1.8192,
-        "y": 4.7931
+        "x": -1.8529,
+        "y": 4.5566
       }
     ],
     "regression": [
       {
         "x": -5.4161,
-        "y": 5.8077
+        "y": 5.8031
       },
       {
         "x": 8.591,
-        "y": -6.8518
+        "y": -6.8492
       }
     ],
     "latest": {
       "date": "2026-07-21",
-      "x": -1.8192,
-      "y": 4.7931,
-      "residual": 2.2363
+      "x": -1.8529,
+      "y": 4.5566,
+      "residual": 1.972
     },
     "correlation": -0.6795,
     "zone": "외국인·기관 주도 상승",
@@ -63690,30 +63690,30 @@
     "highlights": [
       {
         "date": "2026-07-21",
-        "x": -1.8192,
-        "y": 4.7931,
-        "residual": 2.2362701254450377,
+        "x": -1.8529,
+        "y": 4.5566,
+        "residual": 1.9720364796807335,
         "label": "7/21"
       },
       {
         "date": "2026-03-04",
         "x": 0.0796,
         "y": -12.0577,
-        "residual": -12.898421946413514,
+        "residual": -12.896672457992876,
         "label": "3/4"
       },
       {
         "date": "2026-03-05",
         "x": 1.8228,
         "y": 9.6271,
-        "residual": 10.361856956228245,
+        "residual": 10.362727459133833,
         "label": "3/5"
       },
       {
         "date": "2026-06-08",
         "x": 1.7628,
         "y": -8.2859,
-        "residual": -7.605370174427162,
+        "residual": -7.604469417316146,
         "label": "6/8"
       }
     ],
@@ -64779,30 +64779,30 @@
         {
           "date": "2026-07-21",
           "peak_date": "2026-06-22",
-          "x": 31.2619,
-          "y": -25.0802,
-          "close": 6828.6001,
-          "daily_individual_net_buy_trn": -1.8279
+          "x": 31.2369,
+          "y": -25.2493,
+          "close": 6813.1899,
+          "daily_individual_net_buy_trn": -1.8529
         }
       ],
       "regression": [
         {
           "x": -1.2954,
-          "y": -0.8195
+          "y": -0.8185
         },
         {
           "x": 39.8186,
-          "y": -18.2758
+          "y": -18.2809
         }
       ],
       "highlights": [
         {
           "date": "2026-07-21",
           "peak_date": "2026-06-22",
-          "x": 31.2619,
-          "y": -25.0802,
-          "close": 6828.6001,
-          "daily_individual_net_buy_trn": -1.8279,
+          "x": 31.2369,
+          "y": -25.2493,
+          "close": 6813.1899,
+          "daily_individual_net_buy_trn": -1.8529,
           "label": "7/21"
         },
         {
@@ -64845,10 +64845,10 @@
       "latest": {
         "date": "2026-07-21",
         "peak_date": "2026-06-22",
-        "x": 31.2619,
-        "y": -25.0802,
-        "close": 6828.6001,
-        "daily_individual_net_buy_trn": -1.8279
+        "x": 31.2369,
+        "y": -25.2493,
+        "close": 6813.1899,
+        "daily_individual_net_buy_trn": -1.8529
       },
       "zone": "개인 대규모 저가매수에도 깊은 낙폭",
       "interpretation": "개인이 누적으로 크게 매수했지만 지수 낙폭이 깊습니다. 외국인·기관 매도 압력이 개인 매수보다 강해 청산이 끝났다고 보기 어렵습니다.",
@@ -64864,27 +64864,27 @@
       {
         "key": "SAMSUNG",
         "name": "삼성전자",
-        "price": 262500.0,
+        "price": 259000.0,
         "target_price": 430000,
         "eps_2026": 42106,
-        "per_2026": 6.2343,
+        "per_2026": 6.1511,
         "eps_2027": 47475,
-        "per_2027": 5.5292,
+        "per_2027": 5.4555,
         "eps_2028": 52888,
-        "per_2028": 4.9633,
+        "per_2028": 4.8971,
         "interpretation": "강한 감익 우려가 반영된 초저PER"
       },
       {
         "key": "SKHYNIX",
         "name": "SK하이닉스",
-        "price": 1867000.0,
+        "price": 1851000.0,
         "target_price": 2600000,
         "eps_2026": 290964,
-        "per_2026": 6.4166,
+        "per_2026": 6.3616,
         "eps_2027": 308470,
-        "per_2027": 6.0525,
+        "per_2027": 6.0006,
         "eps_2028": 333987,
-        "per_2028": 5.59,
+        "per_2028": 5.5421,
         "interpretation": "저PER이나 EPS 하향과 호재 반응 확인 필요"
       }
     ]
@@ -64906,7 +64906,7 @@
     }
   },
   "manual": {
-    "updated_at": "2026-07-19",
+    "updated_at": "2026-07-21",
     "credit": {
       "kospi_credit_balance_trn_krw": null,
       "kosdaq_credit_balance_trn_krw": null,
@@ -65104,12 +65104,52 @@
         "note": "6.1배는 투자자 수 비율이 아니라 기관 고객계좌의 익스포저 집계일 수 있다. 절대값보다 20배 이상에서 6배 수준으로 하락한 방향과 DRAM ASP·EPS 방향의 조합을 본다."
       }
     },
+    "mid_cycle_correction_reference": {
+      "title": "Evercore ISI 반도체 미드사이클 조정 역사 기준",
+      "reference_date": "2026-07-20",
+      "source": "Evercore ISI Mark Lipacis 반도체 코멘터리의 공개 2차 요약; 원문 리서치 비공개",
+      "original_note_public": false,
+      "historical_cases": [
+        2005,
+        2010,
+        2014,
+        2017,
+        2021,
+        2024
+      ],
+      "trigger_revenue_growth_yoy_pct": 65.0,
+      "trigger_window_months": 4,
+      "average_duration_weeks": 7.0,
+      "median_duration_weeks": 6.0,
+      "average_sox_drawdown_pct": -13.0,
+      "typical_drawdown_range_pct": [
+        -16.0,
+        -10.0
+      ],
+      "average_relative_underperformance_vs_spx_pct": -11.0,
+      "trough_relative_pe_to_spx": 1.0,
+      "current_relative_pe_to_spx_snapshot": 1.1,
+      "current_relative_pe_snapshot_note": "보고서 공개 요약상 SOX가 S&P500 대비 약 10% PER 프리미엄. 일일 자동 원자료가 아니므로 기준일 고정값으로만 사용한다.",
+      "average_post_correction_bounce_pct": 36.0,
+      "average_post_correction_bounce_weeks": 20.0,
+      "post_correction_bounce_range_pct": [
+        29.0,
+        40.0
+      ],
+      "post_correction_duration_range_weeks": [
+        14.0,
+        30.0
+      ],
+      "use_rule": "SOX 낙폭·조정 기간은 매일 자동 계산하고, 상대 PER는 새 기관 자료가 들어올 때 수동 갱신한다. 역사적 반등률은 목표수익률이 아니라 조건부 참고 통계다.",
+      "not_in_trend_rebound_gate_score": true
+    },
     "notes": [
       "감익 시나리오는 자동 매수선이 아니라 현재 가격에 반영된 이익 훼손 정도를 점검하는 스트레스 테스트다.",
       "F-PER는 EPS 추정치가 갱신되면 manual_signals.json의 연도별 EPS를 함께 갱신해야 한다.",
       "메리츠 보고서에서 가져온 시총·이익 비중은 기준일 고정값이며 현재 직접 시가총액 비중과 산식이 다르므로 동일한 값처럼 비교하지 않는다.",
       "하나증권 자료는 새 패널을 만들지 않고 기존 신호의 해석 및 등급 상향 게이트로만 사용한다.",
       "기관 글로벌 메모리 L/S는 수동 스냅샷이며 일일 종합 레짐 점수에 포함하지 않는다.",
+      "Evercore 미드사이클 기준은 기존 SOX 카드의 보조 해석으로만 사용하며 0/4 추세 반등 점수를 직접 올리지 않는다.",
       "필수성이 낮은 신규 지표·패널 추가는 중단하고 현재 핵심 패널의 정확도와 해석 개선을 우선한다."
     ]
   },
@@ -66514,8 +66554,8 @@
         },
         {
           "date": "2026-07-21",
-          "daily_net_buy_trn": 0.2557,
-          "cumulative_net_buy_trn": -149.8522
+          "daily_net_buy_trn": 0.2542,
+          "cumulative_net_buy_trn": -149.8537
         }
       ],
       "ownership": [
@@ -67821,10 +67861,10 @@
         }
       ],
       "source": "Naver Finance KOSPI 외국인 순매수(억원→조원, 일별 구조 감지 파서)",
-      "latest_daily_net_buy_trn": 0.2557,
-      "cumulative_net_buy_trn": -149.8522,
-      "net_buy_5d_trn": 2.6686,
-      "net_buy_20d_trn": -36.8844,
+      "latest_daily_net_buy_trn": 0.2542,
+      "cumulative_net_buy_trn": -149.8537,
+      "net_buy_5d_trn": 2.6671,
+      "net_buy_20d_trn": -36.8859,
       "samsung_foreign_ownership_pct": 46.59,
       "samsung_foreign_ownership_20d_change_pp": -0.97,
       "skhynix_foreign_ownership_pct": 52.4,
@@ -67853,8 +67893,8 @@
           "latest_reference_date": "2026-06-01",
           "key": "SAMSUNG",
           "name": "삼성전자",
-          "price_return_5d_pct": 3.1434,
-          "price_return_20d_pct": -25.7426,
+          "price_return_5d_pct": 1.7682,
+          "price_return_20d_pct": -26.7327,
           "status": "컨센서스 스냅샷 축적 중"
         },
         {
@@ -67862,8 +67902,8 @@
           "latest_reference_date": "2026-06-01",
           "key": "SKHYNIX",
           "name": "SK하이닉스",
-          "price_return_5d_pct": 1.1924,
-          "price_return_20d_pct": -36.0397,
+          "price_return_5d_pct": 0.3252,
+          "price_return_20d_pct": -36.5879,
           "status": "컨센서스 스냅샷 축적 중"
         }
       ],
@@ -67884,12 +67924,12 @@
   "macro_context": {
     "usdkrw": {
       "date": "2026-07-21",
-      "close": 1474.53,
-      "change_1d_pct": -0.8646,
-      "change_5d_pct": -1.547,
-      "realized_vol_20d_pct": 8.0586,
+      "close": 1474.58,
+      "change_1d_pct": -0.8612,
+      "change_5d_pct": -1.5437,
+      "realized_vol_20d_pct": 8.055,
       "previous_realized_vol_20d_pct": 8.9011,
-      "vol_change_5d_pp": -0.8425,
+      "vol_change_5d_pp": -0.8461,
       "stable": true,
       "risk": false,
       "source": "Yahoo Finance fallback",
@@ -67917,13 +67957,13 @@
         "name": "외국인 수급",
         "confirmed": false,
         "partial": true,
-        "short": "20일 -36.8844조원 · 지분율 -0.97/1.15%p"
+        "short": "20일 -36.8859조원 · 지분율 -0.97/1.15%p"
       },
       {
         "name": "환율·변동성",
         "confirmed": false,
         "partial": true,
-        "short": "원/달러 5일 -1.547% · 실제 VKOSPI 당일 하락/다일 전환 미확인"
+        "short": "원/달러 5일 -1.5437% · 실제 VKOSPI 당일 하락/다일 전환 미확인"
       },
       {
         "name": "가격 반응",
@@ -67933,7 +67973,7 @@
       }
     ],
     "note": "실제 VKOSPI와 실현변동성 대체값을 분리합니다. 단일 일간 하락은 부분 개선이며 게이트 점수에는 반영하지 않습니다.",
-    "updated_at": "2026-07-21T13:40:31+09:00"
+    "updated_at": "2026-07-21T13:57:24+09:00"
   },
   "positioning_analysis": {
     "institutional_snapshot": {
@@ -67953,7 +67993,7 @@
       "note": "6.1배는 투자자 수 비율이 아니라 기관 고객계좌의 익스포저 집계일 수 있다. 절대값보다 20배 이상에서 6배 수준으로 하락한 방향과 DRAM ASP·EPS 방향의 조합을 본다."
     },
     "daily_proxy": {
-      "score": 27.3774,
+      "score": 27.3583,
       "state": "투매·극단적 숏",
       "coverage_pct": 35,
       "components": [
@@ -67965,7 +68005,7 @@
           "detail": {
             "flow_20d_percentile": 13.41,
             "ownership_change_percentile": 62.5,
-            "latest_20d_net_buy_trn": -36.8844,
+            "latest_20d_net_buy_trn": -36.8859,
             "source": "Naver Finance KOSPI 외국인 순매수(억원→조원, 일별 구조 감지 파서)"
           }
         },
@@ -67991,7 +68031,7 @@
         },
         {
           "name": "메모리·SOX 상승 확산도",
-          "score": 0.9333,
+          "score": 0.8667,
           "weight": 10,
           "available": true,
           "detail": {
@@ -68021,6 +68061,6 @@
       "삼성전자 KRX 공매도 거래: get_shorting_value_by_date: '거래대금' / get_shorting_volume_by_date: '거래량'",
       "SK하이닉스 KRX 공매도 거래: get_shorting_value_by_date: '거래대금' / get_shorting_volume_by_date: '거래량'"
     ],
-    "updated_at": "2026-07-21T13:40:31+09:00"
+    "updated_at": "2026-07-21T13:57:24+09:00"
   }
 }
