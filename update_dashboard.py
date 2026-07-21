@@ -12,7 +12,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
 SCRIPTS = ROOT / "scripts"
-LATEST_PIPELINE = SCRIPTS / "update_dashboard_v16.py"
+LATEST_PIPELINE = SCRIPTS / "update_dashboard_v17.py"
 
 
 def main() -> None:
