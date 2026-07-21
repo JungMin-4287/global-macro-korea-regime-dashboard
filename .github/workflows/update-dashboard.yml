@@ -5,6 +5,7 @@ on:
   push:
     branches: [main]
     paths:
+      - "update_dashboard.py"
       - "scripts/**"
       - "templates/**"
       - "docs/js/**"
@@ -45,7 +46,7 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Update data and HTML
-        run: python scripts/update_dashboard_v16.py
+        run: python update_dashboard.py
 
       - name: Commit updated dashboard
         run: |
