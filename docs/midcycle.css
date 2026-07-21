@@ -1,0 +1,22 @@
+.midcycle-clock{margin-top:14px;padding:15px;border:1px solid rgba(111,168,255,.26);border-radius:13px;background:linear-gradient(135deg,rgba(111,168,255,.07),rgba(8,16,31,.3));line-height:1.55}
+.midcycle-head{display:flex;justify-content:space-between;gap:14px;align-items:flex-start}
+.midcycle-head small{color:#95a3bd;font-size:12px}
+.midcycle-head h3{margin:4px 0 0;color:#eef4ff;font-size:20px}
+.midcycle-head .badge{max-width:48%}
+.midcycle-metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px;margin-top:13px}
+.midcycle-metrics>div{padding:10px;border-radius:10px;background:rgba(23,36,61,.9)}
+.midcycle-metrics span,.midcycle-metrics small{display:block;color:#95a3bd;font-size:12px}
+.midcycle-metrics b{display:block;margin:4px 0 2px;font-size:17px;color:#eef4ff}
+.midcycle-conditions{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;margin-top:12px}
+.midcycle-condition{display:flex;gap:9px;align-items:flex-start;padding:10px;border-radius:10px;border:1px solid rgba(43,59,94,.85);background:rgba(8,16,31,.38)}
+.midcycle-condition b,.midcycle-condition small{display:block}
+.midcycle-condition small{color:#aebbd1;font-size:12px;margin-top:2px}
+.midcycle-icon{display:flex;align-items:center;justify-content:center;flex:0 0 25px;height:25px;border-radius:50%;font-weight:850}
+.midcycle-condition.confirmed .midcycle-icon{color:#42d49a;background:rgba(66,212,154,.14)}
+.midcycle-condition.partial .midcycle-icon{color:#ffbd4a;background:rgba(255,189,74,.14)}
+.midcycle-condition.missing .midcycle-icon{color:#ff6577;background:rgba(255,101,119,.14)}
+.midcycle-reading{margin-top:12px;padding:12px 13px;border-left:4px solid #6fa8ff;border-radius:9px;background:rgba(111,168,255,.07)}
+.midcycle-reading p{margin:5px 0 0;color:#cbd6ea}
+.midcycle-history{margin-top:10px;color:#b8c5da;font-size:13px}
+@media(max-width:820px){.midcycle-metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.midcycle-conditions{grid-template-columns:1fr}.midcycle-head{display:block}.midcycle-head .badge{display:inline-block;max-width:100%;margin-top:9px}}
+@media(max-width:390px){.midcycle-metrics{grid-template-columns:1fr}}
