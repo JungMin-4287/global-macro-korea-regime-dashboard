@@ -19,15 +19,17 @@ DASH.card=a=>{
       <div class="summary-reading ${DASH.noteClass(zone)}"><strong>${x.headline||`현재 구간: ${zone}`}</strong><p>${reading}</p><div class="status-line">52주 범위 ${f(a.low_52w)}~${f(a.high_52w)} · ${a.source||'-'}</div></div>
     </article>`;
   }
-  const isStock=a.type==='stock',isNDX=a.name==='나스닥100';
+  const isStock=['stock','global_stock'].includes(a.type),isNDX=a.name==='나스닥100';
   const ratio=isStock?a.ratio30:(isNDX?a.ratio100:a.ratio50);
   const ratioLabel=isStock?'30일 이격도':isNDX?'100일 이격도':'50일 이격도';
+  const t=a.technical_rebound||{},fresh=a.freshness||{};
+  const stale=fresh.stale?`<span class="badge bad">${fresh.business_days_late??'?'}일 지연</span>`:'';
   return `<article class="card summary-card">
-    <div class="kpi"><div><div class="name">${a.name}</div><div class="value">${f(a.close,0)}</div><div class="muted summary-date">${a.date||'-'} · ${f(a.change_pct)}%</div></div><span class="badge ${DASH.cls(zone)}">${zone}</span></div>
+    <div class="kpi"><div><div class="name">${a.name}</div><div class="value">${f(a.close,0)}</div><div class="muted summary-date">${a.date||'-'} · ${f(a.change_pct)}%</div></div><div>${stale}<span class="badge ${DASH.cls(zone)}">${zone}</span></div></div>
     <div class="summary-metrics">
       <div class="metric"><span class="muted">${ratioLabel}</span><b>${f(ratio)}</b><small>${ratio===null||ratio===undefined?'-':f(ratio-100)}%</small></div>
-      <div class="metric"><span class="muted">현재 낙폭</span><b>${f(a.current_drawdown_pct)}%</b></div>
-      <div class="metric"><span class="muted">252일 MDD</span><b>${f(a.mdd_252_pct)}%</b></div>
+      <div class="metric"><span class="muted">RSI(14)</span><b>${f(t.rsi14)}</b><small>${t.state||'-'}</small></div>
+      <div class="metric"><span class="muted">MACD 히스토그램</span><b>${f(t.macd_hist)}</b><small>Sigma ${f(t.sigma20)}</small></div>
     </div>
     <div class="summary-reading ${DASH.noteClass(zone)}"><strong>${x.headline||`현재 구간: ${zone}`}</strong><p>${reading}</p></div>
   </article>`;
