@@ -8,6 +8,8 @@ KOSPI·KOSDAQ의 50일/120일 이격도 지수, 252거래일 MDD·현재 낙폭,
 - 괴리율(%) = `이격도 지수 - 100`
 - 지수: 50일·120일 이격도
 - 삼성전자·SK하이닉스: 30일 이격도(전술) + 50·120일선과 252일 MDD(중기)
+- 일봉 반등 확인: RSI(14), MACD 히스토그램, 20일 Sigma와 가격 반등의 4조건
+- 미국 메모리 선행 확인: Micron·Sandisk, KOSPI200 현물은 선물 방향의 일봉 대용치
 - 호재에도 하락하면 경고, 악재에도 전저점을 지키면 바닥 선행 신호
 
 ## 단일 실행 진입점
@@ -19,9 +21,10 @@ KOSPI·KOSDAQ의 50일/120일 이격도 지수, 252거래일 MDD·현재 낙폭,
 GitHub Actions가 평일 한국시간 09:00~15:45에 15분 간격으로 실행되며, 15:40 종가 갱신과 다음 날 05:30 미국장 마감 갱신을 추가 수행합니다.
 
 1. KRX(pykrx)를 우선 사용
-2. 실패하면 Yahoo Finance를 대체 소스로 사용
-3. `docs/data/market_data.json`, `docs/data/market_history.csv`, `docs/index.html` 갱신
-4. 변경 내용을 자동 커밋
+2. 실패하면 Yahoo Finance chart API, 국내 최신일은 네이버 금융을 대체 소스로 사용
+3. 일부 소스 실패 시 직전 정상값을 보존하고 거래일 지연 경고를 표시
+4. `docs/data/market_data.json`, `docs/data/market_history.csv`, `docs/index.html` 갱신
+5. 변경 내용을 자동 커밋
 
 ## 로컬 실행
 
