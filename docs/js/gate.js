@@ -30,7 +30,11 @@ DASH.renderTrendGate=()=>{
     const state=x.confirmed?'confirmed':x.partial?'partial':'waiting';
     const icon=x.confirmed?'✓':x.partial?'△':'×';
     const status=x.confirmed?'충족':x.partial?'진행 중':'미충족';
-    return `<div class="gate-chip ${state}"><span>${icon}</span><div><b>${i+1}. ${x.name}</b><em>${status}</em><small>${x.short||x.summary||'-'}</small></div></div>`;
+    const details=Array.isArray(x.details)&&x.details.length
+      ? `<div class="gate-chip-details">${x.details.map(d=>`<span>${d}</span>`).join('')}</div>`
+      : '';
+    const mode=x.data_mode?`<small class="gate-data-mode">기준: ${x.data_mode}</small>`:'';
+    return `<div class="gate-chip ${state}"><span>${icon}</span><div><b>${i+1}. ${x.name}</b><em>${status}</em><small>${x.short||x.summary||'-'}</small>${details}${mode}</div></div>`;
   }).join('');
   const unmet=items.filter(x=>!x.confirmed).map(x=>`<li><b>${x.name}</b><span>${x.short||x.summary||'확인 대기'}</span></li>`).join('');
   const unmetBox=unmet?`<div class="gate-unmet"><b>미충족·확인 대기 조건</b><ul>${unmet}</ul></div>`:'<div class="gate-unmet all-clear"><b>4개 조건 모두 충족</b><span>치명적 위험이 없는지 최종 확인이 필요합니다.</span></div>';
