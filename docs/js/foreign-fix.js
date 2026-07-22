@@ -10,25 +10,31 @@
       const f = DASH.f;
       if (!metrics) return;
 
+      const multi = foreign.market_flow_multi_horizon || {};
+      const horizon = multi.net_buy_trn || {};
+      const ownership = foreign.ownership_multi_horizon || {};
+      const sam = ownership.samsung || {};
+      const hyn = ownership.skhynix || {};
+      const samChg = sam.change_pp || {};
+      const hynChg = hyn.change_pp || {};
       const snap = foreign.market_snapshot || {};
-      const hasMarketOwnership = snap.kospi_foreign_ownership_mcap_weighted_pct != null;
-      const fourthCard = hasMarketOwnership
-        ? `<div class="metric"><span class="muted">KOSPI 외국인 보유 비중</span><b>${f(snap.kospi_foreign_ownership_mcap_weighted_pct)}%</b><small>${snap.date || '-'} 확정치</small></div>`
-        : `<div class="metric"><span class="muted">최근 5일 외국인 순매수</span><b>${f(foreign.net_buy_5d_trn)}조원</b><small>KOSPI 보유비중 미산출 시 대체</small></div>`;
 
       metrics.innerHTML = `
-        <div class="metric"><span class="muted">최근 20일 순매수</span><b>${f(foreign.net_buy_20d_trn)}조원</b><small>5일 ${f(foreign.net_buy_5d_trn)}조원</small></div>
-        <div class="metric"><span class="muted">삼성 외국인 지분율</span><b>${f(foreign.samsung_foreign_ownership_pct)}%</b><small>20일 ${f(foreign.samsung_foreign_ownership_20d_change_pp)}%p</small></div>
-        <div class="metric"><span class="muted">하이닉스 외국인 지분율</span><b>${f(foreign.skhynix_foreign_ownership_pct)}%</b><small>20일 ${f(foreign.skhynix_foreign_ownership_20d_change_pp)}%p</small></div>
-        ${fourthCard}`;
+        <div class="metric"><span class="muted">KOSPI 외국인 순매수</span><b>1일 ${f(horizon['1'])}조원</b><small>5일 ${f(horizon['5'])} · 20일 ${f(horizon['20'])}</small></div>
+        <div class="metric"><span class="muted">수급 속도</span><b>${multi.reversal_state || '-'}</b><small>5일 가속도 ${f(multi.acceleration_5d_trn)}조원 · ${multi.streak_days || 0}일 ${multi.streak_direction || '중립'}</small></div>
+        <div class="metric"><span class="muted">삼성 외국인 지분율</span><b>${f(sam.current_pct ?? foreign.samsung_foreign_ownership_pct)}%</b><small>5일 ${f(samChg['5'])}%p · 20일 ${f(samChg['20'])}%p</small></div>
+        <div class="metric"><span class="muted">하이닉스 외국인 지분율</span><b>${f(hyn.current_pct ?? foreign.skhynix_foreign_ownership_pct)}%</b><small>5일 ${f(hynChg['5'])}%p · 20일 ${f(hynChg['20'])}%p</small></div>`;
 
       if (text) {
-        const source = foreign.source || '원자료 미확인';
-        const caveat = hasMarketOwnership
-          ? `KOSPI 외국인 보유비중은 ${snap.date || '-'} 확정치입니다.`
-          : 'KOSPI 전체 외국인 보유비중은 이번 실행에서 얻지 못해 5일 순매수로 대체했습니다.';
-        const status = text.querySelector('.status-line');
-        if (status) status.innerHTML = `${source}<br>${caveat} 삼성전자·SK하이닉스 지분율은 확정치 시차가 있을 수 있습니다.`;
+        const gate = foreign.multi_horizon_gate || {};
+        const signal = gate.signal || foreign.signal || '데이터 축적 중';
+        const source = multi.source || foreign.source || '원자료 미확인';
+        const judgement = signal === '수급 회복 확인'
+          ? '단기 순매수 반전과 20일 지속성, 종목별 지분율 회복이 함께 확인됐습니다.'
+          : signal === '단기 반전 진행'
+            ? '1일·5일 수급은 개선 중이지만 20일 누적과 두 종목 지분율이 모두 돌아섰는지 추가 확인이 필요합니다.'
+            : '단기와 중기 수급이 동시에 약해 외국인 매도 압력이 끝났다고 보기 어렵습니다.';
+        text.innerHTML = `<div class="headline">현재 판단: ${signal}</div><div><b>무슨 뜻?</b> ${judgement}</div><div class="action"><b>판정 기준:</b> 1·5·10·20·60일 순매수, 5일 가속도, 삼성전자·SK하이닉스 외국인 지분율 변화를 함께 봅니다.</div><div class="status-line">${source} · 기준일 ${multi.latest_date || '-'} · 관측치 ${multi.observation_count || 0}일<br>KOSPI 전체 외국인 보유비중은 원자료 열이 없을 때 미산출하며, 단기 순매수와 종목별 지분율로 대체 판단합니다.</div>`;
       }
     };
   }
