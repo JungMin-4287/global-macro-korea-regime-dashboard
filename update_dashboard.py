@@ -3,6 +3,8 @@
 
 Run only this file from GitHub Actions or locally. Legacy versioned scripts remain
 internal compatibility modules until they are gradually consolidated.
+
+Refresh marker: 2026-07-30 Korea close and U.S. overnight macro check.
 """
 from __future__ import annotations
 
