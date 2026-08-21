@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-21T05:57:41+09:00",
+  "generated_at": "2026-08-21T10:52:15+09:00",
   "status": "ok",
   "methodology": {
     "disparity_ratio": "현재가 ÷ 이동평균 × 100",
@@ -18,60 +18,38 @@
     "KOSPI": {
       "name": "KOSPI",
       "type": "index",
-      "date": "2026-08-20",
+      "date": "2026-08-21",
       "source": "Yahoo Finance chart API + Naver latest-day overlay",
-      "close": 6852.58,
-      "change_pct": 5.894,
-      "current_drawdown_pct": -24.8171,
+      "close": 6898.76,
+      "change_pct": 0.6739,
+      "current_drawdown_pct": -24.3105,
       "mdd_252_pct": -38.6304,
-      "sma30": 6713.513,
-      "ratio30": 102.0714,
-      "dev30": 2.0714,
-      "ratio30_percentile_3y": 58.5979,
-      "sma50": 7378.0018,
-      "ratio50": 92.8785,
-      "dev50": -7.1215,
-      "ratio50_percentile_3y": 4.8942,
-      "sma60": 7531.5152,
-      "ratio60": 90.9854,
-      "dev60": -9.0146,
-      "ratio60_percentile_3y": 3.1746,
-      "sma100": 7077.5923,
-      "ratio100": 96.8208,
-      "dev100": -3.1792,
-      "ratio100_percentile_3y": 16.6667,
-      "sma120": 6848.2906,
-      "ratio120": 100.0626,
-      "dev120": 0.0626,
-      "ratio120_percentile_3y": 31.4815,
-      "sma200": 5887.2453,
-      "ratio200": 116.3971,
-      "dev200": 16.3971,
-      "ratio200_percentile_3y": 64.5503,
-      "rebound_3d": false,
+      "sma30": 6675.094,
+      "ratio30": 103.3508,
+      "dev30": 3.3508,
+      "ratio30_percentile_3y": 70.7672,
+      "sma50": 7366.2888,
+      "ratio50": 93.6531,
+      "dev50": -6.3469,
+      "ratio50_percentile_3y": 6.3492,
+      "sma60": 7516.2347,
+      "ratio60": 91.7848,
+      "dev60": -8.2152,
+      "ratio60_percentile_3y": 4.2328,
+      "sma100": 7091.0407,
+      "ratio100": 97.2884,
+      "dev100": -2.7116,
+      "ratio100_percentile_3y": 18.254,
+      "sma120": 6857.0628,
+      "ratio120": 100.6081,
+      "dev120": 0.6081,
+      "ratio120_percentile_3y": 33.8624,
+      "sma200": 5902.0311,
+      "ratio200": 116.8879,
+      "dev200": 16.8879,
+      "ratio200_percentile_3y": 64.8148,
+      "rebound_3d": true,
       "history": [
-        {
-          "date": "2024-06-27",
-          "close": 2784.0601,
-          "sma30": 2729.638,
-          "sma50": 2706.1922,
-          "sma60": 2708.8672,
-          "sma100": 2687.5095,
-          "sma120": 2659.6999,
-          "sma200": 2590.5975,
-          "ratio30": 101.9937,
-          "ratio50": 102.8774,
-          "ratio60": 102.7758,
-          "ratio100": 103.5926,
-          "ratio120": 104.6757,
-          "ratio200": 107.4679,
-          "drawdown": -0.8395,
-          "rsi14": 58.4584,
-          "macd": 23.5703,
-          "macd_signal": 19.4937,
-          "macd_hist": 4.0766,
-          "sigma20": 0.9589
-        },
         {
           "date": "2024-06-28",
           "close": 2797.8201,
@@ -11140,9 +11118,9 @@
         },
         {
           "date": "2026-07-29",
-          "close": 5663.24,
+          "close": 5663.2402,
           "sma30": 7751.0817,
-          "sma50": 7843.8848,
+          "sma50": 7843.8849,
           "sma60": 7745.7339,
           "sma100": 6941.7597,
           "sma120": 6704.7852,
@@ -11158,11 +11136,11 @@
           "macd": -500.1796,
           "macd_signal": -347.768,
           "macd_hist": -152.4116,
-          "sigma20": -2.1189
+          "sigma20": -2.1188
         },
         {
           "date": "2026-07-30",
-          "close": 5593.56,
+          "close": 5593.5601,
           "sma30": 7652.6677,
           "sma50": 7796.1278,
           "sma60": 7728.2762,
@@ -11177,7 +11155,7 @@
           "ratio200": 98.3903,
           "drawdown": -38.6304,
           "rsi14": 31.6227,
-          "macd": -554.5008,
+          "macd": -554.5007,
           "macd_signal": -389.1145,
           "macd_hist": -165.3862,
           "sigma20": -1.9349
@@ -11201,12 +11179,12 @@
           "rsi14": 44.7771,
           "macd": -510.8181,
           "macd_signal": -413.4553,
-          "macd_hist": -97.3629,
+          "macd_hist": -97.3628,
           "sigma20": -0.5863
         },
         {
           "date": "2026-08-03",
-          "close": 6257.4502,
+          "close": 6257.45,
           "sma30": 7494.7364,
           "sma50": 7753.0014,
           "sma60": 7720.995,
@@ -11218,7 +11196,7 @@
           "ratio60": 81.0446,
           "ratio100": 89.8861,
           "ratio120": 93.001,
-          "ratio200": 109.4906,
+          "ratio200": 109.4905,
           "drawdown": -31.3466,
           "rsi14": 41.8519,
           "macd": -497.7355,
@@ -11250,7 +11228,7 @@
         },
         {
           "date": "2026-08-05",
-          "close": 6598.26,
+          "close": 6598.2598,
           "sma30": 7322.768,
           "sma50": 7722.5334,
           "sma60": 7698.256,
@@ -11258,7 +11236,7 @@
           "sma120": 6751.031,
           "sma200": 5744.8204,
           "ratio30": 90.1061,
-          "ratio50": 85.4417,
+          "ratio50": 85.4416,
           "ratio60": 85.7111,
           "ratio100": 94.4939,
           "ratio120": 97.7371,
@@ -11299,7 +11277,7 @@
           "sma50": 7660.3704,
           "sma60": 7657.7077,
           "sma100": 6996.8616,
-          "sma120": 6767.8684,
+          "sma120": 6767.8683,
           "sma200": 5771.6204,
           "ratio30": 87.3643,
           "ratio50": 81.7032,
@@ -11398,13 +11376,13 @@
           "drawdown": -25.2477,
           "rsi14": 50.4544,
           "macd": -267.5988,
-          "macd_signal": -365.4254,
+          "macd_signal": -365.4255,
           "macd_hist": 97.8267,
           "sigma20": 0.7942
         },
         {
           "date": "2026-08-14",
-          "close": 6977.94,
+          "close": 6977.9399,
           "sma30": 6841.7217,
           "sma50": 7486.16,
           "sma60": 7561.5664,
@@ -11426,7 +11404,7 @@
         },
         {
           "date": "2026-08-18",
-          "close": 6869.83,
+          "close": 6869.8301,
           "sma30": 6793.9357,
           "sma50": 7447.5268,
           "sma60": 7550.7962,
@@ -11442,13 +11420,13 @@
           "drawdown": -24.6279,
           "rsi14": 51.0483,
           "macd": -169.6742,
-          "macd_signal": -301.278,
+          "macd_signal": -301.2781,
           "macd_hist": 131.6039,
           "sigma20": 1.0269
         },
         {
           "date": "2026-08-19",
-          "close": 6471.1699,
+          "close": 6471.17,
           "sma30": 6754.705,
           "sma50": 7404.162,
           "sma60": 7537.4547,
@@ -11489,21 +11467,43 @@
           "macd_signal": -246.866,
           "macd_hist": 111.4898,
           "sigma20": 0.9808
+        },
+        {
+          "date": "2026-08-21",
+          "close": 6898.76,
+          "sma30": 6675.094,
+          "sma50": 7366.2888,
+          "sma60": 7516.2347,
+          "sma100": 7091.0407,
+          "sma120": 6857.0628,
+          "sma200": 5902.0311,
+          "ratio30": 103.3508,
+          "ratio50": 93.6531,
+          "ratio60": 91.7848,
+          "ratio100": 97.2884,
+          "ratio120": 100.6081,
+          "ratio200": 116.8879,
+          "drawdown": -24.3105,
+          "rsi14": 51.6179,
+          "macd": -104.135,
+          "macd_signal": -218.3198,
+          "macd_hist": 114.1848,
+          "sigma20": 1.1657
         }
       ],
       "disparity_interpretation": {
         "zone": "강한 과매도",
         "headline": "현재 구간: 강한 과매도",
-        "summary": "50일 이격도 92.9(-7.1%), 120일 이격도 100.1(+0.1%). 120일선 위로 중기 추세는 유지. 60일 이격도는 91.0로 장표상 과거 극단 구간 90과 비교합니다.",
-        "action": "수치만으로 매수하지 말고 전저점 방어, A/D 개선, VKOSPI 하락 전환을 확인해야 합니다."
+        "summary": "50일 이격도 93.7(-6.3%), 120일 이격도 100.6(+0.6%). 120일선 위로 중기 추세는 유지. 60일 이격도는 91.8로 장표상 과거 극단 구간 90과 비교합니다.",
+        "action": "과매도 반등이 시작됐지만 5·20일선 회복과 외국인 수급 반전이 추가 확인 조건입니다."
       },
       "is_proxy": false,
       "technical_rebound": {
-        "rsi14": 50.9891,
-        "macd": -135.3762,
-        "macd_signal": -246.866,
-        "macd_hist": 111.4898,
-        "sigma20": 0.9808,
+        "rsi14": 51.6179,
+        "macd": -104.135,
+        "macd_signal": -218.3198,
+        "macd_hist": 114.1848,
+        "sigma20": 1.1657,
         "score": 4,
         "state": "기술 반등 확인",
         "checks": {
@@ -11514,10 +11514,10 @@
         },
         "note": "일봉 종가 기준. 4개 조건 중 가격·RSI·MACD 히스토그램·Sigma의 동시 개선을 확인"
       },
-      "signal": "과매도 접근",
-      "score": 3,
+      "signal": "반등 확인",
+      "score": 4,
       "freshness": {
-        "date": "2026-08-20",
+        "date": "2026-08-21",
         "expected_close_date": "2026-08-20",
         "business_days_late": 0,
         "stale": false,
@@ -11527,60 +11527,38 @@
     "KOSDAQ": {
       "name": "KOSDAQ",
       "type": "index",
-      "date": "2026-08-20",
+      "date": "2026-08-21",
       "source": "Yahoo Finance chart API + Naver latest-day overlay",
-      "close": 840.89,
-      "change_pct": 1.9928,
-      "current_drawdown_pct": -31.422,
+      "close": 796.35,
+      "change_pct": -5.2968,
+      "current_drawdown_pct": -35.0544,
       "mdd_252_pct": -47.4156,
-      "sma30": 787.549,
-      "ratio30": 106.773,
-      "dev30": 6.773,
-      "ratio30_percentile_3y": 95.5026,
-      "sma50": 846.8842,
-      "ratio50": 99.2922,
-      "dev50": -0.7078,
-      "ratio50_percentile_3y": 39.6825,
-      "sma60": 880.6075,
-      "ratio60": 95.4898,
-      "dev60": -4.5102,
-      "ratio60_percentile_3y": 22.3545,
-      "sma100": 985.6247,
-      "ratio100": 85.3154,
-      "dev100": -14.6846,
-      "ratio100_percentile_3y": 5.6878,
-      "sma120": 1010.8043,
-      "ratio120": 83.1902,
-      "dev120": -16.8098,
-      "ratio120_percentile_3y": 4.6296,
-      "sma200": 994.137,
-      "ratio200": 84.5849,
-      "dev200": -15.4151,
-      "ratio200_percentile_3y": 6.3492,
-      "rebound_3d": true,
+      "sma30": 787.9273,
+      "ratio30": 101.069,
+      "dev30": 1.069,
+      "ratio30_percentile_3y": 53.3069,
+      "sma50": 843.7786,
+      "ratio50": 94.379,
+      "dev50": -5.621,
+      "ratio50_percentile_3y": 17.5926,
+      "sma60": 874.338,
+      "ratio60": 91.0803,
+      "dev60": -8.9197,
+      "ratio60_percentile_3y": 9.7884,
+      "sma100": 982.2218,
+      "ratio100": 81.0764,
+      "dev100": -18.9236,
+      "ratio100_percentile_3y": 4.1005,
+      "sma120": 1007.7301,
+      "ratio120": 79.0241,
+      "dev120": -20.9759,
+      "ratio120_percentile_3y": 3.4392,
+      "sma200": 993.6023,
+      "ratio200": 80.1478,
+      "dev200": -19.8522,
+      "ratio200_percentile_3y": 2.5132,
+      "rebound_3d": false,
       "history": [
-        {
-          "date": "2024-07-01",
-          "close": 847.15,
-          "sma30": 850.6867,
-          "sma50": 854.1296,
-          "sma60": 855.9487,
-          "sma100": 861.3934,
-          "sma120": 859.3233,
-          "sma200": 847.4971,
-          "ratio30": 99.5843,
-          "ratio50": 99.1828,
-          "ratio60": 98.9721,
-          "ratio100": 98.3465,
-          "ratio120": 98.5834,
-          "ratio200": 99.959,
-          "drawdown": -9.8738,
-          "rsi14": 45.8755,
-          "macd": -3.6071,
-          "macd_signal": -1.9876,
-          "macd_hist": -1.6195,
-          "sigma20": -0.6664
-        },
         {
           "date": "2024-07-02",
           "close": 829.91,
@@ -22998,35 +22976,57 @@
           "macd_signal": -6.9633,
           "macd_hist": 12.522,
           "sigma20": 0.8197
+        },
+        {
+          "date": "2026-08-21",
+          "close": 796.35,
+          "sma30": 787.9273,
+          "sma50": 843.7786,
+          "sma60": 874.338,
+          "sma100": 982.2218,
+          "sma120": 1007.7301,
+          "sma200": 993.6023,
+          "ratio30": 101.069,
+          "ratio50": 94.379,
+          "ratio60": 91.0803,
+          "ratio100": 81.0764,
+          "ratio120": 79.0241,
+          "ratio200": 80.1478,
+          "drawdown": -35.0544,
+          "rsi14": 46.3841,
+          "macd": 2.8669,
+          "macd_signal": -4.9973,
+          "macd_hist": 7.8641,
+          "sigma20": 0.1303
         }
       ],
       "disparity_interpretation": {
-        "zone": "조정 국면",
-        "headline": "현재 구간: 조정 국면",
-        "summary": "50일 이격도 99.3(-0.7%), 120일 이격도 83.2(-16.8%). 120일선 아래로 중기 추세도 훼손.",
-        "action": "과매도 반등이 시작됐지만 5·20일선 회복과 외국인 수급 반전이 추가 확인 조건입니다."
+        "zone": "강한 과매도",
+        "headline": "현재 구간: 강한 과매도",
+        "summary": "50일 이격도 94.4(-5.6%), 120일 이격도 79.0(-21.0%). 120일선 아래로 중기 추세도 훼손.",
+        "action": "수치만으로 매수하지 말고 전저점 방어, A/D 개선, VKOSPI 하락 전환을 확인해야 합니다."
       },
       "is_proxy": false,
       "technical_rebound": {
-        "rsi14": 53.5675,
-        "macd": 5.5587,
-        "macd_signal": -6.9633,
-        "macd_hist": 12.522,
-        "sigma20": 0.8197,
-        "score": 3,
-        "state": "초기 반등 진행",
+        "rsi14": 46.3841,
+        "macd": 2.8669,
+        "macd_signal": -4.9973,
+        "macd_hist": 7.8641,
+        "sigma20": 0.1303,
+        "score": 0,
+        "state": "하락 추세·확인 필요",
         "checks": {
-          "price_up": true,
-          "rsi_turn": true,
+          "price_up": false,
+          "rsi_turn": false,
           "macd_hist_turn": false,
-          "sigma_turn": true
+          "sigma_turn": false
         },
         "note": "일봉 종가 기준. 4개 조건 중 가격·RSI·MACD 히스토그램·Sigma의 동시 개선을 확인"
       },
-      "signal": "반등 확인",
-      "score": 4,
+      "signal": "과매도 접근",
+      "score": 3,
       "freshness": {
-        "date": "2026-08-20",
+        "date": "2026-08-21",
         "expected_close_date": "2026-08-20",
         "business_days_late": 0,
         "stale": false,
@@ -23036,60 +23036,38 @@
     "SAMSUNG": {
       "name": "삼성전자",
       "type": "stock",
-      "date": "2026-08-20",
+      "date": "2026-08-21",
       "source": "Yahoo Finance chart API + Naver latest-day overlay",
-      "close": 271000.0,
-      "change_pct": 9.4949,
-      "current_drawdown_pct": -25.2414,
+      "close": 280000.0,
+      "change_pct": 3.321,
+      "current_drawdown_pct": -22.7586,
       "mdd_252_pct": -42.8966,
-      "sma30": 252300.0,
-      "ratio30": 107.4118,
-      "dev30": 7.4118,
-      "ratio30_percentile_3y": 78.1746,
-      "sma50": 282380.0,
-      "ratio50": 95.97,
-      "dev50": -4.03,
-      "ratio50_percentile_3y": 19.0476,
-      "sma60": 289150.0,
-      "ratio60": 93.723,
-      "dev60": -6.277,
-      "ratio60_percentile_3y": 13.2275,
-      "sma100": 265350.5,
-      "ratio100": 102.1291,
-      "dev100": 2.1291,
-      "ratio100_percentile_3y": 41.0053,
-      "sma120": 253324.5833,
-      "ratio120": 106.9774,
-      "dev120": 6.9774,
-      "ratio120_percentile_3y": 57.5397,
-      "sma200": 203114.75,
-      "ratio200": 133.4221,
-      "dev200": 33.4221,
-      "ratio200_percentile_3y": 72.619,
+      "sma30": 252383.3333,
+      "ratio30": 110.9423,
+      "dev30": 10.9423,
+      "ratio30_percentile_3y": 84.9206,
+      "sma50": 281930.0,
+      "ratio50": 99.3154,
+      "dev50": -0.6846,
+      "ratio50_percentile_3y": 35.3175,
+      "sma60": 288833.3333,
+      "ratio60": 96.9417,
+      "dev60": -3.0583,
+      "ratio60_percentile_3y": 21.5608,
+      "sma100": 266349.5,
+      "ratio100": 105.125,
+      "dev100": 5.125,
+      "ratio100_percentile_3y": 54.1005,
+      "sma120": 253962.0833,
+      "ratio120": 110.2527,
+      "dev120": 10.2527,
+      "ratio120_percentile_3y": 63.8889,
+      "sma200": 204017.25,
+      "ratio200": 137.2433,
+      "dev200": 37.2433,
+      "ratio200_percentile_3y": 73.4127,
       "rebound_3d": true,
       "history": [
-        {
-          "date": "2024-06-28",
-          "close": 81500.0,
-          "sma30": 78046.6667,
-          "sma50": 78138.0,
-          "sma60": 79098.3333,
-          "sma100": 77340.0,
-          "sma120": 76830.8333,
-          "sma200": 74481.0,
-          "ratio30": 104.4247,
-          "ratio50": 104.3026,
-          "ratio60": 103.0363,
-          "ratio100": 105.3788,
-          "ratio120": 106.0772,
-          "ratio200": 109.4239,
-          "drawdown": -4.4549,
-          "rsi14": 59.9559,
-          "macd": 1085.5483,
-          "macd_signal": 703.6066,
-          "macd_hist": 381.9417,
-          "sigma20": 1.1659
-        },
         {
           "date": "2024-07-01",
           "close": 81800.0,
@@ -34507,21 +34485,43 @@
           "macd_signal": -8467.3122,
           "macd_hist": 5656.9182,
           "sigma20": 1.2765
+        },
+        {
+          "date": "2026-08-21",
+          "close": 280000.0,
+          "sma30": 252383.3333,
+          "sma50": 281930.0,
+          "sma60": 288833.3333,
+          "sma100": 266349.5,
+          "sma120": 253962.0833,
+          "sma200": 204017.25,
+          "ratio30": 110.9423,
+          "ratio50": 99.3154,
+          "ratio60": 96.9417,
+          "ratio100": 105.125,
+          "ratio120": 110.2527,
+          "ratio200": 137.2433,
+          "drawdown": -22.7586,
+          "rsi14": 55.709,
+          "macd": -620.1137,
+          "macd_signal": -6897.8725,
+          "macd_hist": 6277.7588,
+          "sigma20": 1.645
         }
       ],
       "disparity_interpretation": {
-        "zone": "상승 추세",
-        "headline": "기술적 구간: 상승 추세 · 트레이딩 판정: 과매도 접근",
-        "summary": "30일 이격도 107.4(+7.4%), 50일 96.0(-4.0%), 120일 107.0(+7.0%). 252일 고점 대비 -25.2%",
-        "action": "가격 반응과 수급을 함께 확인해야 하며 이격도 단독으로 매수하지 않습니다. 하나증권 자료의 과매도 근거는 가점으로만 사용합니다. 현재 확인 4개(3거래일 반전, SOX 대비 5일 상대강도 개선, KOSPI 외국인 5일 순매수, 외국인 지분율 20일 상승). 추가 확인: 빅테크 CAPEX·클라우드 상향. 허용 비중: 기존 판정 유지."
+        "zone": "추세 확장·과열 경계",
+        "headline": "기술적 구간: 추세 확장·과열 경계 · 트레이딩 판정: 과매도 접근",
+        "summary": "30일 이격도 110.9(+10.9%), 50일 99.3(-0.7%), 120일 110.3(+10.3%). 252일 고점 대비 -22.8%",
+        "action": "조정 후에도 이격이 높아 추격매수보다 리스크 관리가 우선입니다. 하나증권 자료의 과매도 근거는 가점으로만 사용합니다. 현재 확인 4개(3거래일 반전, SOX 대비 5일 상대강도 개선, KOSPI 외국인 5일 순매수, 외국인 지분율 20일 상승). 추가 확인: 빅테크 CAPEX·클라우드 상향. 허용 비중: 기존 판정 유지."
       },
       "is_proxy": false,
       "technical_rebound": {
-        "rsi14": 53.4931,
-        "macd": -2810.394,
-        "macd_signal": -8467.3122,
-        "macd_hist": 5656.9182,
-        "sigma20": 1.2765,
+        "rsi14": 55.709,
+        "macd": -620.1137,
+        "macd_signal": -6897.8725,
+        "macd_hist": 6277.7588,
+        "sigma20": 1.645,
         "score": 4,
         "state": "기술 반등 확인",
         "checks": {
@@ -34551,7 +34551,7 @@
         "rule": "MDD·DRAM 가격·ETF 유입은 과매도 가점일 뿐 단독 등급 상향 조건이 아니다."
       },
       "freshness": {
-        "date": "2026-08-20",
+        "date": "2026-08-21",
         "expected_close_date": "2026-08-20",
         "business_days_late": 0,
         "stale": false,
@@ -34561,60 +34561,38 @@
     "SKHYNIX": {
       "name": "SK하이닉스",
       "type": "stock",
-      "date": "2026-08-20",
+      "date": "2026-08-21",
       "source": "Yahoo Finance chart API + Naver latest-day overlay",
-      "close": 1691000.0,
-      "change_pct": 12.7333,
-      "current_drawdown_pct": -42.0692,
+      "close": 1752000.0,
+      "change_pct": 3.6073,
+      "current_drawdown_pct": -39.9794,
       "mdd_252_pct": -54.7105,
-      "sma30": 1706933.3333,
-      "ratio30": 99.0666,
-      "dev30": -0.9334,
-      "ratio30_percentile_3y": 31.0847,
-      "sma50": 2016520.0,
-      "ratio50": 83.8573,
-      "dev50": -16.1427,
-      "ratio50_percentile_3y": 5.291,
-      "sma60": 2049333.3333,
-      "ratio60": 82.5146,
-      "dev60": -17.4854,
-      "ratio60_percentile_3y": 4.6296,
-      "sma100": 1758410.0,
-      "ratio100": 96.1664,
-      "dev100": -3.8336,
-      "ratio100_percentile_3y": 13.6243,
-      "sma120": 1626458.3333,
-      "ratio120": 103.9682,
-      "dev120": 3.9682,
-      "ratio120_percentile_3y": 21.164,
-      "sma200": 1246475.0,
-      "ratio200": 135.6626,
-      "dev200": 35.6626,
-      "ratio200_percentile_3y": 62.5661,
+      "sma30": 1696133.3333,
+      "ratio30": 103.2938,
+      "dev30": 3.2938,
+      "ratio30_percentile_3y": 48.2804,
+      "sma50": 2010600.0,
+      "ratio50": 87.1382,
+      "dev50": -12.8618,
+      "ratio50_percentile_3y": 6.8783,
+      "sma60": 2044333.3333,
+      "ratio60": 85.7003,
+      "dev60": -14.2997,
+      "ratio60_percentile_3y": 6.0847,
+      "sma100": 1766600.0,
+      "ratio100": 99.1736,
+      "dev100": -0.8264,
+      "ratio100_percentile_3y": 17.5926,
+      "sma120": 1632575.0,
+      "ratio120": 107.3151,
+      "dev120": 7.3151,
+      "ratio120_percentile_3y": 26.455,
+      "sma200": 1252630.0,
+      "ratio200": 139.8657,
+      "dev200": 39.8657,
+      "ratio200_percentile_3y": 65.0794,
       "rebound_3d": true,
       "history": [
-        {
-          "date": "2024-06-28",
-          "close": 236500.0,
-          "sma30": 211580.0,
-          "sma50": 198070.0,
-          "sma60": 195890.0,
-          "sma100": 180590.0,
-          "sma120": 173263.3333,
-          "sma200": 154623.5,
-          "ratio30": 111.7781,
-          "ratio50": 119.4022,
-          "ratio60": 120.731,
-          "ratio100": 130.9596,
-          "ratio120": 136.4974,
-          "ratio200": 152.9522,
-          "drawdown": -0.4211,
-          "rsi14": 68.676,
-          "macd": 11185.7053,
-          "macd_signal": 10730.325,
-          "macd_hist": 455.3803,
-          "sigma20": 1.1002
-        },
         {
           "date": "2024-07-01",
           "close": 235500.0,
@@ -46032,21 +46010,43 @@
           "macd_signal": -139074.6215,
           "macd_hist": 37999.8256,
           "sigma20": 0.7249
+        },
+        {
+          "date": "2026-08-21",
+          "close": 1752000.0,
+          "sma30": 1696133.3333,
+          "sma50": 2010600.0,
+          "sma60": 2044333.3333,
+          "sma100": 1766600.0,
+          "sma120": 1632575.0,
+          "sma200": 1252630.0,
+          "ratio30": 103.2938,
+          "ratio50": 87.1382,
+          "ratio60": 85.7003,
+          "ratio100": 99.1736,
+          "ratio120": 107.3151,
+          "ratio200": 139.8657,
+          "drawdown": -39.9794,
+          "rsi14": 51.7356,
+          "macd": -80742.2481,
+          "macd_signal": -127408.1468,
+          "macd_hist": 46665.8987,
+          "sigma20": 1.3231
         }
       ],
       "disparity_interpretation": {
-        "zone": "전술적 눌림 관찰",
-        "headline": "기술적 구간: 전술적 눌림 관찰 · 트레이딩 판정: 반등 확인",
-        "summary": "30일 이격도 99.1(-0.9%), 50일 83.9(-16.1%), 120일 104.0(+4.0%). 252일 고점 대비 -42.1%",
-        "action": "눌림 후 반전 조건에 근접했습니다. 5·20일선 회복과 SOX 상대강도 개선 시 1차 분할매수 후보입니다. 하나증권 자료의 과매도 근거는 가점으로만 사용합니다. 현재 확인 3개(3거래일 반전, SOX 대비 5일 상대강도 개선, KOSPI 외국인 5일 순매수). 추가 확인: 외국인 지분율 20일 상승, 빅테크 CAPEX·클라우드 상향. 허용 비중: 기존 판정 유지."
+        "zone": "상승 추세",
+        "headline": "기술적 구간: 상승 추세 · 트레이딩 판정: 과매도 접근",
+        "summary": "30일 이격도 103.3(+3.3%), 50일 87.1(-12.9%), 120일 107.3(+7.3%). 252일 고점 대비 -40.0%",
+        "action": "가격 반응과 수급을 함께 확인해야 하며 이격도 단독으로 매수하지 않습니다. 하나증권 자료의 과매도 근거는 가점으로만 사용합니다. 현재 확인 3개(3거래일 반전, SOX 대비 5일 상대강도 개선, KOSPI 외국인 5일 순매수). 추가 확인: 외국인 지분율 20일 상승, 빅테크 CAPEX·클라우드 상향. 허용 비중: 기존 판정 유지."
       },
       "is_proxy": false,
       "technical_rebound": {
-        "rsi14": 49.7059,
-        "macd": -101074.7959,
-        "macd_signal": -139074.6215,
-        "macd_hist": 37999.8256,
-        "sigma20": 0.7249,
+        "rsi14": 51.7356,
+        "macd": -80742.2481,
+        "macd_signal": -127408.1468,
+        "macd_hist": 46665.8987,
+        "sigma20": 1.3231,
         "score": 4,
         "state": "기술 반등 확인",
         "checks": {
@@ -46057,9 +46057,9 @@
         },
         "note": "일봉 종가 기준. 4개 조건 중 가격·RSI·MACD 히스토그램·Sigma의 동시 개선을 확인"
       },
-      "signal": "반등 확인",
-      "score": 4,
-      "trade_judgement": "반등 확인",
+      "signal": "과매도 접근",
+      "score": 3,
+      "trade_judgement": "과매도 접근",
       "event_gate": {
         "confirmation_count": 3,
         "confirmations": {
@@ -46076,7 +46076,7 @@
         "rule": "MDD·DRAM 가격·ETF 유입은 과매도 가점일 뿐 단독 등급 상향 조건이 아니다."
       },
       "freshness": {
-        "date": "2026-08-20",
+        "date": "2026-08-21",
         "expected_close_date": "2026-08-20",
         "business_days_late": 0,
         "stale": false,
@@ -57586,7 +57586,7 @@
       "score": 2,
       "freshness": {
         "date": "2026-08-20",
-        "expected_close_date": "2026-08-19",
+        "expected_close_date": "2026-08-20",
         "business_days_late": 0,
         "stale": false,
         "source": "Yahoo Finance chart API"
@@ -69096,7 +69096,7 @@
       "interpretation": "나스닥100이 100일선 부근 또는 소폭 상회: 중립",
       "freshness": {
         "date": "2026-08-20",
-        "expected_close_date": "2026-08-19",
+        "expected_close_date": "2026-08-20",
         "business_days_late": 0,
         "stale": false,
         "source": "Yahoo Finance chart API"
@@ -69105,36 +69105,36 @@
     "USDKRW": {
       "name": "원/달러",
       "type": "macro",
-      "date": "2026-08-20",
+      "date": "2026-08-21",
       "source": "Yahoo Finance chart API",
-      "close": 1393.85,
-      "change_pct": 0.3203,
-      "current_drawdown_pct": -10.3334,
-      "mdd_252_pct": -10.6196,
-      "sma30": 1443.7403,
-      "ratio30": 96.5444,
-      "dev30": -3.4556,
-      "ratio30_percentile_3y": 2.2487,
-      "sma50": 1478.2446,
-      "ratio50": 94.2909,
-      "dev50": -5.7091,
-      "ratio50_percentile_3y": 0.5291,
-      "sma60": 1486.0287,
-      "ratio60": 93.797,
-      "dev60": -6.203,
-      "ratio60_percentile_3y": 0.3968,
-      "sma100": 1485.3355,
-      "ratio100": 93.8408,
-      "dev100": -6.1592,
-      "ratio100_percentile_3y": 0.2646,
-      "sma120": 1486.7936,
-      "ratio120": 93.7487,
-      "dev120": -6.2513,
-      "ratio120_percentile_3y": 0.2646,
-      "sma200": 1475.0118,
-      "ratio200": 94.4975,
-      "dev200": -5.5025,
-      "ratio200_percentile_3y": 0.2646,
+      "close": 1380.98,
+      "change_pct": -0.606,
+      "current_drawdown_pct": -11.1613,
+      "mdd_252_pct": -11.1613,
+      "sma30": 1443.3113,
+      "ratio30": 95.6814,
+      "dev30": -4.3186,
+      "ratio30_percentile_3y": 0.9259,
+      "sma50": 1477.9872,
+      "ratio50": 93.4365,
+      "dev50": -6.5635,
+      "ratio50_percentile_3y": 0.1323,
+      "sma60": 1485.8142,
+      "ratio60": 92.9443,
+      "dev60": -7.0557,
+      "ratio60_percentile_3y": 0.1323,
+      "sma100": 1485.2068,
+      "ratio100": 92.9823,
+      "dev100": -7.0177,
+      "ratio100_percentile_3y": 0.1323,
+      "sma120": 1486.6863,
+      "ratio120": 92.8898,
+      "dev120": -7.1102,
+      "ratio120_percentile_3y": 0.1323,
+      "sma200": 1474.9475,
+      "ratio200": 93.6291,
+      "dev200": -6.3709,
+      "ratio200_percentile_3y": 0.1323,
       "rebound_3d": false,
       "history": [
         {
@@ -80556,26 +80556,26 @@
           "sigma20": -1.8548
         },
         {
-          "date": "2026-08-20",
-          "close": 1393.85,
-          "sma30": 1443.7403,
-          "sma50": 1478.2446,
-          "sma60": 1486.0287,
-          "sma100": 1485.3355,
-          "sma120": 1486.7936,
-          "sma200": 1475.0118,
-          "ratio30": 96.5444,
-          "ratio50": 94.2909,
-          "ratio60": 93.797,
-          "ratio100": 93.8408,
-          "ratio120": 93.7487,
-          "ratio200": 94.4975,
-          "drawdown": -10.3334,
-          "rsi14": 27.4796,
-          "macd": -21.6739,
-          "macd_signal": -21.6933,
-          "macd_hist": 0.0195,
-          "sigma20": -1.574
+          "date": "2026-08-21",
+          "close": 1380.98,
+          "sma30": 1443.3113,
+          "sma50": 1477.9872,
+          "sma60": 1485.8142,
+          "sma100": 1485.2068,
+          "sma120": 1486.6863,
+          "sma200": 1474.9475,
+          "ratio30": 95.6814,
+          "ratio50": 93.4365,
+          "ratio60": 92.9443,
+          "ratio100": 92.9823,
+          "ratio120": 92.8898,
+          "ratio200": 93.6291,
+          "drawdown": -11.1613,
+          "rsi14": 22.2318,
+          "macd": -22.7005,
+          "macd_signal": -21.8987,
+          "macd_hist": -0.8019,
+          "sigma20": -2.0905
         }
       ],
       "disparity_interpretation": {
@@ -80586,25 +80586,25 @@
       },
       "is_proxy": false,
       "technical_rebound": {
-        "rsi14": 27.4796,
-        "macd": -21.6739,
-        "macd_signal": -21.6933,
-        "macd_hist": 0.0195,
-        "sigma20": -1.574,
-        "score": 3,
-        "state": "초기 반등 진행",
+        "rsi14": 22.2318,
+        "macd": -22.7005,
+        "macd_signal": -21.8987,
+        "macd_hist": -0.8019,
+        "sigma20": -2.0905,
+        "score": 0,
+        "state": "하락 추세·확인 필요",
         "checks": {
-          "price_up": true,
-          "rsi_turn": true,
+          "price_up": false,
+          "rsi_turn": false,
           "macd_hist_turn": false,
-          "sigma_turn": true
+          "sigma_turn": false
         },
         "note": "일봉 종가 기준. 4개 조건 중 가격·RSI·MACD 히스토그램·Sigma의 동시 개선을 확인"
       },
       "signal": "추세 훼손",
       "score": 2,
       "freshness": {
-        "date": "2026-08-20",
+        "date": "2026-08-21",
         "expected_close_date": "2026-08-20",
         "business_days_late": 0,
         "stale": false,
@@ -92114,7 +92114,7 @@
       "score": 0,
       "freshness": {
         "date": "2026-08-20",
-        "expected_close_date": "2026-08-19",
+        "expected_close_date": "2026-08-20",
         "business_days_late": 0,
         "stale": false,
         "source": "Yahoo Finance chart API"
@@ -92123,9 +92123,9 @@
     "KOSPI200": {
       "name": "KOSPI200 현물(선물 대용)",
       "type": "index",
-      "date": "2026-08-20",
+      "date": "2026-08-21",
       "source": "Yahoo Finance chart API",
-      "close": 1080.98,
+      "close": 1084.9,
       "change_pct": 0.0,
       "current_drawdown_pct": 0.0,
       "mdd_252_pct": 0.0,
@@ -92156,8 +92156,8 @@
       "rebound_3d": false,
       "history": [
         {
-          "date": "2026-08-20",
-          "close": 1080.98,
+          "date": "2026-08-21",
+          "close": 1084.9,
           "sma30": null,
           "sma50": null,
           "sma60": null,
@@ -92204,7 +92204,7 @@
       "signal": "중립",
       "score": 0,
       "freshness": {
-        "date": "2026-08-20",
+        "date": "2026-08-21",
         "expected_close_date": "2026-08-20",
         "business_days_late": 0,
         "stale": false,
@@ -103714,7 +103714,7 @@
       "score": 2,
       "freshness": {
         "date": "2026-08-20",
-        "expected_close_date": "2026-08-19",
+        "expected_close_date": "2026-08-20",
         "business_days_late": 0,
         "stale": false,
         "source": "Yahoo Finance chart API"
@@ -112165,7 +112165,7 @@
       "score": 3,
       "freshness": {
         "date": "2026-08-20",
-        "expected_close_date": "2026-08-19",
+        "expected_close_date": "2026-08-20",
         "business_days_late": 0,
         "stale": false,
         "source": "Yahoo Finance chart API"
@@ -112178,7 +112178,7 @@
       "source": "Investing.com KOSPI Volatility 화면; 사용자 제공 스크린샷",
       "close": 86.91,
       "change_pct": -0.26,
-      "current_drawdown_pct": -10.8498,
+      "current_drawdown_pct": -12.7879,
       "mdd_252_pct": -62.1374,
       "sma30": null,
       "ratio30": null,
@@ -112209,21 +112209,21 @@
       "disparity_interpretation": {
         "zone": "극단적 공포·강제청산 구간",
         "headline": "현재 구간: 극단적 공포·강제청산 구간",
-        "summary": "VKOSPI 87.13, 20일 평균 88.57, 50일 평균 77.68, 3년 수준 백분위 98.5%. 실제 VKOSPI가 아닌 실현변동성 대체치",
+        "summary": "VKOSPI 85.23, 20일 평균 89.33, 50일 평균 78.98, 3년 수준 백분위 98.1%. 실제 VKOSPI가 아닌 실현변동성 대체치",
         "action": "역사적 극단 구간입니다. 공포 자체는 반등 후보지만 최소 2거래일 하락 전환과 시장 폭 회복이 필요합니다."
       },
       "is_proxy": true,
       "sma20": null,
-      "level_percentile_3y": 98.545,
+      "level_percentile_3y": 98.1481,
       "low_52w": 12.5449,
       "high_52w": 97.7306,
       "history_points": 520,
       "technical_rebound": {
-        "rsi14": 53.5708,
-        "macd": 3.9256,
-        "macd_signal": 5.1691,
-        "macd_hist": -1.2435,
-        "sigma20": -0.2476,
+        "rsi14": 49.9178,
+        "macd": 2.8823,
+        "macd_signal": 4.435,
+        "macd_hist": -1.5527,
+        "sigma20": -0.8376,
         "score": 0,
         "state": "하락 추세·확인 필요",
         "checks": {
@@ -112235,8 +112235,8 @@
         "note": "일봉 종가 기준. 4개 조건 중 가격·RSI·MACD 히스토그램·Sigma의 동시 개선을 확인"
       },
       "interpretation": "실제 VKOSPI 종가 스냅샷. 당일 하락은 부분 개선이며 3일·5일 하락 전환 확인 전에는 게이트 확정에 사용하지 않습니다.",
-      "proxy_close": 87.127,
-      "proxy_change_pct": -0.755,
+      "proxy_close": 85.2329,
+      "proxy_change_pct": -1.9732,
       "proxy_source": "KOSPI 20일 실현변동성 대체지표",
       "data_kind": "actual_vkospi_manual_snapshot",
       "actual_vkospi": true,
@@ -112896,11 +112896,6 @@
   },
   "market_psychology": {
     "points": [
-      {
-        "date": "2025-11-21",
-        "x": 2.2695,
-        "y": -3.7852
-      },
       {
         "date": "2025-11-24",
         "x": -0.4619,
@@ -113795,55 +113790,60 @@
         "date": "2026-08-20",
         "x": -2.2712,
         "y": 5.894
+      },
+      {
+        "date": "2026-08-21",
+        "x": -0.4364,
+        "y": 0.6739
       }
     ],
     "regression": [
       {
         "x": -8.284,
-        "y": 9.1966
+        "y": 9.1737
       },
       {
         "x": 8.591,
-        "y": -7.6123
+        "y": -7.5728
       }
     ],
     "latest": {
-      "date": "2026-08-20",
-      "x": -2.2712,
-      "y": 5.894,
-      "residual": 2.6866
+      "date": "2026-08-21",
+      "x": -0.4364,
+      "y": 0.6739,
+      "residual": -0.7119
     },
-    "correlation": -0.7014,
+    "correlation": -0.7005,
     "zone": "외국인·기관 주도 상승",
     "source": "Naver Finance 개인 순매수(억원→조원)",
-    "interpretation": "개인 매도에도 지수가 상승했습니다. 외국인·기관이 가격을 끌어올리는 비교적 건전한 수급입니다. 과거 회귀관계보다 지수 반응이 강해 수급 개선 가능성이 있습니다.",
+    "interpretation": "개인 매도에도 지수가 상승했습니다. 외국인·기관이 가격을 끌어올리는 비교적 건전한 수급입니다.",
     "highlights": [
       {
-        "date": "2026-08-20",
-        "x": -2.2712,
-        "y": 5.894,
-        "residual": 2.6866467914530348,
-        "label": "8/20"
+        "date": "2026-08-21",
+        "x": -0.4364,
+        "y": 0.6739,
+        "residual": -0.7119548776773755,
+        "label": "8/21"
       },
       {
         "date": "2026-03-04",
         "x": 0.0796,
         "y": -12.0577,
-        "residual": -12.923453642552925,
+        "residual": -12.931481780893437,
         "label": "3/4"
       },
       {
         "date": "2026-03-05",
         "x": 1.8228,
         "y": 9.6271,
-        "residual": 10.497723915487239,
+        "residual": 10.483251983280526,
         "label": "3/5"
       },
       {
         "date": "2026-07-29",
         "x": -1.9701,
         "y": -5.9834,
-        "residual": -8.89083163745593,
+        "residual": -8.891282994998168,
         "label": "7/29"
       }
     ],
@@ -114831,7 +114831,7 @@
           "peak_date": "2026-06-22",
           "x": 40.3842,
           "y": -37.8659,
-          "close": 5663.24,
+          "close": 5663.2402,
           "daily_individual_net_buy_trn": -1.9701
         },
         {
@@ -114839,7 +114839,7 @@
           "peak_date": "2026-06-22",
           "x": 38.9533,
           "y": -38.6304,
-          "close": 5593.56,
+          "close": 5593.5601,
           "daily_individual_net_buy_trn": -1.4309
         },
         {
@@ -114855,7 +114855,7 @@
           "peak_date": "2026-06-22",
           "x": 35.3216,
           "y": -31.3466,
-          "close": 6257.4502,
+          "close": 6257.45,
           "daily_individual_net_buy_trn": 4.6523
         },
         {
@@ -114871,7 +114871,7 @@
           "peak_date": "2026-06-22",
           "x": 34.9559,
           "y": -27.6074,
-          "close": 6598.26,
+          "close": 6598.2598,
           "daily_individual_net_buy_trn": -1.1844
         },
         {
@@ -114927,7 +114927,7 @@
           "peak_date": "2026-06-22",
           "x": 31.4755,
           "y": -23.4417,
-          "close": 6977.94,
+          "close": 6977.9399,
           "daily_individual_net_buy_trn": -1.982
         },
         {
@@ -114935,7 +114935,7 @@
           "peak_date": "2026-06-22",
           "x": 32.2175,
           "y": -24.6279,
-          "close": 6869.83,
+          "close": 6869.8301,
           "daily_individual_net_buy_trn": 0.742
         },
         {
@@ -114943,7 +114943,7 @@
           "peak_date": "2026-06-22",
           "x": 36.8532,
           "y": -29.0018,
-          "close": 6471.1699,
+          "close": 6471.17,
           "daily_individual_net_buy_trn": 4.6357
         },
         {
@@ -114980,7 +114980,7 @@
           "peak_date": "2026-06-22",
           "x": 38.9533,
           "y": -38.6304,
-          "close": 5593.56,
+          "close": 5593.5601,
           "daily_individual_net_buy_trn": -1.4309,
           "label": "7/30"
         },
@@ -115034,47 +115034,47 @@
       {
         "key": "SAMSUNG",
         "name": "삼성전자",
-        "price": 271000.0,
+        "price": 280000.0,
         "target_price": 430000,
         "eps_2026": 42106,
-        "per_2026": 6.4361,
+        "per_2026": 6.6499,
         "eps_2027": 47475,
-        "per_2027": 5.7083,
+        "per_2027": 5.8978,
         "eps_2028": 52888,
-        "per_2028": 5.124,
+        "per_2028": 5.2942,
         "interpretation": "강한 감익 우려가 반영된 초저PER"
       },
       {
         "key": "SKHYNIX",
         "name": "SK하이닉스",
-        "price": 1691000.0,
+        "price": 1752000.0,
         "target_price": 2600000,
         "eps_2026": 290964,
-        "per_2026": 5.8117,
+        "per_2026": 6.0214,
         "eps_2027": 308470,
-        "per_2027": 5.4819,
+        "per_2027": 5.6796,
         "eps_2028": 333987,
-        "per_2028": 5.0631,
+        "per_2028": 5.2457,
         "interpretation": "강한 감익 우려가 반영된 초저PER"
       }
     ]
   },
   "breadth": {
     "KOSPI": {
-      "advancers": 521,
-      "unchanged": 46,
-      "decliners": 338,
-      "ad_ratio": 1.5414,
-      "date": "2026-08-20",
+      "advancers": 92,
+      "unchanged": 18,
+      "decliners": 792,
+      "ad_ratio": 0.1162,
+      "date": "2026-08-21",
       "source": "Naver Finance market advance/decline counters",
       "fallback_from": null
     },
     "KOSDAQ": {
-      "advancers": 1064,
-      "unchanged": 86,
-      "decliners": 576,
-      "ad_ratio": 1.8472,
-      "date": "2026-08-20",
+      "advancers": 185,
+      "unchanged": 47,
+      "decliners": 1489,
+      "ad_ratio": 0.1242,
+      "date": "2026-08-21",
       "source": "Naver Finance market advance/decline counters",
       "fallback_from": null
     }
@@ -115334,1404 +115334,1404 @@
     "foreign": {
       "points": [
         {
-          "date": "2025-06-30",
-          "daily_net_buy_trn": -0.6489,
-          "cumulative_net_buy_trn": -0.6489
-        },
-        {
           "date": "2025-07-01",
           "daily_net_buy_trn": 0.176,
-          "cumulative_net_buy_trn": -0.4729
+          "cumulative_net_buy_trn": 0.176
         },
         {
           "date": "2025-07-02",
           "daily_net_buy_trn": -0.3278,
-          "cumulative_net_buy_trn": -0.8007
+          "cumulative_net_buy_trn": -0.1518
         },
         {
           "date": "2025-07-03",
           "daily_net_buy_trn": 0.6427,
-          "cumulative_net_buy_trn": -0.158
+          "cumulative_net_buy_trn": 0.4909
         },
         {
           "date": "2025-07-04",
           "daily_net_buy_trn": 0.1624,
-          "cumulative_net_buy_trn": 0.0044
+          "cumulative_net_buy_trn": 0.6533
         },
         {
           "date": "2025-07-07",
           "daily_net_buy_trn": -0.0937,
-          "cumulative_net_buy_trn": -0.0893
+          "cumulative_net_buy_trn": 0.5596
         },
         {
           "date": "2025-07-08",
           "daily_net_buy_trn": 0.2461,
-          "cumulative_net_buy_trn": 0.1568
+          "cumulative_net_buy_trn": 0.8057
         },
         {
           "date": "2025-07-09",
           "daily_net_buy_trn": -0.4105,
-          "cumulative_net_buy_trn": -0.2537
+          "cumulative_net_buy_trn": 0.3952
         },
         {
           "date": "2025-07-10",
           "daily_net_buy_trn": 0.4694,
-          "cumulative_net_buy_trn": 0.2157
+          "cumulative_net_buy_trn": 0.8646
         },
         {
           "date": "2025-07-11",
           "daily_net_buy_trn": 0.3259,
-          "cumulative_net_buy_trn": 0.5416
+          "cumulative_net_buy_trn": 1.1905
         },
         {
           "date": "2025-07-14",
           "daily_net_buy_trn": 0.3707,
-          "cumulative_net_buy_trn": 0.9123
+          "cumulative_net_buy_trn": 1.5612
         },
         {
           "date": "2025-07-15",
           "daily_net_buy_trn": 0.2123,
-          "cumulative_net_buy_trn": 1.1246
+          "cumulative_net_buy_trn": 1.7735
         },
         {
           "date": "2025-07-16",
           "daily_net_buy_trn": 0.0555,
-          "cumulative_net_buy_trn": 1.1801
+          "cumulative_net_buy_trn": 1.829
         },
         {
           "date": "2025-07-17",
           "daily_net_buy_trn": 0.0493,
-          "cumulative_net_buy_trn": 1.2294
+          "cumulative_net_buy_trn": 1.8783
         },
         {
           "date": "2025-07-18",
           "daily_net_buy_trn": 0.1878,
-          "cumulative_net_buy_trn": 1.4172
+          "cumulative_net_buy_trn": 2.0661
         },
         {
           "date": "2025-07-21",
           "daily_net_buy_trn": 0.8935,
-          "cumulative_net_buy_trn": 2.3107
+          "cumulative_net_buy_trn": 2.9596
         },
         {
           "date": "2025-07-22",
           "daily_net_buy_trn": -0.1288,
-          "cumulative_net_buy_trn": 2.1819
+          "cumulative_net_buy_trn": 2.8308
         },
         {
           "date": "2025-07-23",
           "daily_net_buy_trn": 0.4228,
-          "cumulative_net_buy_trn": 2.6047
+          "cumulative_net_buy_trn": 3.2536
         },
         {
           "date": "2025-07-24",
           "daily_net_buy_trn": 0.7386,
-          "cumulative_net_buy_trn": 3.3433
+          "cumulative_net_buy_trn": 3.9922
         },
         {
           "date": "2025-07-25",
           "daily_net_buy_trn": 0.2706,
-          "cumulative_net_buy_trn": 3.6139
+          "cumulative_net_buy_trn": 4.2628
         },
         {
           "date": "2025-07-28",
           "daily_net_buy_trn": 0.4753,
-          "cumulative_net_buy_trn": 4.0892
+          "cumulative_net_buy_trn": 4.7381
         },
         {
           "date": "2025-07-29",
           "daily_net_buy_trn": 0.6054,
-          "cumulative_net_buy_trn": 4.6946
+          "cumulative_net_buy_trn": 5.3435
         },
         {
           "date": "2025-07-30",
           "daily_net_buy_trn": 0.5783,
-          "cumulative_net_buy_trn": 5.2729
+          "cumulative_net_buy_trn": 5.9218
         },
         {
           "date": "2025-07-31",
           "daily_net_buy_trn": 0.345,
-          "cumulative_net_buy_trn": 5.6179
+          "cumulative_net_buy_trn": 6.2668
         },
         {
           "date": "2025-08-01",
           "daily_net_buy_trn": -0.6524,
-          "cumulative_net_buy_trn": 4.9655
+          "cumulative_net_buy_trn": 5.6144
         },
         {
           "date": "2025-08-04",
           "daily_net_buy_trn": 0.083,
-          "cumulative_net_buy_trn": 5.0485
+          "cumulative_net_buy_trn": 5.6974
         },
         {
           "date": "2025-08-05",
           "daily_net_buy_trn": 0.2919,
-          "cumulative_net_buy_trn": 5.3404
+          "cumulative_net_buy_trn": 5.9893
         },
         {
           "date": "2025-08-06",
           "daily_net_buy_trn": 0.2804,
-          "cumulative_net_buy_trn": 5.6208
+          "cumulative_net_buy_trn": 6.2697
         },
         {
           "date": "2025-08-07",
           "daily_net_buy_trn": -0.0171,
-          "cumulative_net_buy_trn": 5.6037
+          "cumulative_net_buy_trn": 6.2526
         },
         {
           "date": "2025-08-08",
           "daily_net_buy_trn": -0.1576,
-          "cumulative_net_buy_trn": 5.4461
+          "cumulative_net_buy_trn": 6.095
         },
         {
           "date": "2025-08-11",
           "daily_net_buy_trn": 0.2169,
-          "cumulative_net_buy_trn": 5.663
+          "cumulative_net_buy_trn": 6.3119
         },
         {
           "date": "2025-08-12",
           "daily_net_buy_trn": -0.0604,
-          "cumulative_net_buy_trn": 5.6026
+          "cumulative_net_buy_trn": 6.2515
         },
         {
           "date": "2025-08-13",
           "daily_net_buy_trn": 0.6349,
-          "cumulative_net_buy_trn": 6.2375
+          "cumulative_net_buy_trn": 6.8864
         },
         {
           "date": "2025-08-14",
           "daily_net_buy_trn": -0.0779,
-          "cumulative_net_buy_trn": 6.1596
+          "cumulative_net_buy_trn": 6.8085
         },
         {
           "date": "2025-08-18",
           "daily_net_buy_trn": -0.4881,
-          "cumulative_net_buy_trn": 5.6715
+          "cumulative_net_buy_trn": 6.3204
         },
         {
           "date": "2025-08-19",
           "daily_net_buy_trn": -0.4544,
-          "cumulative_net_buy_trn": 5.2171
+          "cumulative_net_buy_trn": 5.866
         },
         {
           "date": "2025-08-20",
           "daily_net_buy_trn": -0.2185,
-          "cumulative_net_buy_trn": 4.9986
+          "cumulative_net_buy_trn": 5.6475
         },
         {
           "date": "2025-08-21",
           "daily_net_buy_trn": -0.0152,
-          "cumulative_net_buy_trn": 4.9834
+          "cumulative_net_buy_trn": 5.6323
         },
         {
           "date": "2025-08-22",
           "daily_net_buy_trn": 0.1826,
-          "cumulative_net_buy_trn": 5.166
+          "cumulative_net_buy_trn": 5.8149
         },
         {
           "date": "2025-08-25",
           "daily_net_buy_trn": 0.1224,
-          "cumulative_net_buy_trn": 5.2884
+          "cumulative_net_buy_trn": 5.9373
         },
         {
           "date": "2025-08-26",
           "daily_net_buy_trn": -0.6836,
-          "cumulative_net_buy_trn": 4.6048
+          "cumulative_net_buy_trn": 5.2537
         },
         {
           "date": "2025-08-27",
           "daily_net_buy_trn": -0.2023,
-          "cumulative_net_buy_trn": 4.4025
+          "cumulative_net_buy_trn": 5.0514
         },
         {
           "date": "2025-08-28",
           "daily_net_buy_trn": -0.0241,
-          "cumulative_net_buy_trn": 4.3784
+          "cumulative_net_buy_trn": 5.0273
         },
         {
           "date": "2025-08-29",
           "daily_net_buy_trn": -0.3724,
-          "cumulative_net_buy_trn": 4.006
+          "cumulative_net_buy_trn": 4.6549
         },
         {
           "date": "2025-09-01",
           "daily_net_buy_trn": -0.272,
-          "cumulative_net_buy_trn": 3.734
+          "cumulative_net_buy_trn": 4.3829
         },
         {
           "date": "2025-09-02",
           "daily_net_buy_trn": 0.401,
-          "cumulative_net_buy_trn": 4.135
+          "cumulative_net_buy_trn": 4.7839
         },
         {
           "date": "2025-09-03",
           "daily_net_buy_trn": 0.4359,
-          "cumulative_net_buy_trn": 4.5709
+          "cumulative_net_buy_trn": 5.2198
         },
         {
           "date": "2025-09-04",
           "daily_net_buy_trn": 0.2025,
-          "cumulative_net_buy_trn": 4.7734
+          "cumulative_net_buy_trn": 5.4223
         },
         {
           "date": "2025-09-05",
           "daily_net_buy_trn": -0.1374,
-          "cumulative_net_buy_trn": 4.636
+          "cumulative_net_buy_trn": 5.2849
         },
         {
           "date": "2025-09-08",
           "daily_net_buy_trn": 0.2301,
-          "cumulative_net_buy_trn": 4.8661
+          "cumulative_net_buy_trn": 5.515
         },
         {
           "date": "2025-09-09",
           "daily_net_buy_trn": 0.6808,
-          "cumulative_net_buy_trn": 5.5469
+          "cumulative_net_buy_trn": 6.1958
         },
         {
           "date": "2025-09-10",
           "daily_net_buy_trn": 1.3817,
-          "cumulative_net_buy_trn": 6.9286
+          "cumulative_net_buy_trn": 7.5775
         },
         {
           "date": "2025-09-11",
           "daily_net_buy_trn": 0.3,
-          "cumulative_net_buy_trn": 7.2286
+          "cumulative_net_buy_trn": 7.8775
         },
         {
           "date": "2025-09-12",
           "daily_net_buy_trn": 1.4355,
-          "cumulative_net_buy_trn": 8.6641
+          "cumulative_net_buy_trn": 9.313
         },
         {
           "date": "2025-09-15",
           "daily_net_buy_trn": 0.2667,
-          "cumulative_net_buy_trn": 8.9308
+          "cumulative_net_buy_trn": 9.5797
         },
         {
           "date": "2025-09-16",
           "daily_net_buy_trn": 1.7927,
-          "cumulative_net_buy_trn": 10.7235
+          "cumulative_net_buy_trn": 11.3724
         },
         {
           "date": "2025-09-17",
           "daily_net_buy_trn": -0.0347,
-          "cumulative_net_buy_trn": 10.6888
+          "cumulative_net_buy_trn": 11.3377
         },
         {
           "date": "2025-09-18",
           "daily_net_buy_trn": 0.2851,
-          "cumulative_net_buy_trn": 10.9739
+          "cumulative_net_buy_trn": 11.6228
         },
         {
           "date": "2025-09-19",
           "daily_net_buy_trn": -0.308,
-          "cumulative_net_buy_trn": 10.6659
+          "cumulative_net_buy_trn": 11.3148
         },
         {
           "date": "2025-09-22",
           "daily_net_buy_trn": 0.5653,
-          "cumulative_net_buy_trn": 11.2312
+          "cumulative_net_buy_trn": 11.8801
         },
         {
           "date": "2025-09-23",
           "daily_net_buy_trn": 0.3414,
-          "cumulative_net_buy_trn": 11.5726
+          "cumulative_net_buy_trn": 12.2215
         },
         {
           "date": "2025-09-24",
           "daily_net_buy_trn": -0.2486,
-          "cumulative_net_buy_trn": 11.324
+          "cumulative_net_buy_trn": 11.9729
         },
         {
           "date": "2025-09-25",
           "daily_net_buy_trn": 0.2196,
-          "cumulative_net_buy_trn": 11.5436
+          "cumulative_net_buy_trn": 12.1925
         },
         {
           "date": "2025-09-26",
           "daily_net_buy_trn": -0.5707,
-          "cumulative_net_buy_trn": 10.9729
+          "cumulative_net_buy_trn": 11.6218
         },
         {
           "date": "2025-09-29",
           "daily_net_buy_trn": 0.4472,
-          "cumulative_net_buy_trn": 11.4201
+          "cumulative_net_buy_trn": 12.069
         },
         {
           "date": "2025-09-30",
           "daily_net_buy_trn": 0.023,
-          "cumulative_net_buy_trn": 11.4431
+          "cumulative_net_buy_trn": 12.092
         },
         {
           "date": "2025-10-01",
           "daily_net_buy_trn": 0.8455,
-          "cumulative_net_buy_trn": 12.2886
+          "cumulative_net_buy_trn": 12.9375
         },
         {
           "date": "2025-10-02",
           "daily_net_buy_trn": 3.1265,
-          "cumulative_net_buy_trn": 15.4151
+          "cumulative_net_buy_trn": 16.064
         },
         {
           "date": "2025-10-10",
           "daily_net_buy_trn": 1.0592,
-          "cumulative_net_buy_trn": 16.4743
+          "cumulative_net_buy_trn": 17.1232
         },
         {
           "date": "2025-10-13",
           "daily_net_buy_trn": -0.822,
-          "cumulative_net_buy_trn": 15.6523
+          "cumulative_net_buy_trn": 16.3012
         },
         {
           "date": "2025-10-14",
           "daily_net_buy_trn": 0.5581,
-          "cumulative_net_buy_trn": 16.2104
+          "cumulative_net_buy_trn": 16.8593
         },
         {
           "date": "2025-10-15",
           "daily_net_buy_trn": 0.1631,
-          "cumulative_net_buy_trn": 16.3735
+          "cumulative_net_buy_trn": 17.0224
         },
         {
           "date": "2025-10-16",
           "daily_net_buy_trn": 0.6533,
-          "cumulative_net_buy_trn": 17.0268
+          "cumulative_net_buy_trn": 17.6757
         },
         {
           "date": "2025-10-17",
           "daily_net_buy_trn": 0.4438,
-          "cumulative_net_buy_trn": 17.4706
+          "cumulative_net_buy_trn": 18.1195
         },
         {
           "date": "2025-10-20",
           "daily_net_buy_trn": -0.25,
-          "cumulative_net_buy_trn": 17.2206
+          "cumulative_net_buy_trn": 17.8695
         },
         {
           "date": "2025-10-21",
           "daily_net_buy_trn": -0.0124,
-          "cumulative_net_buy_trn": 17.2082
+          "cumulative_net_buy_trn": 17.8571
         },
         {
           "date": "2025-10-22",
           "daily_net_buy_trn": -0.7033,
-          "cumulative_net_buy_trn": 16.5049
+          "cumulative_net_buy_trn": 17.1538
         },
         {
           "date": "2025-10-23",
           "daily_net_buy_trn": -0.4071,
-          "cumulative_net_buy_trn": 16.0978
+          "cumulative_net_buy_trn": 16.7467
         },
         {
           "date": "2025-10-24",
           "daily_net_buy_trn": 0.5756,
-          "cumulative_net_buy_trn": 16.6734
+          "cumulative_net_buy_trn": 17.3223
         },
         {
           "date": "2025-10-27",
           "daily_net_buy_trn": 0.6471,
-          "cumulative_net_buy_trn": 17.3205
+          "cumulative_net_buy_trn": 17.9694
         },
         {
           "date": "2025-10-28",
           "daily_net_buy_trn": -1.6379,
-          "cumulative_net_buy_trn": 15.6826
+          "cumulative_net_buy_trn": 16.3315
         },
         {
           "date": "2025-10-29",
           "daily_net_buy_trn": -0.1066,
-          "cumulative_net_buy_trn": 15.576
+          "cumulative_net_buy_trn": 16.2249
         },
         {
           "date": "2025-10-30",
           "daily_net_buy_trn": -0.1173,
-          "cumulative_net_buy_trn": 15.4587
+          "cumulative_net_buy_trn": 16.1076
         },
         {
           "date": "2025-10-31",
           "daily_net_buy_trn": 1.3212,
-          "cumulative_net_buy_trn": 16.7799
+          "cumulative_net_buy_trn": 17.4288
         },
         {
           "date": "2025-11-03",
           "daily_net_buy_trn": -0.7949,
-          "cumulative_net_buy_trn": 15.985
+          "cumulative_net_buy_trn": 16.6339
         },
         {
           "date": "2025-11-04",
           "daily_net_buy_trn": -2.2282,
-          "cumulative_net_buy_trn": 13.7568
+          "cumulative_net_buy_trn": 14.4057
         },
         {
           "date": "2025-11-05",
           "daily_net_buy_trn": -2.0695,
-          "cumulative_net_buy_trn": 11.6873
+          "cumulative_net_buy_trn": 12.3362
         },
         {
           "date": "2025-11-06",
           "daily_net_buy_trn": -1.695,
-          "cumulative_net_buy_trn": 9.9923
+          "cumulative_net_buy_trn": 10.6412
         },
         {
           "date": "2025-11-07",
           "daily_net_buy_trn": -0.455,
-          "cumulative_net_buy_trn": 9.5373
+          "cumulative_net_buy_trn": 10.1862
         },
         {
           "date": "2025-11-10",
           "daily_net_buy_trn": -0.151,
-          "cumulative_net_buy_trn": 9.3863
+          "cumulative_net_buy_trn": 10.0352
         },
         {
           "date": "2025-11-11",
           "daily_net_buy_trn": 0.077,
-          "cumulative_net_buy_trn": 9.4633
+          "cumulative_net_buy_trn": 10.1122
         },
         {
           "date": "2025-11-12",
           "daily_net_buy_trn": -0.4265,
-          "cumulative_net_buy_trn": 9.0368
+          "cumulative_net_buy_trn": 9.6857
         },
         {
           "date": "2025-11-13",
           "daily_net_buy_trn": 0.9989,
-          "cumulative_net_buy_trn": 10.0357
+          "cumulative_net_buy_trn": 10.6846
         },
         {
           "date": "2025-11-14",
           "daily_net_buy_trn": -2.3575,
-          "cumulative_net_buy_trn": 7.6782
+          "cumulative_net_buy_trn": 8.3271
         },
         {
           "date": "2025-11-17",
           "daily_net_buy_trn": 0.5189,
-          "cumulative_net_buy_trn": 8.1971
+          "cumulative_net_buy_trn": 8.846
         },
         {
           "date": "2025-11-18",
           "daily_net_buy_trn": -0.55,
-          "cumulative_net_buy_trn": 7.6471
+          "cumulative_net_buy_trn": 8.296
         },
         {
           "date": "2025-11-19",
           "daily_net_buy_trn": -1.0495,
-          "cumulative_net_buy_trn": 6.5976
+          "cumulative_net_buy_trn": 7.2465
         },
         {
           "date": "2025-11-20",
           "daily_net_buy_trn": 0.7406,
-          "cumulative_net_buy_trn": 7.3382
+          "cumulative_net_buy_trn": 7.9871
         },
         {
           "date": "2025-11-21",
           "daily_net_buy_trn": -2.8229,
-          "cumulative_net_buy_trn": 4.5153
+          "cumulative_net_buy_trn": 5.1642
         },
         {
           "date": "2025-11-24",
           "daily_net_buy_trn": -0.7993,
-          "cumulative_net_buy_trn": 3.716
+          "cumulative_net_buy_trn": 4.3649
         },
         {
           "date": "2025-11-25",
           "daily_net_buy_trn": 0.0049,
-          "cumulative_net_buy_trn": 3.7209
+          "cumulative_net_buy_trn": 4.3698
         },
         {
           "date": "2025-11-26",
           "daily_net_buy_trn": 0.5158,
-          "cumulative_net_buy_trn": 4.2367
+          "cumulative_net_buy_trn": 4.8856
         },
         {
           "date": "2025-11-27",
           "daily_net_buy_trn": 0.1546,
-          "cumulative_net_buy_trn": 4.3913
+          "cumulative_net_buy_trn": 5.0402
         },
         {
           "date": "2025-11-28",
           "daily_net_buy_trn": -2.0369,
-          "cumulative_net_buy_trn": 2.3544
+          "cumulative_net_buy_trn": 3.0033
         },
         {
           "date": "2025-12-01",
           "daily_net_buy_trn": 0.2235,
-          "cumulative_net_buy_trn": 2.5779
+          "cumulative_net_buy_trn": 3.2268
         },
         {
           "date": "2025-12-02",
           "daily_net_buy_trn": 1.2147,
-          "cumulative_net_buy_trn": 3.7926
+          "cumulative_net_buy_trn": 4.4415
         },
         {
           "date": "2025-12-03",
           "daily_net_buy_trn": 0.2816,
-          "cumulative_net_buy_trn": 4.0742
+          "cumulative_net_buy_trn": 4.7231
         },
         {
           "date": "2025-12-04",
           "daily_net_buy_trn": -0.696,
-          "cumulative_net_buy_trn": 3.3782
+          "cumulative_net_buy_trn": 4.0271
         },
         {
           "date": "2025-12-05",
           "daily_net_buy_trn": 0.9934,
-          "cumulative_net_buy_trn": 4.3716
+          "cumulative_net_buy_trn": 5.0205
         },
         {
           "date": "2025-12-08",
           "daily_net_buy_trn": 0.3211,
-          "cumulative_net_buy_trn": 4.6927
+          "cumulative_net_buy_trn": 5.3416
         },
         {
           "date": "2025-12-09",
           "daily_net_buy_trn": -0.0889,
-          "cumulative_net_buy_trn": 4.6038
+          "cumulative_net_buy_trn": 5.2527
         },
         {
           "date": "2025-12-10",
           "daily_net_buy_trn": 0.3739,
-          "cumulative_net_buy_trn": 4.9777
+          "cumulative_net_buy_trn": 5.6266
         },
         {
           "date": "2025-12-11",
           "daily_net_buy_trn": 0.3656,
-          "cumulative_net_buy_trn": 5.3433
+          "cumulative_net_buy_trn": 5.9922
         },
         {
           "date": "2025-12-12",
           "daily_net_buy_trn": 0.0414,
-          "cumulative_net_buy_trn": 5.3847
+          "cumulative_net_buy_trn": 6.0336
         },
         {
           "date": "2025-12-15",
           "daily_net_buy_trn": -0.9569,
-          "cumulative_net_buy_trn": 4.4278
+          "cumulative_net_buy_trn": 5.0767
         },
         {
           "date": "2025-12-16",
           "daily_net_buy_trn": -1.0305,
-          "cumulative_net_buy_trn": 3.3973
+          "cumulative_net_buy_trn": 4.0462
         },
         {
           "date": "2025-12-17",
           "daily_net_buy_trn": -0.0322,
-          "cumulative_net_buy_trn": 3.3651
+          "cumulative_net_buy_trn": 4.014
         },
         {
           "date": "2025-12-18",
           "daily_net_buy_trn": -0.3459,
-          "cumulative_net_buy_trn": 3.0192
+          "cumulative_net_buy_trn": 3.6681
         },
         {
           "date": "2025-12-19",
           "daily_net_buy_trn": -0.7573,
-          "cumulative_net_buy_trn": 2.2619
+          "cumulative_net_buy_trn": 2.9108
         },
         {
           "date": "2025-12-22",
           "daily_net_buy_trn": 1.1017,
-          "cumulative_net_buy_trn": 3.3636
+          "cumulative_net_buy_trn": 4.0125
         },
         {
           "date": "2025-12-23",
           "daily_net_buy_trn": 0.9551,
-          "cumulative_net_buy_trn": 4.3187
+          "cumulative_net_buy_trn": 4.9676
         },
         {
           "date": "2025-12-24",
           "daily_net_buy_trn": 0.5225,
-          "cumulative_net_buy_trn": 4.8412
+          "cumulative_net_buy_trn": 5.4901
         },
         {
           "date": "2025-12-26",
           "daily_net_buy_trn": 1.779,
-          "cumulative_net_buy_trn": 6.6202
+          "cumulative_net_buy_trn": 7.2691
         },
         {
           "date": "2025-12-29",
           "daily_net_buy_trn": 0.3337,
-          "cumulative_net_buy_trn": 6.9539
+          "cumulative_net_buy_trn": 7.6028
         },
         {
           "date": "2025-12-30",
           "daily_net_buy_trn": -0.4768,
-          "cumulative_net_buy_trn": 6.4771
+          "cumulative_net_buy_trn": 7.126
         },
         {
           "date": "2026-01-02",
           "daily_net_buy_trn": 0.6309,
-          "cumulative_net_buy_trn": 7.108
+          "cumulative_net_buy_trn": 7.7569
         },
         {
           "date": "2026-01-05",
           "daily_net_buy_trn": 2.1726,
-          "cumulative_net_buy_trn": 9.2806
+          "cumulative_net_buy_trn": 9.9295
         },
         {
           "date": "2026-01-06",
           "daily_net_buy_trn": -0.6184,
-          "cumulative_net_buy_trn": 8.6622
+          "cumulative_net_buy_trn": 9.3111
         },
         {
           "date": "2026-01-07",
           "daily_net_buy_trn": 1.2548,
-          "cumulative_net_buy_trn": 9.917
+          "cumulative_net_buy_trn": 10.5659
         },
         {
           "date": "2026-01-08",
           "daily_net_buy_trn": -0.0979,
-          "cumulative_net_buy_trn": 9.8191
+          "cumulative_net_buy_trn": 10.468
         },
         {
           "date": "2026-01-09",
           "daily_net_buy_trn": -1.6068,
-          "cumulative_net_buy_trn": 8.2123
+          "cumulative_net_buy_trn": 8.8612
         },
         {
           "date": "2026-01-12",
           "daily_net_buy_trn": -0.3512,
-          "cumulative_net_buy_trn": 7.8611
+          "cumulative_net_buy_trn": 8.51
         },
         {
           "date": "2026-01-13",
           "daily_net_buy_trn": -0.2793,
-          "cumulative_net_buy_trn": 7.5818
+          "cumulative_net_buy_trn": 8.2307
         },
         {
           "date": "2026-01-14",
           "daily_net_buy_trn": -0.376,
-          "cumulative_net_buy_trn": 7.2058
+          "cumulative_net_buy_trn": 7.8547
         },
         {
           "date": "2026-01-15",
           "daily_net_buy_trn": 0.345,
-          "cumulative_net_buy_trn": 7.5508
+          "cumulative_net_buy_trn": 8.1997
         },
         {
           "date": "2026-01-16",
           "daily_net_buy_trn": 0.435,
-          "cumulative_net_buy_trn": 7.9858
+          "cumulative_net_buy_trn": 8.6347
         },
         {
           "date": "2026-01-19",
           "daily_net_buy_trn": 0.5532,
-          "cumulative_net_buy_trn": 8.539
+          "cumulative_net_buy_trn": 9.1879
         },
         {
           "date": "2026-01-20",
           "daily_net_buy_trn": 0.1232,
-          "cumulative_net_buy_trn": 8.6622
+          "cumulative_net_buy_trn": 9.3111
         },
         {
           "date": "2026-01-21",
           "daily_net_buy_trn": 0.4394,
-          "cumulative_net_buy_trn": 9.1016
+          "cumulative_net_buy_trn": 9.7505
         },
         {
           "date": "2026-01-22",
           "daily_net_buy_trn": -0.2432,
-          "cumulative_net_buy_trn": 8.8584
+          "cumulative_net_buy_trn": 9.5073
         },
         {
           "date": "2026-01-23",
           "daily_net_buy_trn": 0.1438,
-          "cumulative_net_buy_trn": 9.0022
+          "cumulative_net_buy_trn": 9.6511
         },
         {
           "date": "2026-01-26",
           "daily_net_buy_trn": -0.1588,
-          "cumulative_net_buy_trn": 8.8434
+          "cumulative_net_buy_trn": 9.4923
         },
         {
           "date": "2026-01-27",
           "daily_net_buy_trn": 0.8448,
-          "cumulative_net_buy_trn": 9.6882
+          "cumulative_net_buy_trn": 10.3371
         },
         {
           "date": "2026-01-28",
           "daily_net_buy_trn": 0.4008,
-          "cumulative_net_buy_trn": 10.089
+          "cumulative_net_buy_trn": 10.7379
         },
         {
           "date": "2026-01-29",
           "daily_net_buy_trn": -1.4897,
-          "cumulative_net_buy_trn": 8.5993
+          "cumulative_net_buy_trn": 9.2482
         },
         {
           "date": "2026-01-30",
           "daily_net_buy_trn": -1.9729,
-          "cumulative_net_buy_trn": 6.6264
+          "cumulative_net_buy_trn": 7.2753
         },
         {
           "date": "2026-02-02",
           "daily_net_buy_trn": -2.5168,
-          "cumulative_net_buy_trn": 4.1096
+          "cumulative_net_buy_trn": 4.7585
         },
         {
           "date": "2026-02-03",
           "daily_net_buy_trn": 0.7038,
-          "cumulative_net_buy_trn": 4.8134
+          "cumulative_net_buy_trn": 5.4623
         },
         {
           "date": "2026-02-04",
           "daily_net_buy_trn": -0.9413,
-          "cumulative_net_buy_trn": 3.8721
+          "cumulative_net_buy_trn": 4.521
         },
         {
           "date": "2026-02-05",
           "daily_net_buy_trn": -5.0108,
-          "cumulative_net_buy_trn": -1.1387
+          "cumulative_net_buy_trn": -0.4898
         },
         {
           "date": "2026-02-06",
           "daily_net_buy_trn": -3.3233,
-          "cumulative_net_buy_trn": -4.462
+          "cumulative_net_buy_trn": -3.8131
         },
         {
           "date": "2026-02-09",
           "daily_net_buy_trn": 0.432,
-          "cumulative_net_buy_trn": -4.03
+          "cumulative_net_buy_trn": -3.3811
         },
         {
           "date": "2026-02-10",
           "daily_net_buy_trn": 0.1474,
-          "cumulative_net_buy_trn": -3.8826
+          "cumulative_net_buy_trn": -3.2337
         },
         {
           "date": "2026-02-11",
           "daily_net_buy_trn": 0.8461,
-          "cumulative_net_buy_trn": -3.0365
+          "cumulative_net_buy_trn": -2.3876
         },
         {
           "date": "2026-02-12",
           "daily_net_buy_trn": 2.9954,
-          "cumulative_net_buy_trn": -0.0411
+          "cumulative_net_buy_trn": 0.6078
         },
         {
           "date": "2026-02-13",
           "daily_net_buy_trn": -0.922,
-          "cumulative_net_buy_trn": -0.9631
+          "cumulative_net_buy_trn": -0.3142
         },
         {
           "date": "2026-02-19",
           "daily_net_buy_trn": -0.9396,
-          "cumulative_net_buy_trn": -1.9027
+          "cumulative_net_buy_trn": -1.2538
         },
         {
           "date": "2026-02-20",
           "daily_net_buy_trn": -0.742,
-          "cumulative_net_buy_trn": -2.6447
+          "cumulative_net_buy_trn": -1.9958
         },
         {
           "date": "2026-02-23",
           "daily_net_buy_trn": -1.1132,
-          "cumulative_net_buy_trn": -3.7579
+          "cumulative_net_buy_trn": -3.109
         },
         {
           "date": "2026-02-24",
           "daily_net_buy_trn": -0.2013,
-          "cumulative_net_buy_trn": -3.9592
+          "cumulative_net_buy_trn": -3.3103
         },
         {
           "date": "2026-02-25",
           "daily_net_buy_trn": -1.3082,
-          "cumulative_net_buy_trn": -5.2674
+          "cumulative_net_buy_trn": -4.6185
         },
         {
           "date": "2026-02-26",
           "daily_net_buy_trn": -2.1135,
-          "cumulative_net_buy_trn": -7.3809
+          "cumulative_net_buy_trn": -6.732
         },
         {
           "date": "2026-02-27",
           "daily_net_buy_trn": -7.0528,
-          "cumulative_net_buy_trn": -14.4337
+          "cumulative_net_buy_trn": -13.7848
         },
         {
           "date": "2026-03-03",
           "daily_net_buy_trn": -5.1487,
-          "cumulative_net_buy_trn": -19.5824
+          "cumulative_net_buy_trn": -18.9335
         },
         {
           "date": "2026-03-04",
           "daily_net_buy_trn": 0.2303,
-          "cumulative_net_buy_trn": -19.3521
+          "cumulative_net_buy_trn": -18.7032
         },
         {
           "date": "2026-03-05",
           "daily_net_buy_trn": -0.1446,
-          "cumulative_net_buy_trn": -19.4967
+          "cumulative_net_buy_trn": -18.8478
         },
         {
           "date": "2026-03-06",
           "daily_net_buy_trn": -1.9418,
-          "cumulative_net_buy_trn": -21.4385
+          "cumulative_net_buy_trn": -20.7896
         },
         {
           "date": "2026-03-09",
           "daily_net_buy_trn": -3.1735,
-          "cumulative_net_buy_trn": -24.612
+          "cumulative_net_buy_trn": -23.9631
         },
         {
           "date": "2026-03-10",
           "daily_net_buy_trn": 1.0283,
-          "cumulative_net_buy_trn": -23.5837
+          "cumulative_net_buy_trn": -22.9348
         },
         {
           "date": "2026-03-11",
           "daily_net_buy_trn": -0.2563,
-          "cumulative_net_buy_trn": -23.84
+          "cumulative_net_buy_trn": -23.1911
         },
         {
           "date": "2026-03-12",
           "daily_net_buy_trn": -2.3831,
-          "cumulative_net_buy_trn": -26.2231
+          "cumulative_net_buy_trn": -25.5742
         },
         {
           "date": "2026-03-13",
           "daily_net_buy_trn": -1.4502,
-          "cumulative_net_buy_trn": -27.6733
+          "cumulative_net_buy_trn": -27.0244
         },
         {
           "date": "2026-03-16",
           "daily_net_buy_trn": -0.8485,
-          "cumulative_net_buy_trn": -28.5218
+          "cumulative_net_buy_trn": -27.8729
         },
         {
           "date": "2026-03-17",
           "daily_net_buy_trn": -0.174,
-          "cumulative_net_buy_trn": -28.6958
+          "cumulative_net_buy_trn": -28.0469
         },
         {
           "date": "2026-03-18",
           "daily_net_buy_trn": 0.8802,
-          "cumulative_net_buy_trn": -27.8156
+          "cumulative_net_buy_trn": -27.1667
         },
         {
           "date": "2026-03-19",
           "daily_net_buy_trn": -1.876,
-          "cumulative_net_buy_trn": -29.6916
+          "cumulative_net_buy_trn": -29.0427
         },
         {
           "date": "2026-03-20",
           "daily_net_buy_trn": -1.2402,
-          "cumulative_net_buy_trn": -30.9318
+          "cumulative_net_buy_trn": -30.2829
         },
         {
           "date": "2026-03-23",
           "daily_net_buy_trn": -3.6751,
-          "cumulative_net_buy_trn": -34.6069
+          "cumulative_net_buy_trn": -33.958
         },
         {
           "date": "2026-03-24",
           "daily_net_buy_trn": -1.9863,
-          "cumulative_net_buy_trn": -36.5932
+          "cumulative_net_buy_trn": -35.9443
         },
         {
           "date": "2026-03-25",
           "daily_net_buy_trn": -1.2895,
-          "cumulative_net_buy_trn": -37.8827
+          "cumulative_net_buy_trn": -37.2338
         },
         {
           "date": "2026-03-26",
           "daily_net_buy_trn": -2.937,
-          "cumulative_net_buy_trn": -40.8197
+          "cumulative_net_buy_trn": -40.1708
         },
         {
           "date": "2026-03-27",
           "daily_net_buy_trn": -3.4286,
-          "cumulative_net_buy_trn": -44.2483
+          "cumulative_net_buy_trn": -43.5994
         },
         {
           "date": "2026-03-30",
           "daily_net_buy_trn": -2.0945,
-          "cumulative_net_buy_trn": -46.3428
+          "cumulative_net_buy_trn": -45.6939
         },
         {
           "date": "2026-03-31",
           "daily_net_buy_trn": -3.8386,
-          "cumulative_net_buy_trn": -50.1814
+          "cumulative_net_buy_trn": -49.5325
         },
         {
           "date": "2026-04-01",
           "daily_net_buy_trn": -0.6411,
-          "cumulative_net_buy_trn": -50.8225
+          "cumulative_net_buy_trn": -50.1736
         },
         {
           "date": "2026-04-02",
           "daily_net_buy_trn": -0.1368,
-          "cumulative_net_buy_trn": -50.9593
+          "cumulative_net_buy_trn": -50.3104
         },
         {
           "date": "2026-04-03",
           "daily_net_buy_trn": 0.8035,
-          "cumulative_net_buy_trn": -50.1558
+          "cumulative_net_buy_trn": -49.5069
         },
         {
           "date": "2026-04-06",
           "daily_net_buy_trn": -0.1596,
-          "cumulative_net_buy_trn": -50.3154
+          "cumulative_net_buy_trn": -49.6665
         },
         {
           "date": "2026-04-07",
           "daily_net_buy_trn": 0.3704,
-          "cumulative_net_buy_trn": -49.945
+          "cumulative_net_buy_trn": -49.2961
         },
         {
           "date": "2026-04-08",
           "daily_net_buy_trn": 1.9089,
-          "cumulative_net_buy_trn": -48.0361
+          "cumulative_net_buy_trn": -47.3872
         },
         {
           "date": "2026-04-09",
           "daily_net_buy_trn": 1.8476,
-          "cumulative_net_buy_trn": -46.1885
+          "cumulative_net_buy_trn": -45.5396
         },
         {
           "date": "2026-04-10",
           "daily_net_buy_trn": 1.0641,
-          "cumulative_net_buy_trn": -45.1244
+          "cumulative_net_buy_trn": -44.4755
         },
         {
           "date": "2026-04-13",
           "daily_net_buy_trn": -0.4579,
-          "cumulative_net_buy_trn": -45.5823
+          "cumulative_net_buy_trn": -44.9334
         },
         {
           "date": "2026-04-14",
           "daily_net_buy_trn": 0.8276,
-          "cumulative_net_buy_trn": -44.7547
+          "cumulative_net_buy_trn": -44.1058
         },
         {
           "date": "2026-04-15",
           "daily_net_buy_trn": 0.4973,
-          "cumulative_net_buy_trn": -44.2574
+          "cumulative_net_buy_trn": -43.6085
         },
         {
           "date": "2026-04-16",
           "daily_net_buy_trn": 0.4814,
-          "cumulative_net_buy_trn": -43.776
+          "cumulative_net_buy_trn": -43.1271
         },
         {
           "date": "2026-04-17",
           "daily_net_buy_trn": -1.9974,
-          "cumulative_net_buy_trn": -45.7734
+          "cumulative_net_buy_trn": -45.1245
         },
         {
           "date": "2026-04-20",
           "daily_net_buy_trn": -0.2338,
-          "cumulative_net_buy_trn": -46.0072
+          "cumulative_net_buy_trn": -45.3583
         },
         {
           "date": "2026-04-21",
           "daily_net_buy_trn": 1.1565,
-          "cumulative_net_buy_trn": -44.8507
+          "cumulative_net_buy_trn": -44.2018
         },
         {
           "date": "2026-04-22",
           "daily_net_buy_trn": -0.6762,
-          "cumulative_net_buy_trn": -45.5269
+          "cumulative_net_buy_trn": -44.878
         },
         {
           "date": "2026-04-23",
           "daily_net_buy_trn": -0.082,
-          "cumulative_net_buy_trn": -45.6089
+          "cumulative_net_buy_trn": -44.96
         },
         {
           "date": "2026-04-24",
           "daily_net_buy_trn": -1.9496,
-          "cumulative_net_buy_trn": -47.5585
+          "cumulative_net_buy_trn": -46.9096
         },
         {
           "date": "2026-04-27",
           "daily_net_buy_trn": 0.8563,
-          "cumulative_net_buy_trn": -46.7022
+          "cumulative_net_buy_trn": -46.0533
         },
         {
           "date": "2026-04-28",
           "daily_net_buy_trn": -0.1843,
-          "cumulative_net_buy_trn": -46.8865
+          "cumulative_net_buy_trn": -46.2376
         },
         {
           "date": "2026-04-29",
           "daily_net_buy_trn": -0.6071,
-          "cumulative_net_buy_trn": -47.4936
+          "cumulative_net_buy_trn": -46.8447
         },
         {
           "date": "2026-04-30",
           "daily_net_buy_trn": -1.4559,
-          "cumulative_net_buy_trn": -48.9495
+          "cumulative_net_buy_trn": -48.3006
         },
         {
           "date": "2026-05-04",
           "daily_net_buy_trn": 2.9308,
-          "cumulative_net_buy_trn": -46.0187
+          "cumulative_net_buy_trn": -45.3698
         },
         {
           "date": "2026-05-06",
           "daily_net_buy_trn": 3.1085,
-          "cumulative_net_buy_trn": -42.9102
+          "cumulative_net_buy_trn": -42.2613
         },
         {
           "date": "2026-05-07",
           "daily_net_buy_trn": -6.6987,
-          "cumulative_net_buy_trn": -49.6089
+          "cumulative_net_buy_trn": -48.96
         },
         {
           "date": "2026-05-08",
           "daily_net_buy_trn": -5.2967,
-          "cumulative_net_buy_trn": -54.9056
+          "cumulative_net_buy_trn": -54.2567
         },
         {
           "date": "2026-05-11",
           "daily_net_buy_trn": -2.8147,
-          "cumulative_net_buy_trn": -57.7203
+          "cumulative_net_buy_trn": -57.0714
         },
         {
           "date": "2026-05-12",
           "daily_net_buy_trn": -5.609,
-          "cumulative_net_buy_trn": -63.3293
+          "cumulative_net_buy_trn": -62.6804
         },
         {
           "date": "2026-05-13",
           "daily_net_buy_trn": -3.7227,
-          "cumulative_net_buy_trn": -67.052
+          "cumulative_net_buy_trn": -66.4031
         },
         {
           "date": "2026-05-14",
           "daily_net_buy_trn": -2.145,
-          "cumulative_net_buy_trn": -69.197
+          "cumulative_net_buy_trn": -68.5481
         },
         {
           "date": "2026-05-15",
           "daily_net_buy_trn": -5.604,
-          "cumulative_net_buy_trn": -74.801
+          "cumulative_net_buy_trn": -74.1521
         },
         {
           "date": "2026-05-18",
           "daily_net_buy_trn": -3.6492,
-          "cumulative_net_buy_trn": -78.4502
+          "cumulative_net_buy_trn": -77.8013
         },
         {
           "date": "2026-05-19",
           "daily_net_buy_trn": -5.7242,
-          "cumulative_net_buy_trn": -84.1744
+          "cumulative_net_buy_trn": -83.5255
         },
         {
           "date": "2026-05-20",
           "daily_net_buy_trn": -2.931,
-          "cumulative_net_buy_trn": -87.1054
+          "cumulative_net_buy_trn": -86.4565
         },
         {
           "date": "2026-05-21",
           "daily_net_buy_trn": -0.2212,
-          "cumulative_net_buy_trn": -87.3266
+          "cumulative_net_buy_trn": -86.6777
         },
         {
           "date": "2026-05-22",
           "daily_net_buy_trn": -1.9221,
-          "cumulative_net_buy_trn": -89.2487
+          "cumulative_net_buy_trn": -88.5998
         },
         {
           "date": "2026-05-26",
           "daily_net_buy_trn": -0.1321,
-          "cumulative_net_buy_trn": -89.3808
+          "cumulative_net_buy_trn": -88.7319
         },
         {
           "date": "2026-05-27",
           "daily_net_buy_trn": -0.2493,
-          "cumulative_net_buy_trn": -89.6301
+          "cumulative_net_buy_trn": -88.9812
         },
         {
           "date": "2026-05-28",
           "daily_net_buy_trn": -2.7414,
-          "cumulative_net_buy_trn": -92.3715
+          "cumulative_net_buy_trn": -91.7226
         },
         {
           "date": "2026-05-29",
           "daily_net_buy_trn": -1.0421,
-          "cumulative_net_buy_trn": -93.4136
+          "cumulative_net_buy_trn": -92.7647
         },
         {
           "date": "2026-06-01",
           "daily_net_buy_trn": -2.8219,
-          "cumulative_net_buy_trn": -96.2355
+          "cumulative_net_buy_trn": -95.5866
         },
         {
           "date": "2026-06-02",
           "daily_net_buy_trn": -6.3035,
-          "cumulative_net_buy_trn": -102.539
+          "cumulative_net_buy_trn": -101.8901
         },
         {
           "date": "2026-06-04",
           "daily_net_buy_trn": -6.6663,
-          "cumulative_net_buy_trn": -109.2053
+          "cumulative_net_buy_trn": -108.5564
         },
         {
           "date": "2026-06-05",
           "daily_net_buy_trn": -2.7638,
-          "cumulative_net_buy_trn": -111.9691
+          "cumulative_net_buy_trn": -111.3202
         },
         {
           "date": "2026-06-08",
           "daily_net_buy_trn": -0.2644,
-          "cumulative_net_buy_trn": -112.2335
+          "cumulative_net_buy_trn": -111.5846
         },
         {
           "date": "2026-06-09",
           "daily_net_buy_trn": -2.0064,
-          "cumulative_net_buy_trn": -114.2399
+          "cumulative_net_buy_trn": -113.591
         },
         {
           "date": "2026-06-10",
           "daily_net_buy_trn": -2.7754,
-          "cumulative_net_buy_trn": -117.0153
+          "cumulative_net_buy_trn": -116.3664
         },
         {
           "date": "2026-06-11",
           "daily_net_buy_trn": -1.464,
-          "cumulative_net_buy_trn": -118.4793
+          "cumulative_net_buy_trn": -117.8304
         },
         {
           "date": "2026-06-12",
           "daily_net_buy_trn": 2.2041,
-          "cumulative_net_buy_trn": -116.2752
+          "cumulative_net_buy_trn": -115.6263
         },
         {
           "date": "2026-06-15",
           "daily_net_buy_trn": 1.0774,
-          "cumulative_net_buy_trn": -115.1978
+          "cumulative_net_buy_trn": -114.5489
         },
         {
           "date": "2026-06-16",
           "daily_net_buy_trn": 1.5353,
-          "cumulative_net_buy_trn": -113.6625
+          "cumulative_net_buy_trn": -113.0136
         },
         {
           "date": "2026-06-17",
           "daily_net_buy_trn": -0.9952,
-          "cumulative_net_buy_trn": -114.6577
+          "cumulative_net_buy_trn": -114.0088
         },
         {
           "date": "2026-06-18",
           "daily_net_buy_trn": 1.2776,
-          "cumulative_net_buy_trn": -113.3801
+          "cumulative_net_buy_trn": -112.7312
         },
         {
           "date": "2026-06-19",
           "daily_net_buy_trn": -0.3555,
-          "cumulative_net_buy_trn": -113.7356
+          "cumulative_net_buy_trn": -113.0867
         },
         {
           "date": "2026-06-22",
           "daily_net_buy_trn": -2.5466,
-          "cumulative_net_buy_trn": -116.2822
+          "cumulative_net_buy_trn": -115.6333
         },
         {
           "date": "2026-06-23",
           "daily_net_buy_trn": -4.2047,
-          "cumulative_net_buy_trn": -120.4869
+          "cumulative_net_buy_trn": -119.838
         },
         {
           "date": "2026-06-24",
           "daily_net_buy_trn": -4.6546,
-          "cumulative_net_buy_trn": -125.1415
+          "cumulative_net_buy_trn": -124.4926
         },
         {
           "date": "2026-06-25",
           "daily_net_buy_trn": -0.8754,
-          "cumulative_net_buy_trn": -126.0169
+          "cumulative_net_buy_trn": -125.368
         },
         {
           "date": "2026-06-26",
           "daily_net_buy_trn": -4.2906,
-          "cumulative_net_buy_trn": -130.3075
+          "cumulative_net_buy_trn": -129.6586
         },
         {
           "date": "2026-06-29",
           "daily_net_buy_trn": -7.7332,
-          "cumulative_net_buy_trn": -138.0407
+          "cumulative_net_buy_trn": -137.3918
         },
         {
           "date": "2026-06-30",
           "daily_net_buy_trn": -3.7992,
-          "cumulative_net_buy_trn": -141.8399
+          "cumulative_net_buy_trn": -141.191
         },
         {
           "date": "2026-07-01",
           "daily_net_buy_trn": -1.7028,
-          "cumulative_net_buy_trn": -143.5427
+          "cumulative_net_buy_trn": -142.8938
         },
         {
           "date": "2026-07-02",
           "daily_net_buy_trn": -4.3706,
-          "cumulative_net_buy_trn": -147.9133
+          "cumulative_net_buy_trn": -147.2644
         },
         {
           "date": "2026-07-03",
           "daily_net_buy_trn": -2.175,
-          "cumulative_net_buy_trn": -150.0883
+          "cumulative_net_buy_trn": -149.4394
         },
         {
           "date": "2026-07-06",
           "daily_net_buy_trn": -1.3144,
-          "cumulative_net_buy_trn": -151.4027
+          "cumulative_net_buy_trn": -150.7538
         },
         {
           "date": "2026-07-07",
           "daily_net_buy_trn": -2.9172,
-          "cumulative_net_buy_trn": -154.3199
+          "cumulative_net_buy_trn": -153.671
         },
         {
           "date": "2026-07-08",
           "daily_net_buy_trn": 0.3437,
-          "cumulative_net_buy_trn": -153.9762
+          "cumulative_net_buy_trn": -153.3273
         },
         {
           "date": "2026-07-09",
           "daily_net_buy_trn": 0.1343,
-          "cumulative_net_buy_trn": -153.8419
+          "cumulative_net_buy_trn": -153.193
         },
         {
           "date": "2026-07-10",
           "daily_net_buy_trn": -0.3228,
-          "cumulative_net_buy_trn": -154.1647
+          "cumulative_net_buy_trn": -153.5158
         },
         {
           "date": "2026-07-13",
           "daily_net_buy_trn": -1.6705,
-          "cumulative_net_buy_trn": -155.8352
+          "cumulative_net_buy_trn": -155.1863
         },
         {
           "date": "2026-07-14",
           "daily_net_buy_trn": 0.9565,
-          "cumulative_net_buy_trn": -154.8787
+          "cumulative_net_buy_trn": -154.2298
         },
         {
           "date": "2026-07-15",
           "daily_net_buy_trn": 2.3031,
-          "cumulative_net_buy_trn": -152.5756
+          "cumulative_net_buy_trn": -151.9267
         },
         {
           "date": "2026-07-16",
           "daily_net_buy_trn": -1.3665,
-          "cumulative_net_buy_trn": -153.9421
+          "cumulative_net_buy_trn": -153.2932
         },
         {
           "date": "2026-07-20",
           "daily_net_buy_trn": 0.5198,
-          "cumulative_net_buy_trn": -153.4223
+          "cumulative_net_buy_trn": -152.7734
         },
         {
           "date": "2026-07-21",
           "daily_net_buy_trn": 0.2952,
-          "cumulative_net_buy_trn": -153.1271
+          "cumulative_net_buy_trn": -152.4782
         },
         {
           "date": "2026-07-22",
           "daily_net_buy_trn": 2.6211,
-          "cumulative_net_buy_trn": -150.506
+          "cumulative_net_buy_trn": -149.8571
         },
         {
           "date": "2026-07-23",
           "daily_net_buy_trn": 2.1359,
-          "cumulative_net_buy_trn": -148.3701
+          "cumulative_net_buy_trn": -147.7212
         },
         {
           "date": "2026-07-24",
           "daily_net_buy_trn": -3.2683,
-          "cumulative_net_buy_trn": -151.6384
+          "cumulative_net_buy_trn": -150.9895
         },
         {
           "date": "2026-07-27",
           "daily_net_buy_trn": -2.8811,
-          "cumulative_net_buy_trn": -154.5195
+          "cumulative_net_buy_trn": -153.8706
         },
         {
           "date": "2026-07-28",
           "daily_net_buy_trn": -4.5009,
-          "cumulative_net_buy_trn": -159.0204
+          "cumulative_net_buy_trn": -158.3715
         },
         {
           "date": "2026-07-29",
           "daily_net_buy_trn": -1.2502,
-          "cumulative_net_buy_trn": -160.2706
+          "cumulative_net_buy_trn": -159.6217
         },
         {
           "date": "2026-07-30",
           "daily_net_buy_trn": 1.328,
-          "cumulative_net_buy_trn": -158.9426
+          "cumulative_net_buy_trn": -158.2937
         },
         {
           "date": "2026-07-31",
           "daily_net_buy_trn": 7.241,
-          "cumulative_net_buy_trn": -151.7016
+          "cumulative_net_buy_trn": -151.0527
         },
         {
           "date": "2026-08-03",
           "daily_net_buy_trn": -2.822,
-          "cumulative_net_buy_trn": -154.5236
+          "cumulative_net_buy_trn": -153.8747
         },
         {
           "date": "2026-08-04",
           "daily_net_buy_trn": -0.3716,
-          "cumulative_net_buy_trn": -154.8952
+          "cumulative_net_buy_trn": -154.2463
         },
         {
           "date": "2026-08-05",
           "daily_net_buy_trn": 1.4464,
-          "cumulative_net_buy_trn": -153.4488
+          "cumulative_net_buy_trn": -152.7999
         },
         {
           "date": "2026-08-06",
           "daily_net_buy_trn": -3.2893,
-          "cumulative_net_buy_trn": -156.7381
+          "cumulative_net_buy_trn": -156.0892
         },
         {
           "date": "2026-08-07",
           "daily_net_buy_trn": -0.8651,
-          "cumulative_net_buy_trn": -157.6032
+          "cumulative_net_buy_trn": -156.9543
         },
         {
           "date": "2026-08-10",
           "daily_net_buy_trn": -1.4909,
-          "cumulative_net_buy_trn": -159.0941
+          "cumulative_net_buy_trn": -158.4452
         },
         {
           "date": "2026-08-11",
           "daily_net_buy_trn": 0.0535,
-          "cumulative_net_buy_trn": -159.0406
+          "cumulative_net_buy_trn": -158.3917
         },
         {
           "date": "2026-08-12",
           "daily_net_buy_trn": 2.8354,
-          "cumulative_net_buy_trn": -156.2052
+          "cumulative_net_buy_trn": -155.5563
         },
         {
           "date": "2026-08-13",
           "daily_net_buy_trn": 2.1102,
-          "cumulative_net_buy_trn": -154.095
+          "cumulative_net_buy_trn": -153.4461
         },
         {
           "date": "2026-08-14",
           "daily_net_buy_trn": 3.0387,
-          "cumulative_net_buy_trn": -151.0563
+          "cumulative_net_buy_trn": -150.4074
         },
         {
           "date": "2026-08-18",
           "daily_net_buy_trn": 0.0914,
-          "cumulative_net_buy_trn": -150.9649
+          "cumulative_net_buy_trn": -150.316
         },
         {
           "date": "2026-08-19",
           "daily_net_buy_trn": -3.4726,
-          "cumulative_net_buy_trn": -154.4375
+          "cumulative_net_buy_trn": -153.7886
         },
         {
           "date": "2026-08-20",
           "daily_net_buy_trn": 1.7068,
-          "cumulative_net_buy_trn": -152.7307
+          "cumulative_net_buy_trn": -152.0818
+        },
+        {
+          "date": "2026-08-21",
+          "daily_net_buy_trn": 0.3062,
+          "cumulative_net_buy_trn": -151.7756
         }
       ],
       "ownership": [
@@ -118032,74 +118032,74 @@
         },
         {
           "date": "2026-08-20",
-          "samsung_pct": 46.82,
-          "skhynix_pct": 51.03
+          "samsung_pct": 46.86,
+          "skhynix_pct": 51.05
         }
       ],
       "source": "Naver Finance KOSPI 외국인 순매수(억원→조원, 일별 구조 감지 파서)",
-      "latest_daily_net_buy_trn": 1.7068,
-      "cumulative_net_buy_trn": -152.7307,
-      "net_buy_5d_trn": 3.4745,
-      "net_buy_20d_trn": -2.2247,
-      "samsung_foreign_ownership_pct": 46.82,
-      "samsung_foreign_ownership_20d_change_pp": 0.11,
-      "skhynix_foreign_ownership_pct": 51.03,
-      "skhynix_foreign_ownership_20d_change_pp": -1.47,
+      "latest_daily_net_buy_trn": 0.3062,
+      "cumulative_net_buy_trn": -151.7756,
+      "net_buy_5d_trn": 1.6705,
+      "net_buy_20d_trn": -4.0544,
+      "samsung_foreign_ownership_pct": 46.86,
+      "samsung_foreign_ownership_20d_change_pp": 0.15,
+      "skhynix_foreign_ownership_pct": 51.05,
+      "skhynix_foreign_ownership_20d_change_pp": -1.45,
       "market_snapshot": {},
       "signal": "단기 반전 진행",
       "collection_errors": [
         "KRX 전종목 표는 스키마 정상화 전까지 이전 확정치만 표시"
       ],
       "market_flow_multi_horizon": {
-        "latest_date": "2026-08-20",
+        "latest_date": "2026-08-21",
         "net_buy_trn": {
-          "1": 1.7068,
-          "5": 3.4745,
-          "10": 0.7181,
-          "20": -2.2247,
-          "60": -63.482
+          "1": 0.3062,
+          "5": 1.6705,
+          "10": 4.3136,
+          "20": -4.0544,
+          "60": -63.0437
         },
-        "prior_5d_trn": -2.7564,
-        "acceleration_5d_trn": 6.2309,
-        "streak_days": 1,
+        "prior_5d_trn": 2.6431,
+        "acceleration_5d_trn": -0.9726,
+        "streak_days": 2,
         "streak_direction": "순매수",
         "reversal_state": "5일 순매수 전환",
         "observation_count": 280,
         "source": "Naver Finance KOSPI 외국인 순매수(억원→조원, 일별 구조 감지 파서)"
       },
-      "net_buy_1d_trn": 1.7068,
-      "net_buy_10d_trn": 0.7181,
-      "net_buy_60d_trn": -63.482,
-      "samsung_foreign_ownership_1d_change_pp": 0.07,
-      "samsung_foreign_ownership_5d_change_pp": 0.11,
-      "samsung_foreign_ownership_10d_change_pp": 0.14,
-      "samsung_foreign_ownership_60d_change_pp": -1.5,
-      "skhynix_foreign_ownership_1d_change_pp": 0.04,
-      "skhynix_foreign_ownership_5d_change_pp": 0.2,
-      "skhynix_foreign_ownership_10d_change_pp": 0.0,
-      "skhynix_foreign_ownership_60d_change_pp": -0.58,
+      "net_buy_1d_trn": 0.3062,
+      "net_buy_10d_trn": 4.3136,
+      "net_buy_60d_trn": -63.0437,
+      "samsung_foreign_ownership_1d_change_pp": 0.11,
+      "samsung_foreign_ownership_5d_change_pp": 0.15,
+      "samsung_foreign_ownership_10d_change_pp": 0.18,
+      "samsung_foreign_ownership_60d_change_pp": -1.46,
+      "skhynix_foreign_ownership_1d_change_pp": 0.06,
+      "skhynix_foreign_ownership_5d_change_pp": 0.22,
+      "skhynix_foreign_ownership_10d_change_pp": 0.02,
+      "skhynix_foreign_ownership_60d_change_pp": -0.56,
       "ownership_multi_horizon": {
         "samsung": {
           "latest_date": "2026-08-20",
-          "current_pct": 46.82,
+          "current_pct": 46.86,
           "change_pp": {
-            "1": 0.07,
-            "5": 0.11,
-            "10": 0.14,
-            "20": 0.11,
-            "60": -1.5
+            "1": 0.11,
+            "5": 0.15,
+            "10": 0.18,
+            "20": 0.15,
+            "60": -1.46
           },
           "observation_count": 260
         },
         "skhynix": {
           "latest_date": "2026-08-20",
-          "current_pct": 51.03,
+          "current_pct": 51.05,
           "change_pp": {
-            "1": 0.04,
-            "5": 0.2,
-            "10": 0.0,
-            "20": -1.47,
-            "60": -0.58
+            "1": 0.06,
+            "5": 0.22,
+            "10": 0.02,
+            "20": -1.45,
+            "60": -0.56
           },
           "observation_count": 260
         }
@@ -118107,11 +118107,11 @@
       "multi_horizon_gate": {
         "confirmed": false,
         "partial": true,
-        "short_turn": true,
+        "short_turn": false,
         "medium_support": false,
         "ownership_short": true,
         "ownership_medium": false,
-        "partial_count": 3,
+        "partial_count": 2,
         "signal": "단기 반전 진행",
         "logic": "1·5일 반전과 20일 지속성, 삼성전자·SK하이닉스 지분율 변화를 함께 평가"
       }
@@ -118134,8 +118134,8 @@
           "latest_reference_date": "2026-06-01",
           "key": "SAMSUNG",
           "name": "삼성전자",
-          "price_return_5d_pct": 6.0665,
-          "price_return_20d_pct": 4.0307,
+          "price_return_5d_pct": 4.4776,
+          "price_return_20d_pct": 3.7037,
           "status": "컨센서스 스냅샷 축적 중"
         },
         {
@@ -118143,8 +118143,8 @@
           "latest_reference_date": "2026-06-01",
           "key": "SKHYNIX",
           "name": "SK하이닉스",
-          "price_return_5d_pct": 12.4335,
-          "price_return_20d_pct": -7.5956,
+          "price_return_5d_pct": 9.9812,
+          "price_return_20d_pct": -8.7024,
           "status": "컨센서스 스냅샷 축적 중"
         }
       ],
@@ -118164,13 +118164,13 @@
   },
   "macro_context": {
     "usdkrw": {
-      "date": "2026-08-20",
-      "close": 1393.85,
-      "change_1d_pct": 0.3203,
-      "change_5d_pct": -1.6233,
-      "realized_vol_20d_pct": 11.4419,
+      "date": "2026-08-21",
+      "close": 1380.98,
+      "change_1d_pct": -0.606,
+      "change_5d_pct": -2.5317,
+      "realized_vol_20d_pct": 11.2719,
       "previous_realized_vol_20d_pct": 10.7263,
-      "vol_change_5d_pp": 0.7156,
+      "vol_change_5d_pp": 0.5456,
       "stable": false,
       "risk": false,
       "source": "Yahoo Finance chart API",
@@ -118198,12 +118198,12 @@
         "name": "외국인 수급",
         "confirmed": false,
         "partial": true,
-        "short": "1일 1.7068조원 · 5일 3.4745조원 · 20일 -2.2247조원",
+        "short": "1일 0.3062조원 · 5일 1.6705조원 · 20일 -4.0544조원",
         "details": [
-          "5일 가속도 6.2309조원 · 1일 연속 순매수",
-          "삼성 지분율 5일 0.11%p / 20일 0.11%p",
-          "하이닉스 지분율 5일 0.2%p / 20일 -1.47%p",
-          "판정 5일 순매수 전환 · 기준일 2026-08-20"
+          "5일 가속도 -0.9726조원 · 2일 연속 순매수",
+          "삼성 지분율 5일 0.15%p / 20일 0.15%p",
+          "하이닉스 지분율 5일 0.22%p / 20일 -1.45%p",
+          "판정 5일 순매수 전환 · 기준일 2026-08-21"
         ],
         "data_mode": "1·5·10·20·60일 다중 구간"
       },
@@ -118211,7 +118211,7 @@
         "name": "환율·변동성",
         "confirmed": false,
         "partial": true,
-        "short": "원/달러 5일 -1.6233% · 실제 VKOSPI 당일 하락/다일 전환 미확인"
+        "short": "원/달러 5일 -2.5317% · 실제 VKOSPI 당일 하락/다일 전환 미확인"
       },
       {
         "name": "가격 반응",
@@ -118221,7 +118221,7 @@
       }
     ],
     "note": "실제 VKOSPI와 실현변동성 대체값을 분리합니다. 단일 일간 하락은 부분 개선이며 게이트 점수에는 반영하지 않습니다.",
-    "updated_at": "2026-08-21T05:57:41+09:00"
+    "updated_at": "2026-08-21T10:52:15+09:00"
   },
   "positioning_analysis": {
     "institutional_snapshot": {
@@ -118241,19 +118241,19 @@
       "note": "6.1배는 투자자 수 비율이 아니라 기관 고객계좌의 익스포저 집계일 수 있다. 절대값보다 20배 이상에서 6배 수준으로 하락한 방향과 DRAM ASP·EPS 방향의 조합을 본다."
     },
     "daily_proxy": {
-      "score": 46.2794,
-      "state": "중립·정상 수준",
+      "score": 44.8379,
+      "state": "디레버리징·비관",
       "coverage_pct": 35,
       "components": [
         {
           "name": "한국 외국인 수급·지분율",
-          "score": 49.8312,
+          "score": 48.4531,
           "weight": 25,
           "available": true,
           "detail": {
-            "flow_20d_percentile": 58.6207,
-            "ownership_change_percentile": 41.0416,
-            "latest_20d_net_buy_trn": -2.2247,
+            "flow_20d_percentile": 54.4061,
+            "ownership_change_percentile": 42.5,
+            "latest_20d_net_buy_trn": -4.0544,
             "source": "Naver Finance KOSPI 외국인 순매수(억원→조원, 일별 구조 감지 파서)"
           }
         },
@@ -118279,7 +118279,7 @@
         },
         {
           "name": "메모리·SOX 상승 확산도",
-          "score": 37.4,
+          "score": 35.8,
           "weight": 10,
           "available": true,
           "detail": {
@@ -118309,7 +118309,7 @@
       "삼성전자 KRX 공매도 거래: get_shorting_value_by_date: '거래대금' / get_shorting_volume_by_date: '거래량'",
       "SK하이닉스 KRX 공매도 거래: get_shorting_value_by_date: '거래대금' / get_shorting_volume_by_date: '거래량'"
     ],
-    "updated_at": "2026-08-21T05:57:41+09:00"
+    "updated_at": "2026-08-21T10:52:15+09:00"
   },
   "mid_cycle_clock": {
     "available": true,
@@ -118401,39 +118401,39 @@
       "not_in_trend_rebound_gate_score": true
     },
     "not_in_trend_rebound_gate_score": true,
-    "updated_at": "2026-08-21T05:57:41+09:00"
+    "updated_at": "2026-08-21T10:52:15+09:00"
   },
   "date_alignment": {
-    "kospi_price_date": "2026-08-20",
+    "kospi_price_date": "2026-08-21",
     "individual_flow_date": "2026-08-20",
     "aligned": true
   },
   "data_freshness": {
-    "checked_at": "2026-08-21T05:58:42+09:00",
+    "checked_at": "2026-08-21T10:53:07+09:00",
     "assets": {
       "KOSPI": {
-        "date": "2026-08-20",
+        "date": "2026-08-21",
         "expected_close_date": "2026-08-20",
         "business_days_late": 0,
         "stale": false,
         "source": "Yahoo Finance chart API + Naver latest-day overlay"
       },
       "KOSDAQ": {
-        "date": "2026-08-20",
+        "date": "2026-08-21",
         "expected_close_date": "2026-08-20",
         "business_days_late": 0,
         "stale": false,
         "source": "Yahoo Finance chart API + Naver latest-day overlay"
       },
       "SAMSUNG": {
-        "date": "2026-08-20",
+        "date": "2026-08-21",
         "expected_close_date": "2026-08-20",
         "business_days_late": 0,
         "stale": false,
         "source": "Yahoo Finance chart API + Naver latest-day overlay"
       },
       "SKHYNIX": {
-        "date": "2026-08-20",
+        "date": "2026-08-21",
         "expected_close_date": "2026-08-20",
         "business_days_late": 0,
         "stale": false,
@@ -118441,20 +118441,20 @@
       },
       "SOX": {
         "date": "2026-08-20",
-        "expected_close_date": "2026-08-19",
+        "expected_close_date": "2026-08-20",
         "business_days_late": 0,
         "stale": false,
         "source": "Yahoo Finance chart API"
       },
       "NDX": {
         "date": "2026-08-20",
-        "expected_close_date": "2026-08-19",
+        "expected_close_date": "2026-08-20",
         "business_days_late": 0,
         "stale": false,
         "source": "Yahoo Finance chart API"
       },
       "USDKRW": {
-        "date": "2026-08-20",
+        "date": "2026-08-21",
         "expected_close_date": "2026-08-20",
         "business_days_late": 0,
         "stale": false,
@@ -118462,13 +118462,13 @@
       },
       "SPX": {
         "date": "2026-08-20",
-        "expected_close_date": "2026-08-19",
+        "expected_close_date": "2026-08-20",
         "business_days_late": 0,
         "stale": false,
         "source": "Yahoo Finance chart API"
       },
       "KOSPI200": {
-        "date": "2026-08-20",
+        "date": "2026-08-21",
         "expected_close_date": "2026-08-20",
         "business_days_late": 0,
         "stale": false,
@@ -118476,14 +118476,14 @@
       },
       "MU": {
         "date": "2026-08-20",
-        "expected_close_date": "2026-08-19",
+        "expected_close_date": "2026-08-20",
         "business_days_late": 0,
         "stale": false,
         "source": "Yahoo Finance chart API"
       },
       "SNDK": {
         "date": "2026-08-20",
-        "expected_close_date": "2026-08-19",
+        "expected_close_date": "2026-08-20",
         "business_days_late": 0,
         "stale": false,
         "source": "Yahoo Finance chart API"
