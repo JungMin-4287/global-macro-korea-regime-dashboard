@@ -4,7 +4,7 @@
 Run only this file from GitHub Actions or locally. Legacy versioned scripts remain
 internal compatibility modules until they are gradually consolidated.
 
-Refresh marker: 2026-07-30 Korea close and U.S. overnight macro check.
+Refresh marker: 2026-08-23 macro stagflation/recession and inverse-hedge overlay.
 """
 from __future__ import annotations
 
@@ -14,7 +14,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
 SCRIPTS = ROOT / "scripts"
-LATEST_PIPELINE = SCRIPTS / "update_dashboard_v21.py"
+LATEST_PIPELINE = SCRIPTS / "update_dashboard_v22.py"
 
 
 def main() -> None:
