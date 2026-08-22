@@ -37,7 +37,7 @@ def yahoo(t):
 
 def fred(i):
     r=requests.get(f'https://fred.stlouisfed.org/graph/fredgraph.csv?id={quote(i)}',headers=H,timeout=(5,20)); r.raise_for_status(); f=pd.read_csv(StringIO(r.text))
-    f['DATE']=pd.to_datetime(f['DATE'],errors='coerce'); f[i]=pd.to_numeric(f[i],errors='coerce'); return f.dropna().set_index('DATE')[i].tail(260)
+    dc='DATE' if 'DATE' in f.columns else ('observation_date' if 'observation_date' in f.columns else f.columns[0]); f[dc]=pd.to_datetime(f[dc],errors='coerce'); f[i]=pd.to_numeric(f[i],errors='coerce'); return f.dropna(subset=[dc,i]).set_index(dc)[i].tail(260)
 
 def snap(s,label,src):
     return {'label':label,'value':num(s.iloc[-1]),'date':s.index[-1].date().isoformat(),'p5':pct(s,5),'p10':pct(s,10),'p20':pct(s,20),'d10':chg(s,10),'d20':chg(s,20),'source':src}
