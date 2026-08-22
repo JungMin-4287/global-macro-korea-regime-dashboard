@@ -182,5 +182,5 @@
 <script src="js/midcycle.js?v=21"></script>
 <script src="js/vkospi-fix.js?v=21"></script>
 <script src="js/app.js?v=21"></script>
-</body>
+<script>(async()=>{try{let d=await(await fetch('data/market_data.json?mr='+Date.now(),{cache:'no-store'})).json(),m=d.macro_regime_hedge||{},x=m.derived||{},h=m.hedge||{},q=(i,v)=>{let e=document.getElementById(i);if(e)e.textContent=v??'-'},n=(v,s='',d=2)=>v==null?'-':Number(v).toLocaleString('ko-KR',{maximumFractionDigits:d})+s;q('mrR',m.regime);q('mrL','Hedge '+(m.hedge_level??'-')+'/4');q('mrA',m.action);q('mrKQ',h['KODEX 코스닥150선물인버스(251340)']);q('mrKP',h['KODEX 인버스(114800)']);q('mrT',h['총 지수헤지']);q('mrGC',n(x.gold_copper_20d_pct,'%'));q('mrB',n(x.bei10_10d_bp,'bp',1));q('mrY',n(x.real30_pct,'%'));q('mrH',n(x.hy_oas_pct,'%'));q('mrD',n(x.dxy_20d_pct,'%'));q('mrV',n(x.vix,'',1));let b=document.getElementById('mrL');if(b)b.className='badge '+((m.hedge_level||0)>=4?'bad':(m.hedge_level||0)>=2?'warn':'good')}catch(e){console.warn('macroRegime',e)}})();</script></body>
 </html>
