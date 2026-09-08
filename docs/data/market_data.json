@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-08T17:58:22+09:00",
+  "generated_at": "2026-09-08T21:06:46+09:00",
   "status": "ok",
   "methodology": {
     "disparity_ratio": "현재가 ÷ 이동평균 × 100",
@@ -69107,34 +69107,34 @@
       "type": "macro",
       "date": "2026-09-08",
       "source": "Yahoo Finance chart API",
-      "close": 1344.8,
-      "change_pct": -0.0193,
-      "current_drawdown_pct": -13.4888,
-      "mdd_252_pct": -13.4888,
-      "sma30": 1399.2407,
-      "ratio30": 96.1093,
-      "dev30": -3.8907,
-      "ratio30_percentile_3y": 1.9841,
-      "sma50": 1439.44,
-      "ratio50": 93.4252,
-      "dev50": -6.5748,
-      "ratio50_percentile_3y": 0.2646,
-      "sma60": 1455.2963,
-      "ratio60": 92.4073,
-      "dev60": -7.5927,
-      "ratio60_percentile_3y": 0.2646,
-      "sma100": 1471.7996,
-      "ratio100": 91.3711,
-      "dev100": -8.6289,
-      "ratio100_percentile_3y": 0.2646,
-      "sma120": 1475.1362,
-      "ratio120": 91.1645,
-      "dev120": -8.8355,
-      "ratio120_percentile_3y": 0.2646,
-      "sma200": 1469.2517,
-      "ratio200": 91.5296,
-      "dev200": -8.4704,
-      "ratio200_percentile_3y": 0.2646,
+      "close": 1341.08,
+      "change_pct": -0.2959,
+      "current_drawdown_pct": -13.7281,
+      "mdd_252_pct": -13.7281,
+      "sma30": 1399.1167,
+      "ratio30": 95.8519,
+      "dev30": -4.1481,
+      "ratio30_percentile_3y": 1.455,
+      "sma50": 1439.3656,
+      "ratio50": 93.1716,
+      "dev50": -6.8284,
+      "ratio50_percentile_3y": 0.1323,
+      "sma60": 1455.2343,
+      "ratio60": 92.1556,
+      "dev60": -7.8444,
+      "ratio60_percentile_3y": 0.1323,
+      "sma100": 1471.7624,
+      "ratio100": 91.1207,
+      "dev100": -8.8793,
+      "ratio100_percentile_3y": 0.1323,
+      "sma120": 1475.1052,
+      "ratio120": 90.9142,
+      "dev120": -9.0858,
+      "ratio120_percentile_3y": 0.1323,
+      "sma200": 1469.2331,
+      "ratio200": 91.2775,
+      "dev200": -8.7225,
+      "ratio200_percentile_3y": 0.1323,
       "rebound_3d": false,
       "history": [
         {
@@ -80557,25 +80557,25 @@
         },
         {
           "date": "2026-09-08",
-          "close": 1344.8,
-          "sma30": 1399.2407,
-          "sma50": 1439.44,
-          "sma60": 1455.2963,
-          "sma100": 1471.7996,
-          "sma120": 1475.1362,
-          "sma200": 1469.2517,
-          "ratio30": 96.1093,
-          "ratio50": 93.4252,
-          "ratio60": 92.4073,
-          "ratio100": 91.3711,
-          "ratio120": 91.1645,
-          "ratio200": 91.5296,
-          "drawdown": -13.4888,
-          "rsi14": 18.9039,
-          "macd": -24.6357,
-          "macd_signal": -23.3295,
-          "macd_hist": -1.3063,
-          "sigma20": -1.7305
+          "close": 1341.08,
+          "sma30": 1399.1167,
+          "sma50": 1439.3656,
+          "sma60": 1455.2343,
+          "sma100": 1471.7624,
+          "sma120": 1475.1052,
+          "sma200": 1469.2331,
+          "ratio30": 95.8519,
+          "ratio50": 93.1716,
+          "ratio60": 92.1556,
+          "ratio100": 91.1207,
+          "ratio120": 90.9142,
+          "ratio200": 91.2775,
+          "drawdown": -13.7281,
+          "rsi14": 18.1238,
+          "macd": -24.9325,
+          "macd_signal": -23.3888,
+          "macd_hist": -1.5437,
+          "sigma20": -1.8558
         }
       ],
       "disparity_interpretation": {
@@ -80586,11 +80586,11 @@
       },
       "is_proxy": false,
       "technical_rebound": {
-        "rsi14": 18.9039,
-        "macd": -24.6357,
-        "macd_signal": -23.3295,
-        "macd_hist": -1.3063,
-        "sigma20": -1.7305,
+        "rsi14": 18.1238,
+        "macd": -24.9325,
+        "macd_signal": -23.3888,
+        "macd_hist": -1.5437,
+        "sigma20": -1.8558,
         "score": 1,
         "state": "하락 추세·확인 필요",
         "checks": {
@@ -125991,7 +125991,7 @@
       },
       {
         "date": "2026-09-08",
-        "x": -3.0331,
+        "x": -3.0329,
         "y": -0.5842
       }
     ],
@@ -126007,9 +126007,9 @@
     ],
     "latest": {
       "date": "2026-09-08",
-      "x": -3.0331,
+      "x": -3.0329,
       "y": -0.5842,
-      "residual": -4.3022
+      "residual": -4.302
     },
     "correlation": -0.6946,
     "zone": "공포·위험 축소",
@@ -126018,30 +126018,30 @@
     "highlights": [
       {
         "date": "2026-09-08",
-        "x": -3.0331,
+        "x": -3.0329,
         "y": -0.5842,
-        "residual": -4.302183836710919,
+        "residual": -4.301998976573111,
         "label": "9/8"
       },
       {
         "date": "2026-03-04",
         "x": 0.0796,
         "y": -12.0577,
-        "residual": -12.823443784686454,
+        "residual": -12.823445288055089,
         "label": "3/4"
       },
       {
         "date": "2026-03-05",
         "x": 1.8228,
         "y": 9.6271,
-        "residual": 10.514694108039812,
+        "residual": 10.514694467711859,
         "label": "3/5"
       },
       {
         "date": "2026-07-31",
         "x": -8.284,
         "y": 17.9115,
-        "residual": 9.21330050190981,
+        "residual": 9.213290059964402,
         "label": "7/31"
       }
     ],
@@ -127267,30 +127267,30 @@
         {
           "date": "2026-09-08",
           "peak_date": "2026-06-22",
-          "x": 18.9814,
+          "x": 18.2591,
           "y": -23.6987,
           "close": 6954.52,
-          "daily_individual_net_buy_trn": -2.3108
+          "daily_individual_net_buy_trn": -3.0331
         }
       ],
       "regression": [
         {
           "x": -1.2382,
-          "y": 1.228
+          "y": 1.2167
         },
         {
           "x": 39.8186,
-          "y": -25.883
+          "y": -25.878
         }
       ],
       "highlights": [
         {
           "date": "2026-09-08",
           "peak_date": "2026-06-22",
-          "x": 18.9814,
+          "x": 18.2591,
           "y": -23.6987,
           "close": 6954.52,
-          "daily_individual_net_buy_trn": -2.3108,
+          "daily_individual_net_buy_trn": -3.0331,
           "label": "9/8"
         },
         {
@@ -127333,10 +127333,10 @@
       "latest": {
         "date": "2026-09-08",
         "peak_date": "2026-06-22",
-        "x": 18.9814,
+        "x": 18.2591,
         "y": -23.6987,
         "close": 6954.52,
-        "daily_individual_net_buy_trn": -2.3108
+        "daily_individual_net_buy_trn": -3.0331
       },
       "zone": "개인 대규모 저가매수에도 깊은 낙폭",
       "interpretation": "개인이 누적으로 크게 매수했지만 지수 낙폭이 깊습니다. 외국인·기관 매도 압력이 개인 매수보다 강해 청산이 끝났다고 보기 어렵습니다.",
@@ -129054,11 +129054,6 @@
       ],
       "ownership": [
         {
-          "date": "2025-08-13",
-          "samsung_pct": 50.6,
-          "skhynix_pct": 55.48
-        },
-        {
           "date": "2025-08-14",
           "samsung_pct": 50.57,
           "skhynix_pct": 55.48
@@ -130352,6 +130347,11 @@
           "date": "2026-09-07",
           "samsung_pct": 46.79,
           "skhynix_pct": 50.63
+        },
+        {
+          "date": "2026-09-08",
+          "samsung_pct": 46.85,
+          "skhynix_pct": 50.65
         }
       ],
       "source": "Naver Finance KOSPI 외국인 순매수(억원→조원, 일별 구조 감지 파서)",
@@ -130359,10 +130359,10 @@
       "cumulative_net_buy_trn": -161.7556,
       "net_buy_5d_trn": 1.7885,
       "net_buy_20d_trn": -1.4814,
-      "samsung_foreign_ownership_pct": 46.79,
-      "samsung_foreign_ownership_20d_change_pp": 0.18,
-      "skhynix_foreign_ownership_pct": 50.63,
-      "skhynix_foreign_ownership_20d_change_pp": -0.18,
+      "samsung_foreign_ownership_pct": 46.85,
+      "samsung_foreign_ownership_20d_change_pp": 0.32,
+      "skhynix_foreign_ownership_pct": 50.65,
+      "skhynix_foreign_ownership_20d_change_pp": -0.12,
       "market_snapshot": {},
       "signal": "단기 반전 진행",
       "collection_errors": [
@@ -130389,35 +130389,35 @@
       "net_buy_10d_trn": -0.1857,
       "net_buy_60d_trn": -44.3003,
       "samsung_foreign_ownership_1d_change_pp": 0.06,
-      "samsung_foreign_ownership_5d_change_pp": 0.07,
-      "samsung_foreign_ownership_10d_change_pp": 0.05,
-      "samsung_foreign_ownership_60d_change_pp": -0.79,
-      "skhynix_foreign_ownership_1d_change_pp": 0.13,
-      "skhynix_foreign_ownership_5d_change_pp": 0.07,
-      "skhynix_foreign_ownership_10d_change_pp": -0.29,
-      "skhynix_foreign_ownership_60d_change_pp": -0.47,
+      "samsung_foreign_ownership_5d_change_pp": 0.14,
+      "samsung_foreign_ownership_10d_change_pp": 0.2,
+      "samsung_foreign_ownership_60d_change_pp": -0.78,
+      "skhynix_foreign_ownership_1d_change_pp": 0.02,
+      "skhynix_foreign_ownership_5d_change_pp": 0.08,
+      "skhynix_foreign_ownership_10d_change_pp": -0.07,
+      "skhynix_foreign_ownership_60d_change_pp": -0.54,
       "ownership_multi_horizon": {
         "samsung": {
-          "latest_date": "2026-09-07",
-          "current_pct": 46.79,
+          "latest_date": "2026-09-08",
+          "current_pct": 46.85,
           "change_pp": {
             "1": 0.06,
-            "5": 0.07,
-            "10": 0.05,
-            "20": 0.18,
-            "60": -0.79
+            "5": 0.14,
+            "10": 0.2,
+            "20": 0.32,
+            "60": -0.78
           },
           "observation_count": 260
         },
         "skhynix": {
-          "latest_date": "2026-09-07",
-          "current_pct": 50.63,
+          "latest_date": "2026-09-08",
+          "current_pct": 50.65,
           "change_pp": {
-            "1": 0.13,
-            "5": 0.07,
-            "10": -0.29,
-            "20": -0.18,
-            "60": -0.47
+            "1": 0.02,
+            "5": 0.08,
+            "10": -0.07,
+            "20": -0.12,
+            "60": -0.54
           },
           "observation_count": 260
         }
@@ -130483,12 +130483,12 @@
   "macro_context": {
     "usdkrw": {
       "date": "2026-09-08",
-      "close": 1344.8,
-      "change_1d_pct": -0.0193,
-      "change_5d_pct": -1.5966,
-      "realized_vol_20d_pct": 7.9335,
+      "close": 1341.08,
+      "change_1d_pct": -0.2959,
+      "change_5d_pct": -1.8688,
+      "realized_vol_20d_pct": 7.8823,
       "previous_realized_vol_20d_pct": 8.2647,
-      "vol_change_5d_pp": -0.3312,
+      "vol_change_5d_pp": -0.3824,
       "stable": true,
       "risk": false,
       "source": "Yahoo Finance chart API",
@@ -130519,8 +130519,8 @@
         "short": "1일 0.6316조원 · 5일 1.7885조원 · 20일 -1.4814조원",
         "details": [
           "5일 가속도 3.7627조원 · 4일 연속 순매수",
-          "삼성 지분율 5일 0.07%p / 20일 0.18%p",
-          "하이닉스 지분율 5일 0.07%p / 20일 -0.18%p",
+          "삼성 지분율 5일 0.14%p / 20일 0.32%p",
+          "하이닉스 지분율 5일 0.08%p / 20일 -0.12%p",
           "판정 5일 순매수 전환 · 기준일 2026-09-08"
         ],
         "data_mode": "1·5·10·20·60일 다중 구간"
@@ -130529,7 +130529,7 @@
         "name": "환율·변동성",
         "confirmed": false,
         "partial": true,
-        "short": "원/달러 5일 -1.5966% · 실제 VKOSPI 당일 하락/다일 전환 미확인"
+        "short": "원/달러 5일 -1.8688% · 실제 VKOSPI 당일 하락/다일 전환 미확인"
       },
       {
         "name": "가격 반응",
@@ -130539,7 +130539,7 @@
       }
     ],
     "note": "실제 VKOSPI와 실현변동성 대체값을 분리합니다. 단일 일간 하락은 부분 개선이며 게이트 점수에는 반영하지 않습니다.",
-    "updated_at": "2026-09-08T17:58:22+09:00"
+    "updated_at": "2026-09-08T21:06:46+09:00"
   },
   "positioning_analysis": {
     "institutional_snapshot": {
@@ -130559,18 +130559,18 @@
       "note": "6.1배는 투자자 수 비율이 아니라 기관 고객계좌의 익스포저 집계일 수 있다. 절대값보다 20배 이상에서 6배 수준으로 하락한 방향과 DRAM ASP·EPS 방향의 조합을 본다."
     },
     "daily_proxy": {
-      "score": 63.6808,
+      "score": 64.7226,
       "state": "중립·정상 수준",
       "coverage_pct": 35,
       "components": [
         {
           "name": "한국 외국인 수급·지분율",
-          "score": 65.8465,
+          "score": 67.3049,
           "weight": 25,
           "available": true,
           "detail": {
             "flow_20d_percentile": 63.9847,
-            "ownership_change_percentile": 67.7083,
+            "ownership_change_percentile": 70.625,
             "latest_20d_net_buy_trn": -1.4814,
             "source": "Naver Finance KOSPI 외국인 순매수(억원→조원, 일별 구조 감지 파서)"
           }
@@ -130627,7 +130627,7 @@
       "삼성전자 KRX 공매도 거래: get_shorting_value_by_date: '거래대금' / get_shorting_volume_by_date: '거래량'",
       "SK하이닉스 KRX 공매도 거래: get_shorting_value_by_date: '거래대금' / get_shorting_volume_by_date: '거래량'"
     ],
-    "updated_at": "2026-09-08T17:58:22+09:00"
+    "updated_at": "2026-09-08T21:06:46+09:00"
   },
   "mid_cycle_clock": {
     "available": true,
@@ -130719,7 +130719,7 @@
       "not_in_trend_rebound_gate_score": true
     },
     "not_in_trend_rebound_gate_score": true,
-    "updated_at": "2026-09-08T17:58:22+09:00"
+    "updated_at": "2026-09-08T21:06:46+09:00"
   },
   "date_alignment": {
     "kospi_price_date": "2026-09-08",
@@ -130727,7 +130727,7 @@
     "aligned": true
   },
   "data_freshness": {
-    "checked_at": "2026-09-08T17:59:09+09:00",
+    "checked_at": "2026-09-08T21:07:41+09:00",
     "assets": {
       "KOSPI": {
         "date": "2026-09-08",
@@ -130869,11 +130869,11 @@
     },
     "stale": true,
     "refresh_error": {
-      "gold": "429 Client Error: Too Many Requests for url: https://query1.finance.yahoo.com/v8/finance/chart/GC%3DF?period1=1773305950&period2=1788944350&interval=1d",
-      "copper": "429 Client Error: Too Many Requests for url: https://query1.finance.yahoo.com/v8/finance/chart/HG%3DF?period1=1773305950&period2=1788944350&interval=1d",
-      "dxy": "429 Client Error: Too Many Requests for url: https://query1.finance.yahoo.com/v8/finance/chart/DX-Y.NYB?period1=1773305950&period2=1788944350&interval=1d",
-      "vix": "429 Client Error: Too Many Requests for url: https://query1.finance.yahoo.com/v8/finance/chart/%5EVIX?period1=1773305950&period2=1788944350&interval=1d",
-      "oil": "429 Client Error: Too Many Requests for url: https://query1.finance.yahoo.com/v8/finance/chart/CL%3DF?period1=1773305950&period2=1788944350&interval=1d",
+      "gold": "429 Client Error: Too Many Requests for url: https://query1.finance.yahoo.com/v8/finance/chart/GC%3DF?period1=1773317261&period2=1788955661&interval=1d",
+      "copper": "429 Client Error: Too Many Requests for url: https://query1.finance.yahoo.com/v8/finance/chart/HG%3DF?period1=1773317261&period2=1788955661&interval=1d",
+      "dxy": "429 Client Error: Too Many Requests for url: https://query1.finance.yahoo.com/v8/finance/chart/DX-Y.NYB?period1=1773317261&period2=1788955661&interval=1d",
+      "vix": "429 Client Error: Too Many Requests for url: https://query1.finance.yahoo.com/v8/finance/chart/%5EVIX?period1=1773317261&period2=1788955661&interval=1d",
+      "oil": "429 Client Error: Too Many Requests for url: https://query1.finance.yahoo.com/v8/finance/chart/CL%3DF?period1=1773317262&period2=1788955662&interval=1d",
       "bei10": "HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Read timed out. (read timeout=20)",
       "real30": "HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Read timed out. (read timeout=20)",
       "hy": "HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Read timed out. (read timeout=20)"
