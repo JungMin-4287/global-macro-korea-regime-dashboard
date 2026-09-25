@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-25T13:46:10+09:00",
+  "generated_at": "2026-09-25T18:50:28+09:00",
   "status": "ok",
   "methodology": {
     "disparity_ratio": "현재가 ÷ 이동평균 × 100",
@@ -11518,8 +11518,8 @@
       "score": 3,
       "freshness": {
         "date": "2026-09-23",
-        "expected_close_date": "2026-09-24",
-        "business_days_late": 1,
+        "expected_close_date": "2026-09-25",
+        "business_days_late": 2,
         "stale": true,
         "source": "Yahoo Finance chart API; fallback notes: Naver: 410 Client Error: 410 for url: https://finance.naver.com/sise/sise_index_day.naver?code=KOSPI&page=1"
       }
@@ -23027,8 +23027,8 @@
       "score": 3,
       "freshness": {
         "date": "2026-09-23",
-        "expected_close_date": "2026-09-24",
-        "business_days_late": 1,
+        "expected_close_date": "2026-09-25",
+        "business_days_late": 2,
         "stale": true,
         "source": "Yahoo Finance chart API; fallback notes: Naver: 410 Client Error: 410 for url: https://finance.naver.com/sise/sise_index_day.naver?code=KOSDAQ&page=1"
       }
@@ -34552,8 +34552,8 @@
       },
       "freshness": {
         "date": "2026-09-23",
-        "expected_close_date": "2026-09-24",
-        "business_days_late": 1,
+        "expected_close_date": "2026-09-25",
+        "business_days_late": 2,
         "stale": true,
         "source": "Yahoo Finance chart API; fallback notes: Naver: 410 Client Error: 410 for url: https://finance.naver.com/item/sise_day.naver?code=005930&page=1"
       }
@@ -46077,8 +46077,8 @@
       },
       "freshness": {
         "date": "2026-09-23",
-        "expected_close_date": "2026-09-24",
-        "business_days_late": 1,
+        "expected_close_date": "2026-09-25",
+        "business_days_late": 2,
         "stale": true,
         "source": "Yahoo Finance chart API; fallback notes: Naver: 410 Client Error: 410 for url: https://finance.naver.com/item/sise_day.naver?code=000660&page=1"
       }
@@ -69107,34 +69107,34 @@
       "type": "macro",
       "date": "2026-09-25",
       "source": "Yahoo Finance chart API",
-      "close": 1360.49,
-      "change_pct": -0.1475,
-      "current_drawdown_pct": -12.4794,
+      "close": 1354.08,
+      "change_pct": -0.618,
+      "current_drawdown_pct": -12.8918,
       "mdd_252_pct": -13.8509,
-      "sma30": 1370.7483,
-      "ratio30": 99.2516,
-      "dev30": -0.7484,
-      "ratio30_percentile_3y": 29.2328,
-      "sma50": 1399.1724,
-      "ratio50": 97.2353,
-      "dev50": -2.7647,
-      "ratio50_percentile_3y": 11.1111,
-      "sma60": 1416.6102,
-      "ratio60": 96.0384,
-      "dev60": -3.9616,
-      "ratio60_percentile_3y": 6.6138,
-      "sma100": 1457.0136,
-      "ratio100": 93.3752,
-      "dev100": -6.6248,
-      "ratio100_percentile_3y": 2.5132,
-      "sma120": 1459.6829,
-      "ratio120": 93.2045,
-      "dev120": -6.7955,
-      "ratio120_percentile_3y": 2.381,
-      "sma200": 1462.0833,
-      "ratio200": 93.0515,
-      "dev200": -6.9485,
-      "ratio200_percentile_3y": 1.7196,
+      "sma30": 1370.5347,
+      "ratio30": 98.7994,
+      "dev30": -1.2006,
+      "ratio30_percentile_3y": 21.164,
+      "sma50": 1399.0442,
+      "ratio50": 96.7861,
+      "dev50": -3.2139,
+      "ratio50_percentile_3y": 8.5979,
+      "sma60": 1416.5033,
+      "ratio60": 95.5931,
+      "dev60": -4.4069,
+      "ratio60_percentile_3y": 5.6878,
+      "sma100": 1456.9495,
+      "ratio100": 92.9394,
+      "dev100": -7.0606,
+      "ratio100_percentile_3y": 1.5873,
+      "sma120": 1459.6295,
+      "ratio120": 92.7687,
+      "dev120": -7.2313,
+      "ratio120_percentile_3y": 1.7196,
+      "sma200": 1462.0513,
+      "ratio200": 92.6151,
+      "dev200": -7.3849,
+      "ratio200_percentile_3y": 1.455,
       "rebound_3d": true,
       "history": [
         {
@@ -80557,25 +80557,25 @@
         },
         {
           "date": "2026-09-25",
-          "close": 1360.49,
-          "sma30": 1370.7483,
-          "sma50": 1399.1724,
-          "sma60": 1416.6102,
-          "sma100": 1457.0136,
-          "sma120": 1459.6829,
-          "sma200": 1462.0833,
-          "ratio30": 99.2516,
-          "ratio50": 97.2353,
-          "ratio60": 96.0384,
-          "ratio100": 93.3752,
-          "ratio120": 93.2045,
-          "ratio200": 93.0515,
-          "drawdown": -12.4794,
-          "rsi14": 43.3458,
-          "macd": -9.4451,
-          "macd_signal": -13.4473,
-          "macd_hist": 4.0021,
-          "sigma20": 0.0788
+          "close": 1354.08,
+          "sma30": 1370.5347,
+          "sma50": 1399.0442,
+          "sma60": 1416.5033,
+          "sma100": 1456.9495,
+          "sma120": 1459.6295,
+          "sma200": 1462.0513,
+          "ratio30": 98.7994,
+          "ratio50": 96.7861,
+          "ratio60": 95.5931,
+          "ratio100": 92.9394,
+          "ratio120": 92.7687,
+          "ratio200": 92.6151,
+          "drawdown": -12.8918,
+          "rsi14": 40.9438,
+          "macd": -9.9565,
+          "macd_signal": -13.5495,
+          "macd_hist": 3.593,
+          "sigma20": -0.3489
         }
       ],
       "disparity_interpretation": {
@@ -80586,11 +80586,11 @@
       },
       "is_proxy": false,
       "technical_rebound": {
-        "rsi14": 43.3458,
-        "macd": -9.4451,
-        "macd_signal": -13.4473,
-        "macd_hist": 4.0021,
-        "sigma20": 0.0788,
+        "rsi14": 40.9438,
+        "macd": -9.9565,
+        "macd_signal": -13.5495,
+        "macd_hist": 3.593,
+        "sigma20": -0.3489,
         "score": 0,
         "state": "하락 추세·확인 필요",
         "checks": {
@@ -80605,7 +80605,7 @@
       "score": 3,
       "freshness": {
         "date": "2026-09-25",
-        "expected_close_date": "2026-09-24",
+        "expected_close_date": "2026-09-25",
         "business_days_late": 0,
         "stale": false,
         "source": "Yahoo Finance chart API"
@@ -92205,8 +92205,8 @@
       "score": 0,
       "freshness": {
         "date": "2026-09-23",
-        "expected_close_date": "2026-09-24",
-        "business_days_late": 1,
+        "expected_close_date": "2026-09-25",
+        "business_days_late": 2,
         "stale": true,
         "source": "Yahoo Finance chart API"
       }
@@ -112773,8 +112773,8 @@
       "manual_note": "실제 VKOSPI와 KOSPI 실현변동성 대체값을 구분한다. 단일 일간 하락은 게이트 ③ 확정이 아니라 부분 개선으로만 사용한다.",
       "freshness": {
         "date": "2026-07-20",
-        "expected_close_date": "2026-09-24",
-        "business_days_late": 48,
+        "expected_close_date": "2026-09-25",
+        "business_days_late": 49,
         "stale": true,
         "source": "Investing.com KOSPI Volatility 화면; 사용자 제공 스크린샷"
       }
@@ -116024,7 +116024,7 @@
     ]
   },
   "errors": {
-    "stale_data": "KOSPI 2026-09-23 (예상 2026-09-24, 1거래일 지연) / KOSDAQ 2026-09-23 (예상 2026-09-24, 1거래일 지연) / 삼성전자 2026-09-23 (예상 2026-09-24, 1거래일 지연) / SK하이닉스 2026-09-23 (예상 2026-09-24, 1거래일 지연) / KOSPI200 현물(선물 대용) 2026-09-23 (예상 2026-09-24, 1거래일 지연) / VKOSPI 2026-07-20 (예상 2026-09-24, 48거래일 지연)"
+    "stale_data": "KOSPI 2026-09-23 (예상 2026-09-25, 2거래일 지연) / KOSDAQ 2026-09-23 (예상 2026-09-25, 2거래일 지연) / 삼성전자 2026-09-23 (예상 2026-09-25, 2거래일 지연) / SK하이닉스 2026-09-23 (예상 2026-09-25, 2거래일 지연) / KOSPI200 현물(선물 대용) 2026-09-23 (예상 2026-09-25, 2거래일 지연) / VKOSPI 2026-07-20 (예상 2026-09-25, 49거래일 지연)"
   },
   "cycle_signals": {
     "foreign": {
@@ -119316,12 +119316,12 @@
   "macro_context": {
     "usdkrw": {
       "date": "2026-09-25",
-      "close": 1360.49,
-      "change_1d_pct": -0.1475,
-      "change_5d_pct": -1.3802,
-      "realized_vol_20d_pct": 11.7371,
+      "close": 1354.08,
+      "change_1d_pct": -0.618,
+      "change_5d_pct": -1.8448,
+      "realized_vol_20d_pct": 11.896,
       "previous_realized_vol_20d_pct": 9.1273,
-      "vol_change_5d_pp": 2.6098,
+      "vol_change_5d_pp": 2.7687,
       "stable": false,
       "risk": false,
       "source": "Yahoo Finance chart API",
@@ -119362,7 +119362,7 @@
         "name": "환율·변동성",
         "confirmed": false,
         "partial": true,
-        "short": "원/달러 5일 -1.3802% · 실제 VKOSPI 당일 하락/다일 전환 미확인"
+        "short": "원/달러 5일 -1.8448% · 실제 VKOSPI 당일 하락/다일 전환 미확인"
       },
       {
         "name": "가격 반응",
@@ -119372,7 +119372,7 @@
       }
     ],
     "note": "실제 VKOSPI와 실현변동성 대체값을 분리합니다. 단일 일간 하락은 부분 개선이며 게이트 점수에는 반영하지 않습니다.",
-    "updated_at": "2026-09-25T13:46:10+09:00"
+    "updated_at": "2026-09-25T18:50:28+09:00"
   },
   "positioning_analysis": {
     "institutional_snapshot": {
@@ -119460,7 +119460,7 @@
       "삼성전자 KRX 공매도 거래: get_shorting_value_by_date: '거래대금' / get_shorting_volume_by_date: '거래량'",
       "SK하이닉스 KRX 공매도 거래: get_shorting_value_by_date: '거래대금' / get_shorting_volume_by_date: '거래량'"
     ],
-    "updated_at": "2026-09-25T13:46:10+09:00"
+    "updated_at": "2026-09-25T18:50:28+09:00"
   },
   "mid_cycle_clock": {
     "available": true,
@@ -119552,7 +119552,7 @@
       "not_in_trend_rebound_gate_score": true
     },
     "not_in_trend_rebound_gate_score": true,
-    "updated_at": "2026-09-25T13:46:10+09:00"
+    "updated_at": "2026-09-25T18:50:28+09:00"
   },
   "date_alignment": {
     "kospi_price_date": "2026-09-23",
@@ -119560,33 +119560,33 @@
     "aligned": true
   },
   "data_freshness": {
-    "checked_at": "2026-09-25T13:46:24+09:00",
+    "checked_at": "2026-09-25T18:50:47+09:00",
     "assets": {
       "KOSPI": {
         "date": "2026-09-23",
-        "expected_close_date": "2026-09-24",
-        "business_days_late": 1,
+        "expected_close_date": "2026-09-25",
+        "business_days_late": 2,
         "stale": true,
         "source": "Yahoo Finance chart API; fallback notes: Naver: 410 Client Error: 410 for url: https://finance.naver.com/sise/sise_index_day.naver?code=KOSPI&page=1"
       },
       "KOSDAQ": {
         "date": "2026-09-23",
-        "expected_close_date": "2026-09-24",
-        "business_days_late": 1,
+        "expected_close_date": "2026-09-25",
+        "business_days_late": 2,
         "stale": true,
         "source": "Yahoo Finance chart API; fallback notes: Naver: 410 Client Error: 410 for url: https://finance.naver.com/sise/sise_index_day.naver?code=KOSDAQ&page=1"
       },
       "SAMSUNG": {
         "date": "2026-09-23",
-        "expected_close_date": "2026-09-24",
-        "business_days_late": 1,
+        "expected_close_date": "2026-09-25",
+        "business_days_late": 2,
         "stale": true,
         "source": "Yahoo Finance chart API; fallback notes: Naver: 410 Client Error: 410 for url: https://finance.naver.com/item/sise_day.naver?code=005930&page=1"
       },
       "SKHYNIX": {
         "date": "2026-09-23",
-        "expected_close_date": "2026-09-24",
-        "business_days_late": 1,
+        "expected_close_date": "2026-09-25",
+        "business_days_late": 2,
         "stale": true,
         "source": "Yahoo Finance chart API; fallback notes: Naver: 410 Client Error: 410 for url: https://finance.naver.com/item/sise_day.naver?code=000660&page=1"
       },
@@ -119606,7 +119606,7 @@
       },
       "USDKRW": {
         "date": "2026-09-25",
-        "expected_close_date": "2026-09-24",
+        "expected_close_date": "2026-09-25",
         "business_days_late": 0,
         "stale": false,
         "source": "Yahoo Finance chart API"
@@ -119620,8 +119620,8 @@
       },
       "KOSPI200": {
         "date": "2026-09-23",
-        "expected_close_date": "2026-09-24",
-        "business_days_late": 1,
+        "expected_close_date": "2026-09-25",
+        "business_days_late": 2,
         "stale": true,
         "source": "Yahoo Finance chart API"
       },
@@ -119641,19 +119641,19 @@
       },
       "VKOSPI": {
         "date": "2026-07-20",
-        "expected_close_date": "2026-09-24",
-        "business_days_late": 48,
+        "expected_close_date": "2026-09-25",
+        "business_days_late": 49,
         "stale": true,
         "source": "Investing.com KOSPI Volatility 화면; 사용자 제공 스크린샷"
       }
     },
     "delayed": [
-      "KOSPI 2026-09-23 (예상 2026-09-24, 1거래일 지연)",
-      "KOSDAQ 2026-09-23 (예상 2026-09-24, 1거래일 지연)",
-      "삼성전자 2026-09-23 (예상 2026-09-24, 1거래일 지연)",
-      "SK하이닉스 2026-09-23 (예상 2026-09-24, 1거래일 지연)",
-      "KOSPI200 현물(선물 대용) 2026-09-23 (예상 2026-09-24, 1거래일 지연)",
-      "VKOSPI 2026-07-20 (예상 2026-09-24, 48거래일 지연)"
+      "KOSPI 2026-09-23 (예상 2026-09-25, 2거래일 지연)",
+      "KOSDAQ 2026-09-23 (예상 2026-09-25, 2거래일 지연)",
+      "삼성전자 2026-09-23 (예상 2026-09-25, 2거래일 지연)",
+      "SK하이닉스 2026-09-23 (예상 2026-09-25, 2거래일 지연)",
+      "KOSPI200 현물(선물 대용) 2026-09-23 (예상 2026-09-25, 2거래일 지연)",
+      "VKOSPI 2026-07-20 (예상 2026-09-25, 49거래일 지연)"
     ]
   },
   "macro_regime_hedge": {
@@ -119702,11 +119702,11 @@
     },
     "stale": true,
     "refresh_error": {
-      "gold": "429 Client Error: Too Many Requests for url: https://query1.finance.yahoo.com/v8/finance/chart/GC%3DF?period1=1774759584&period2=1790397984&interval=1d",
-      "copper": "429 Client Error: Too Many Requests for url: https://query1.finance.yahoo.com/v8/finance/chart/HG%3DF?period1=1774759584&period2=1790397984&interval=1d",
-      "dxy": "429 Client Error: Too Many Requests for url: https://query1.finance.yahoo.com/v8/finance/chart/DX-Y.NYB?period1=1774759584&period2=1790397984&interval=1d",
-      "vix": "429 Client Error: Too Many Requests for url: https://query1.finance.yahoo.com/v8/finance/chart/%5EVIX?period1=1774759584&period2=1790397984&interval=1d",
-      "oil": "429 Client Error: Too Many Requests for url: https://query1.finance.yahoo.com/v8/finance/chart/CL%3DF?period1=1774759584&period2=1790397984&interval=1d",
+      "gold": "429 Client Error: Too Many Requests for url: https://query1.finance.yahoo.com/v8/finance/chart/GC%3DF?period1=1774777847&period2=1790416247&interval=1d",
+      "copper": "429 Client Error: Too Many Requests for url: https://query1.finance.yahoo.com/v8/finance/chart/HG%3DF?period1=1774777847&period2=1790416247&interval=1d",
+      "dxy": "429 Client Error: Too Many Requests for url: https://query1.finance.yahoo.com/v8/finance/chart/DX-Y.NYB?period1=1774777848&period2=1790416248&interval=1d",
+      "vix": "429 Client Error: Too Many Requests for url: https://query1.finance.yahoo.com/v8/finance/chart/%5EVIX?period1=1774777848&period2=1790416248&interval=1d",
+      "oil": "429 Client Error: Too Many Requests for url: https://query1.finance.yahoo.com/v8/finance/chart/CL%3DF?period1=1774777848&period2=1790416248&interval=1d",
       "bei10": "HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Read timed out. (read timeout=20)",
       "real30": "HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Read timed out. (read timeout=20)",
       "hy": "HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Read timed out. (read timeout=20)"
