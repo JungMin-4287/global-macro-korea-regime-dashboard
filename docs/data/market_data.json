@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-14T18:45:15+09:00",
+  "generated_at": "2026-10-14T21:49:29+09:00",
   "status": "ok",
   "methodology": {
     "disparity_ratio": "현재가 ÷ 이동평균 × 100",
@@ -69107,34 +69107,34 @@
       "type": "macro",
       "date": "2026-10-14",
       "source": "Yahoo Finance chart API",
-      "close": 1335.09,
-      "change_pct": 0.072,
-      "current_drawdown_pct": -14.1134,
+      "close": 1339.4399,
+      "change_pct": 0.398,
+      "current_drawdown_pct": -13.8336,
       "mdd_252_pct": -14.1752,
-      "sma30": 1352.5957,
-      "ratio30": 98.7058,
-      "dev30": -1.2942,
-      "ratio30_percentile_3y": 20.1058,
-      "sma50": 1370.8552,
-      "ratio50": 97.391,
-      "dev50": -2.609,
-      "ratio50_percentile_3y": 13.0952,
-      "sma60": 1383.7258,
-      "ratio60": 96.4852,
-      "dev60": -3.5148,
-      "ratio60_percentile_3y": 9.127,
-      "sma100": 1437.6269,
-      "ratio100": 92.8676,
-      "dev100": -7.1324,
-      "ratio100_percentile_3y": 2.2487,
-      "sma120": 1445.7565,
-      "ratio120": 92.3454,
-      "dev120": -7.6546,
-      "ratio120_percentile_3y": 1.8519,
-      "sma200": 1455.0551,
-      "ratio200": 91.7553,
-      "dev200": -8.2447,
-      "ratio200_percentile_3y": 0.9259,
+      "sma30": 1352.7407,
+      "ratio30": 99.0168,
+      "dev30": -0.9832,
+      "ratio30_percentile_3y": 25.1323,
+      "sma50": 1370.9422,
+      "ratio50": 97.7021,
+      "dev50": -2.2979,
+      "ratio50_percentile_3y": 16.2698,
+      "sma60": 1383.7983,
+      "ratio60": 96.7944,
+      "dev60": -3.2056,
+      "ratio60_percentile_3y": 11.6402,
+      "sma100": 1437.6704,
+      "ratio100": 93.1674,
+      "dev100": -6.8326,
+      "ratio100_percentile_3y": 3.3069,
+      "sma120": 1445.7927,
+      "ratio120": 92.644,
+      "dev120": -7.356,
+      "ratio120_percentile_3y": 2.381,
+      "sma200": 1455.0768,
+      "ratio200": 92.0529,
+      "dev200": -7.9471,
+      "ratio200_percentile_3y": 1.5873,
       "rebound_3d": false,
       "history": [
         {
@@ -80557,25 +80557,25 @@
         },
         {
           "date": "2026-10-14",
-          "close": 1335.09,
-          "sma30": 1352.5957,
-          "sma50": 1370.8552,
-          "sma60": 1383.7258,
-          "sma100": 1437.6269,
-          "sma120": 1445.7565,
-          "sma200": 1455.0551,
-          "ratio30": 98.7058,
-          "ratio50": 97.391,
-          "ratio60": 96.4852,
-          "ratio100": 92.8676,
-          "ratio120": 92.3454,
-          "ratio200": 91.7553,
-          "drawdown": -14.1134,
-          "rsi14": 37.2301,
-          "macd": -10.4658,
-          "macd_signal": -10.0652,
-          "macd_hist": -0.4006,
-          "sigma20": -1.3025
+          "close": 1339.4399,
+          "sma30": 1352.7407,
+          "sma50": 1370.9422,
+          "sma60": 1383.7983,
+          "sma100": 1437.6704,
+          "sma120": 1445.7927,
+          "sma200": 1455.0768,
+          "ratio30": 99.0168,
+          "ratio50": 97.7021,
+          "ratio60": 96.7944,
+          "ratio100": 93.1674,
+          "ratio120": 92.644,
+          "ratio200": 92.0529,
+          "drawdown": -13.8336,
+          "rsi14": 40.2233,
+          "macd": -10.1188,
+          "macd_signal": -9.9958,
+          "macd_hist": -0.123,
+          "sigma20": -1.0465
         }
       ],
       "disparity_interpretation": {
@@ -80586,17 +80586,17 @@
       },
       "is_proxy": false,
       "technical_rebound": {
-        "rsi14": 37.2301,
-        "macd": -10.4658,
-        "macd_signal": -10.0652,
-        "macd_hist": -0.4006,
-        "sigma20": -1.3025,
-        "score": 3,
-        "state": "초기 반등 진행",
+        "rsi14": 40.2233,
+        "macd": -10.1188,
+        "macd_signal": -9.9958,
+        "macd_hist": -0.123,
+        "sigma20": -1.0465,
+        "score": 4,
+        "state": "기술 반등 확인",
         "checks": {
           "price_up": true,
           "rsi_turn": true,
-          "macd_hist_turn": false,
+          "macd_hist_turn": true,
           "sigma_turn": true
         },
         "note": "일봉 종가 기준. 4개 조건 중 가격·RSI·MACD 히스토그램·Sigma의 동시 개선을 확인"
@@ -120076,12 +120076,12 @@
   "macro_context": {
     "usdkrw": {
       "date": "2026-10-14",
-      "close": 1335.09,
-      "change_1d_pct": 0.072,
-      "change_5d_pct": -0.3471,
-      "realized_vol_20d_pct": 11.1354,
+      "close": 1339.4399,
+      "change_1d_pct": 0.398,
+      "change_5d_pct": -0.0224,
+      "realized_vol_20d_pct": 11.2628,
       "previous_realized_vol_20d_pct": 12.3498,
-      "vol_change_5d_pp": -1.2144,
+      "vol_change_5d_pp": -1.087,
       "stable": true,
       "risk": false,
       "source": "Yahoo Finance chart API",
@@ -120122,7 +120122,7 @@
         "name": "환율·변동성",
         "confirmed": false,
         "partial": true,
-        "short": "원/달러 5일 -0.3471% · 실제 VKOSPI 당일 하락/다일 전환 미확인"
+        "short": "원/달러 5일 -0.0224% · 실제 VKOSPI 당일 하락/다일 전환 미확인"
       },
       {
         "name": "가격 반응",
@@ -120132,7 +120132,7 @@
       }
     ],
     "note": "실제 VKOSPI와 실현변동성 대체값을 분리합니다. 단일 일간 하락은 부분 개선이며 게이트 점수에는 반영하지 않습니다.",
-    "updated_at": "2026-10-14T18:45:15+09:00"
+    "updated_at": "2026-10-14T21:49:29+09:00"
   },
   "positioning_analysis": {
     "institutional_snapshot": {
@@ -120220,7 +120220,7 @@
       "삼성전자 KRX 공매도 거래: get_shorting_value_by_date: '거래대금' / get_shorting_volume_by_date: '거래량'",
       "SK하이닉스 KRX 공매도 거래: get_shorting_value_by_date: '거래대금' / get_shorting_volume_by_date: '거래량'"
     ],
-    "updated_at": "2026-10-14T18:45:15+09:00"
+    "updated_at": "2026-10-14T21:49:29+09:00"
   },
   "mid_cycle_clock": {
     "available": true,
@@ -120312,7 +120312,7 @@
       "not_in_trend_rebound_gate_score": true
     },
     "not_in_trend_rebound_gate_score": true,
-    "updated_at": "2026-10-14T18:45:15+09:00"
+    "updated_at": "2026-10-14T21:49:29+09:00"
   },
   "date_alignment": {
     "kospi_price_date": "2026-10-14",
@@ -120320,7 +120320,7 @@
     "aligned": true
   },
   "data_freshness": {
-    "checked_at": "2026-10-14T18:45:35+09:00",
+    "checked_at": "2026-10-14T21:49:47+09:00",
     "assets": {
       "KOSPI": {
         "date": "2026-10-14",
@@ -120457,11 +120457,11 @@
     },
     "stale": true,
     "refresh_error": {
-      "gold": "429 Client Error: Too Many Requests for url: https://query1.finance.yahoo.com/v8/finance/chart/GC%3DF?period1=1776419135&period2=1792057535&interval=1d",
-      "copper": "429 Client Error: Too Many Requests for url: https://query1.finance.yahoo.com/v8/finance/chart/HG%3DF?period1=1776419135&period2=1792057535&interval=1d",
-      "dxy": "429 Client Error: Too Many Requests for url: https://query1.finance.yahoo.com/v8/finance/chart/DX-Y.NYB?period1=1776419135&period2=1792057535&interval=1d",
-      "vix": "429 Client Error: Too Many Requests for url: https://query1.finance.yahoo.com/v8/finance/chart/%5EVIX?period1=1776419136&period2=1792057536&interval=1d",
-      "oil": "429 Client Error: Too Many Requests for url: https://query1.finance.yahoo.com/v8/finance/chart/CL%3DF?period1=1776419136&period2=1792057536&interval=1d",
+      "gold": "429 Client Error: Too Many Requests for url: https://query1.finance.yahoo.com/v8/finance/chart/GC%3DF?period1=1776430187&period2=1792068587&interval=1d",
+      "copper": "429 Client Error: Too Many Requests for url: https://query1.finance.yahoo.com/v8/finance/chart/HG%3DF?period1=1776430188&period2=1792068588&interval=1d",
+      "dxy": "429 Client Error: Too Many Requests for url: https://query1.finance.yahoo.com/v8/finance/chart/DX-Y.NYB?period1=1776430188&period2=1792068588&interval=1d",
+      "vix": "429 Client Error: Too Many Requests for url: https://query1.finance.yahoo.com/v8/finance/chart/%5EVIX?period1=1776430188&period2=1792068588&interval=1d",
+      "oil": "429 Client Error: Too Many Requests for url: https://query1.finance.yahoo.com/v8/finance/chart/CL%3DF?period1=1776430188&period2=1792068588&interval=1d",
       "bei10": "HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Read timed out. (read timeout=20)",
       "real30": "HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Read timed out. (read timeout=20)",
       "hy": "HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Read timed out. (read timeout=20)"
